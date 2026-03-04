@@ -1,0 +1,14 @@
+# VSCode settings
+.vscode/
+
+# Workspace file
+DP.code-workspace
+
+# Project folders
+material/
+misc/
+pres/
+
+# Python cache
+__pycache__/
+*.pyc
