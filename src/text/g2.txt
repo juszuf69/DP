@@ -1,0 +1,19 @@
+# Grammar = aa(b,c)+ or Epsilon / in CNF
+
+terminal:
+a,b,c
+
+nonterminal:
+S,A,B,C
+
+rules:
+S - ε
+S - A B
+A - a
+B - A C
+C - C C
+C - b
+C - c
+
+start:
+S

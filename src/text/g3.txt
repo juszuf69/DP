@@ -1,0 +1,21 @@
+# Grammar =  (x(aaa|ε)(bb|ε)(c|ε))|((aaa|ε)(bb|ε)(c|ε)y)|ε / not in CNF
+ 
+terminal:
+a,b,c,x,y
+
+nonterminal:
+S,A,B,C
+
+rules:
+S - ε
+S - x A B C
+S - A B C y
+A - ε
+A - a a a
+B - ε
+B - b b
+C - ε
+C - c
+
+start:
+S
