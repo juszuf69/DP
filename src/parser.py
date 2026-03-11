@@ -17,7 +17,7 @@ def _strip_comment(line: str) -> str:
     return line.split("#", 1)[0].strip()
 
 def _split_csv(line: str) -> List[str]:
-    return [x.strip() for x in line.split(",") if x.strip()]
+    return [x.strip() for x in line.split(" ") if x.strip()]
 
 def _read_sections(text: str) -> Dict[str, List[str]]:
     sections: Dict[str, List[str]] = {k: [] for k in ["terminal", "nonterminal", "rules", "start"]}
@@ -52,34 +52,42 @@ def _read_sections(text: str) -> Dict[str, List[str]]:
 
     return sections
 
-def _tokenize_rhs(rhs_raw: str, nonterminals: Set[str]) -> List[str]:
+def _tokenize_rhs(rhs_raw: str, nonterminals: Set[str], terminals: Set[str]) -> List[str]:
     """
     Tokenize RHS.
-    - If RHS has spaces: split by spaces.
-    - Else: greedy match declared nonterminals (longest first), fallback to single char terminals.
+    1) If RHS has spaces -> split by spaces.
+    2) If RHS exactly matches one declared terminal or nonterminal -> return it as one token.
+    3) Otherwise fallback to greedy tokenization (legacy support).
     """
     rhs_raw = rhs_raw.strip()
     if not rhs_raw:
         raise ValueError("Empty RHS.")
 
+    if rhs_raw in EPS_ALIASES:
+        return [rhs_raw]
+
     if " " in rhs_raw:
         return [tok for tok in rhs_raw.split() if tok]
 
-    nts_sorted = sorted(nonterminals, key=len, reverse=True)
+    # IMPORTANT: whole RHS may itself be one terminal/nonterminal
+    if rhs_raw in terminals or rhs_raw in nonterminals:
+        return [rhs_raw]
+
+    # Legacy fallback: greedy match longest declared symbol first
+    symbols_sorted = sorted(nonterminals | terminals, key=len, reverse=True)
     out: List[str] = []
     i = 0
     while i < len(rhs_raw):
         matched = None
-        for nt in nts_sorted:
-            if rhs_raw.startswith(nt, i):
-                matched = nt
+        for sym in symbols_sorted:
+            if rhs_raw.startswith(sym, i):
+                matched = sym
                 break
         if matched:
             out.append(matched)
             i += len(matched)
         else:
-            out.append(rhs_raw[i])
-            i += 1
+            raise ValueError(f"Cannot tokenize RHS '{rhs_raw}' near position {i}")
     return out
 
 def parse_cfg_file_raw(path: str) -> Tuple[Set[str], Set[str], str, Dict[str, List[List[str]]]]:
@@ -121,11 +129,11 @@ def parse_cfg_file_raw(path: str) -> Tuple[Set[str], Set[str], str, Dict[str, Li
         raise ValueError(f"Start symbol '{start}' not in declared nonterminals.")
 
     # rules
-    rule_re = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*-\s*(.+?)\s*$")
+    pattern = r'^\s*(<[^>\s]+>|[A-Za-z0-9_áéőúűöüóíľščťžý]+)\s*-\s*(.+?)\s*$'
     productions: Dict[str, List[List[str]]] = {A: [] for A in nonterminals}
 
     for line in sections["rules"]:
-        m = rule_re.match(line)
+        m = re.match(pattern, line)
         if not m:
             raise ValueError(f"Bad rule syntax: '{line}' (expected: LHS - RHS)")
         lhs, rhs_raw = m.group(1), m.group(2)
@@ -133,7 +141,7 @@ def parse_cfg_file_raw(path: str) -> Tuple[Set[str], Set[str], str, Dict[str, Li
         if lhs not in nonterminals:
             raise ValueError(f"LHS '{lhs}' not in declared nonterminals.")
 
-        rhs = _tokenize_rhs(rhs_raw, nonterminals)
+        rhs = _tokenize_rhs(rhs_raw, nonterminals, terminals)
 
         # epsilon accepted in these forms:
         if len(rhs) == 1 and rhs[0] in EPS_ALIASES:

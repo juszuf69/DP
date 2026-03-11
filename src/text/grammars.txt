@@ -1,0 +1,369 @@
+terminal:
+a,b
+
+nonterminal:
+S,A,B
+
+rules:
+S - ε
+S - b S
+S - a A
+A - b A
+A - a B
+B - b B
+B - a S
+
+start:
+S
+
+---
+
+terminal:
+e,l,s,n,d
+
+nonterminal:
+S,A,B,C,D
+
+rules:
+S - e A
+A - l B
+A - n C
+B - s D
+C - d
+D - e
+
+start:
+S
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S,A,B
+
+rules:
+S - B A B
+S - A B A
+A - A B
+A - a A
+A - a b
+B - B A
+B - b
+
+start:
+S
+
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S
+
+rules:
+S - ε
+S - a S b
+
+start:
+S
+
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S,A
+
+rules:
+S - A A
+A - a A b
+A - ε
+
+start:
+S
+
+
+---
+
+terminal:
+mama,otec,on,ona,ono,varí,číta,platí,školné,noviny,obed
+
+nonterminal:
+veta,podmet,prísudok,predmet,podstmeno,zámeno,sloveso
+
+rules:
+veta - podmet prísudok
+podmet - podstmeno
+podmet - zámeno
+prísudok - sloveso
+prísudok - sloveso predmet
+predmet - podstmeno
+podstmeno - mama
+podstmeno - otec
+podstmeno - školné
+podstmeno - obed
+podstmeno - noviny
+zámeno - on
+zámeno - ona
+zámeno - ono
+sloveso - varí
+sloveso - číta
+sloveso - platí
+
+start:
+veta
+
+
+---
+
+terminal:
+char,int,float,identifikator,konst_int,;,[,]
+
+nonterminal:
+deklaracie,deklaracia,typ,deklarator,pole
+
+rules:
+deklaracie - deklaracia deklaracie
+deklaracie - ε
+deklaracia - typ deklarator ;
+typ - char
+typ - int
+typ - float
+deklarator - identifikator pole
+pole - ε
+pole - [ konst_int ]
+
+start:
+deklaracie
+
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S,A
+
+rules:
+S - a A
+A - a A
+A - b A
+A - b
+
+start:
+S
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S,A,B
+
+rules:
+S - a b A
+S - b a B
+S - ε
+A - a b A
+A - ε
+B - b a B
+B - ε
+
+start:
+S
+
+---
+
+terminal:
+a,b,c,d
+
+nonterminal:
+S,A
+
+rules:
+S - a
+S - d
+S - b c A
+A - b c A
+A - d
+
+start:
+S
+
+---
+
+terminal:
+0,1,2,3
+
+nonterminal:
+S,A
+
+rules:
+S - 0 S
+S - 1 S
+S - 2 A
+S - 3 A
+A - 2 A
+A - 3 A
+A - ε
+
+start:
+S
+
+---
+
+terminal:
+b,d,e,g,h,i,l,n,t,w
+
+nonterminal:
+S
+
+rules:
+S - b e g i n
+S - e n d
+S - w h i l e
+S - w i t h
+
+start:
+S
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S
+
+rules:
+S - a S
+S - b S
+S - ε
+
+start:
+S
+
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S,A,B
+
+rules:
+S - a A
+S - b B
+S - ε
+A - a B
+A - b S
+B - a S
+B - b A
+
+start:
+S
+
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S,A,B,C,D
+
+rules:
+S - ε
+S - a A
+S - b C
+A - a A
+A - b B
+A - ε
+B - b B
+B - ε
+C - b C
+C - a D
+C - ε
+D - a D
+D - ε
+
+start:
+S
+
+
+---
+
+terminal:
+a,b
+
+nonterminal:
+S,A,B
+
+rules:
+S - a A
+S - a S
+S - A
+S - a b B
+A - ε
+A - b A
+B - b B
+
+start:
+S
+
+
+---
+
+terminal:
+a,b,c
+
+nonterminal:
+S,A,B,C
+
+rules:
+S - a A C
+S - b B
+S - B B
+A - a A b
+B - ε
+B - a B b
+B - S B
+C - C C
+C - b
+C - c
+
+start:
+S
+
+
+---
+
+terminal:
+štart,koniec,;,ak,potom,pokiaľ,rob,príkaz1,príkaz2,p1,p2
+
+nonterminal:
+program,príkazy,príkaz,výraz,podmienka
+
+rules:
+program - štart príkazy koniec
+príkazy - príkaz ; príkazy
+príkazy - ε
+príkaz - výraz
+príkaz - ak podmienka potom príkaz
+príkaz - pokiaľ podmienka rob príkaz
+výraz - príkaz1
+výraz - príkaz2
+podmienka - p1
+podmienka - p2
+
+start:
+program

@@ -1,0 +1,103 @@
+terminal:
+begin end if then while do procedure function Integer Real Boolean Char type var array of record and or not + - * / mod < <= > >= = <> := ( ) [ ] .. . , ; : konšt_int konšt_real konšt_boolean konšt_char id
+
+nonterminal:
+<program> <definície_podprogramov> <definícia_podprogramu> <hlavička_podprogramu> <telo_podprogramu> <deklarácie> <deklarácie_typov> <deklarácie_premenných> <formálne_parametre> <deklarácia_fp> <zvyšok_dfp> <forma> <deklarácia_typu> <deklarácia_premenných> <id> <typ> <jednoduchý_typ> <pole> <dol> <hor> <typ_prvku> <záznam> <zoznam_deklarácií> <deklarácia> <zoznam_identifikátorov> <zvyšok_zoznamu> <blok> <príkazy> <príkaz> <príkaz_priradenia> <príkaz_if> <príkaz_while> <príkaz_call> <skutočné_parametre> <sp> <zvyšok_sp> <výraz> <op1> <op2> <op3> <op4> <logický_op> <relačný_op> <aditívny_op> <multiplikatívny_op> <unárny_op> <konšt> <prem>
+
+rules:
+<program> - <deklarácie> <definície_podprogramov>
+<definície_podprogramov> - <definícia_podprogramu> <definície_podprogramov>
+<definície_podprogramov> - ε
+<definícia_podprogramu> - <hlavička_podprogramu> <telo_podprogramu>
+<hlavička_podprogramu> - procedure <id> ( <formálne_parametre> )
+<hlavička_podprogramu> - function <id> ( <formálne_parametre> ) : <typ>
+<telo_podprogramu> - <deklarácie> <blok>
+<deklarácie> - <deklarácie_typov> <deklarácie_premenných>
+<deklarácie_typov> - <deklarácia_typu> <deklarácie_typov>
+<deklarácie_typov> - ε
+<deklarácie_premenných> - <deklarácia_premenných> <deklarácie_premenných>
+<deklarácie_premenných> - ε
+<formálne_parametre> - <deklarácia_fp> <zvyšok_dfp>
+<formálne_parametre> - ε
+<deklarácia_fp> - <forma> <id> : <typ>
+<zvyšok_dfp> - , <deklarácia_fp> <zvyšok_dfp>
+<zvyšok_dfp> - ε
+<forma> - var
+<forma> - ε
+<deklarácia_typu> - type <id> = <typ> ;
+<deklarácia_premenných> - var <zoznam_deklarácií>
+<id> - id
+<typ> - <jednoduchý_typ>
+<typ> - <id>
+<typ> - <pole>
+<typ> - <záznam>
+<jednoduchý_typ> - Integer
+<jednoduchý_typ> - Real
+<jednoduchý_typ> - Boolean
+<jednoduchý_typ> - Char
+<pole> - array [ <dol> .. <hor> ] of <typ_prvku>
+<dol> - konšt_int
+<hor> - konšt_int
+<typ_prvku> - <typ>
+<záznam> - record <zoznam_deklarácií> end
+<zoznam_deklarácií> - <deklarácia> <zoznam_deklarácií>
+<zoznam_deklarácií> - ε
+<deklarácia> - <zoznam_identifikátorov> : <typ> ;
+<zoznam_identifikátorov> - <id> <zvyšok_zoznamu>
+<zvyšok_zoznamu> - , <id> <zvyšok_zoznamu>
+<zvyšok_zoznamu> - ε
+<blok> - begin <príkazy> end
+<príkazy> - <príkaz> ; <príkazy>
+<príkazy> - ε
+<príkaz> - ε
+<príkaz> - <blok>
+<príkaz> - <príkaz_priradenia>
+<príkaz> - <príkaz_if>
+<príkaz> - <príkaz_while>
+<príkaz> - <príkaz_call>
+<príkaz_priradenia> - <výraz> := <výraz>
+<príkaz_if> - if <výraz> then <príkaz>
+<príkaz_while> - while <výraz> do <príkaz>
+<príkaz_call> - <id> ( <skutočné_parametre> )
+<skutočné_parametre> - <sp> <zvyšok_sp>
+<skutočné_parametre> - ε
+<sp> - <výraz>
+<zvyšok_sp> - , <sp> <zvyšok_sp>
+<zvyšok_sp> - ε
+<výraz> - <výraz> <logický_op> <op1>
+<výraz> - <op1>
+<op1> - <op1> <relačný_op> <op2>
+<op1> - <op2>
+<op2> - <op2> <aditívny_op> <op3>
+<op2> - <op3>
+<op3> - <op3> <multiplikatívny_op> <op4>
+<op3> - <op4>
+<op4> - <konšt>
+<op4> - <prem>
+<op4> - ( <výraz> )
+<op4> - <unárny_op> <op4>
+<logický_op> - and
+<logický_op> - or
+<relačný_op> - <
+<relačný_op> - <=
+<relačný_op> - >
+<relačný_op> - >=
+<relačný_op> - =
+<relačný_op> - <>
+<aditívny_op> - +
+<aditívny_op> - -
+<multiplikatívny_op> - *
+<multiplikatívny_op> - /
+<multiplikatívny_op> - mod
+<unárny_op> - not
+<unárny_op> - -
+<konšt> - konšt_int
+<konšt> - konšt_real
+<konšt> - konšt_boolean
+<konšt> - konšt_char
+<prem> - <id>
+<prem> - <prem> [ <výraz> ]
+<prem> - <prem> . <id>
+
+start:
+<program>
