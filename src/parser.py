@@ -426,7 +426,9 @@ def build_grammar_objects(
 # Public function you import
 # ---------------------------
 
-def parse_grammar_file_to_cnf(path: str) -> Grammar:
+def parse_grammar_file_to_chomsky(path: str) -> Grammar:
     T, N, start, P = parse_cfg_file_raw(path)
     T2, N2, start2, cnfP = cfg_to_cnf(T, N, start, P)
-    return build_grammar_objects(T2, N2, start2, cnfP)
+    grammar = build_grammar_objects(T2, N2, start2, cnfP)
+    grammar.source_path = path
+    return grammar

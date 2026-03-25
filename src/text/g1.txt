@@ -1,10 +1,10 @@
 # Grammar = aa(b,c)+ / in CNF
 
 terminal:
-a,b,c
+a b c
 
 nonterminal:
-S,A,B,C
+S A B C
 
 rules:
 S - A B
