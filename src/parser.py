@@ -17,7 +17,31 @@ def _strip_comment(line: str) -> str:
     return line.split("#", 1)[0].strip()
 
 def _split_csv(line: str) -> List[str]:
-    return [x.strip() for x in line.split(" ") if x.strip()]
+    # Support both comma-separated and whitespace-separated declarations.
+    return [x.strip() for x in re.split(r"[\s,]+", line) if x.strip()]
+
+def _split_grammar_blocks(text: str) -> List[str]:
+    """
+    Split input text into multiple grammar blocks by separator lines like '---'.
+    Empty blocks are ignored.
+    """
+    blocks: List[str] = []
+    current: List[str] = []
+
+    for raw in text.splitlines():
+        if re.match(r"^\s*---\s*$", raw):
+            block = "\n".join(current).strip()
+            if block:
+                blocks.append(block)
+            current = []
+            continue
+        current.append(raw)
+
+    tail = "\n".join(current).strip()
+    if tail:
+        blocks.append(tail)
+
+    return blocks
 
 def _read_sections(text: str) -> Dict[str, List[str]]:
     sections: Dict[str, List[str]] = {k: [] for k in ["terminal", "nonterminal", "rules", "start"]}
@@ -90,7 +114,7 @@ def _tokenize_rhs(rhs_raw: str, nonterminals: Set[str], terminals: Set[str]) -> 
             raise ValueError(f"Cannot tokenize RHS '{rhs_raw}' near position {i}")
     return out
 
-def parse_cfg_file_raw(path: str) -> Tuple[Set[str], Set[str], str, Dict[str, List[List[str]]]]:
+def _parse_cfg_text_raw(text: str) -> Tuple[Set[str], Set[str], str, Dict[str, List[List[str]]]]:
     """
     Parse TXT into raw CFG:
       terminals: set[str]
@@ -99,9 +123,6 @@ def parse_cfg_file_raw(path: str) -> Tuple[Set[str], Set[str], str, Dict[str, Li
       productions: dict[A] = list of rhs lists, each rhs is list[str]
     RHS elements are symbol strings (terminal or nonterminal).
     """
-    with open(path, "r", encoding="utf-8") as f:
-        text = f.read()
-
     sections = _read_sections(text)
 
     terminals_list: List[str] = []
@@ -150,6 +171,39 @@ def parse_cfg_file_raw(path: str) -> Tuple[Set[str], Set[str], str, Dict[str, Li
             productions[lhs].append(rhs)
 
     return terminals, nonterminals, start, productions
+
+def parse_cfg_file_raw_many(path: str) -> List[Tuple[Set[str], Set[str], str, Dict[str, List[List[str]]]]]:
+    """
+    Parse one file containing one or more CFGs separated by lines containing '---'.
+    Returns one raw CFG tuple per grammar block.
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    blocks = _split_grammar_blocks(text)
+    if not blocks:
+        raise ValueError(f"No grammar definitions found in file: {path}")
+
+    out: List[Tuple[Set[str], Set[str], str, Dict[str, List[List[str]]]]] = []
+    for i, block in enumerate(blocks):
+        try:
+            out.append(_parse_cfg_text_raw(block))
+        except Exception as exc:
+            raise ValueError(f"Failed to parse grammar #{i + 1} in '{path}': {exc}") from exc
+
+    return out
+
+def parse_cfg_file_raw(path: str, grammar_index: int = 0) -> Tuple[Set[str], Set[str], str, Dict[str, List[List[str]]]]:
+    """
+    Backward-compatible single-grammar parser.
+    If file contains multiple grammars separated by '---', select one by index.
+    """
+    grammars = parse_cfg_file_raw_many(path)
+    if grammar_index < 0 or grammar_index >= len(grammars):
+        raise IndexError(
+            f"grammar_index {grammar_index} out of range for file '{path}' containing {len(grammars)} grammars"
+        )
+    return grammars[grammar_index]
 
 
 # ---------------------------
@@ -426,9 +480,39 @@ def build_grammar_objects(
 # Public function you import
 # ---------------------------
 
-def parse_grammar_file_to_chomsky(path: str) -> Grammar:
-    T, N, start, P = parse_cfg_file_raw(path)
-    T2, N2, start2, cnfP = cfg_to_cnf(T, N, start, P)
-    grammar = build_grammar_objects(T2, N2, start2, cnfP)
-    grammar.source_path = path
-    return grammar
+def parse_grammar_file_to_chomsky_many(path: str) -> List[Grammar]:
+    """
+    Parse all grammars from file and convert each to Chomsky normal form.
+    """
+    out: List[Grammar] = []
+    raw_grammars = parse_cfg_file_raw_many(path)
+    source_total = len(raw_grammars)
+    for idx, (T, N, start, P) in enumerate(raw_grammars):
+        T2, N2, start2, cnfP = cfg_to_cnf(T, N, start, P)
+        grammar = build_grammar_objects(T2, N2, start2, cnfP)
+        grammar.source_path = path
+        grammar.source_total = source_total
+        if source_total > 1:
+            grammar.source_index = idx
+        out.append(grammar)
+    return out
+
+
+def parse_grammar_file_to_chomsky(path: str) -> List[Grammar]:
+    """
+    Parse all grammars from file and convert each to Chomsky normal form.
+    This is the main API used by callers.
+    """
+    return parse_grammar_file_to_chomsky_many(path)
+
+
+def parse_grammar_file_to_chomsky_by_index(path: str, grammar_index: int = 0) -> Grammar:
+    """
+    Convenience helper for selecting one grammar by index.
+    """
+    grammars = parse_grammar_file_to_chomsky_many(path)
+    if grammar_index < 0 or grammar_index >= len(grammars):
+        raise IndexError(
+            f"grammar_index {grammar_index} out of range for file '{path}' containing {len(grammars)} grammars"
+        )
+    return grammars[grammar_index]

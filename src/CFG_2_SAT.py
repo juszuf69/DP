@@ -1,36 +1,10 @@
 from pysat.formula import CNF
 from pysat.solvers import Solver
 from pathlib import Path
-from grammar_types import Terminal, NonTerminal, Rule, Grammar
+from typing import List, Tuple
+from grammar_types import NonTerminal, Grammar
 from CYK import cyk_accepts
 from parser import parse_grammar_file_to_chomsky
-
-def print_grammar(grammar:Grammar):
-    print("NonTerminals: " + str([nt.value for nt in grammar.NonTerminals]))
-    print("Terminals: " + str([t.value for t in grammar.Terminals]))
-    print("Starting Symbol: " + grammar.startingSymbol.value)
-    print("Rules:")
-    if getattr(grammar, "accepts_epsilon", False):
-        print("- " + grammar.startingSymbol.value + " -> ε")
-    for rule in grammar.rules:
-        if rule.type == 'SINGULAR':
-            print(f"- {rule.nonterminal.value} -> {rule.terminal.value}")
-        else:
-            print(f"- {rule.nonterminal.value} -> {rule.nonterminal2.value} {rule.nonterminal3.value}")
-
-def generate_variants(lists):
-    if not lists:
-        return [[]]
-    
-    result = []
-    first = lists[0]
-    rest = generate_variants(lists[1:])
-    
-    for item in first:
-        for combination in rest:
-            result.append([item] + combination)
-    
-    return result
 
 
 class CFG_2_SAT():
@@ -201,11 +175,22 @@ class CFG_2_SAT():
 
     def _dimacs_output_path(self) -> Path:
         if self.input_path is None:
-            return Path("cnf_dimacs.txt")
+            input_path = Path("src/text/grammar.txt")
+        else:
+            input_path = Path(self.input_path)
 
-        input_path = Path(self.input_path)
         suffix = input_path.suffix if input_path.suffix else ".txt"
-        return input_path.with_name(input_path.stem + "_dimacs" + suffix)
+        output_dir = input_path.parent / "dimacs_outputs"
+        source_total = getattr(self.grammar, "source_total", 1)
+        if source_total > 1:
+            output_dir = output_dir / input_path.stem
+
+        grammar_index = getattr(self.grammar, "source_index", None)
+        if grammar_index is None:
+            filename = input_path.stem + "_dimacs" + suffix
+        else:
+            filename = input_path.stem + f"_g{grammar_index + 1}_dimacs" + suffix
+        return output_dir / filename
 
     def save_dimacs(self):
         if not self.clauses:
@@ -219,6 +204,8 @@ class CFG_2_SAT():
         output_path = self._dimacs_output_path()
         grammar_name = Path(self.input_path).name if self.input_path else "unknown"
         safe_word = self.word.replace("\n", " ").strip()
+
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
         with open(output_path, "w", encoding="utf-8") as dimacs_file:
             dimacs_file.write(f"c grammar={grammar_name} word={safe_word}\n")
@@ -270,10 +257,54 @@ class CFG_2_SAT():
                             return
 
         print_derivation_helper(self.startingSymbol, 0, len(self.word_tokens) - 1, '- ')
-     
 
-G = parse_grammar_file_to_chomsky("src/text/g3.txt")
-print_grammar(G)
-solver = CFG_2_SAT(G, "x a a a b b c", solve=True)
-print("Generated DIMACS:", solver.dimacs_path)
-# CFG_2_SAT(G, "function id ( ) : Char begin id := konšt_int ; end")
+
+def parse_input_file_to_chomsky(file_name: str) -> List[Grammar]:
+    """
+    Step 1: Parse input file into CNF grammars.
+    """
+    return parse_grammar_file_to_chomsky(file_name)
+
+
+def generate_dimacs_from_grammars(
+    grammars: List[Grammar],
+    word: str,
+    solve: bool = False,
+) -> List[Tuple[str, Grammar]]:
+    """
+    Step 2: Generate DIMACS output for already parsed CNF grammars.
+    Returns tuples (dimacs_output_path, grammar).
+    """
+    outputs: List[Tuple[str, Grammar]] = []
+    for grammar in grammars:
+        solver = CFG_2_SAT(grammar, word, solve=solve)
+        if solver.dimacs_path:
+            outputs.append((solver.dimacs_path, grammar))
+    return outputs
+
+
+def build_dimacs_from_file(file_name: str, word: str, solve: bool = False) -> List[Tuple[str, Grammar]]:
+    """
+    Full pipeline: parse file to CNF grammars + generate DIMACS.
+    Returns tuples (dimacs_output_path, grammar).
+    """
+    grammars = parse_input_file_to_chomsky(file_name)
+    return generate_dimacs_from_grammars(grammars, word, solve=solve)
+
+
+def generate_dimacs_from_file(file_name: str, word: str, solve: bool = False) -> List[str]:
+    """
+    Backward-compatible wrapper returning only DIMACS output paths.
+    """
+    outputs = build_dimacs_from_file(file_name, word, solve=solve)
+    return [output_path for output_path, _ in outputs]
+
+
+if __name__ == "__main__":
+    outputs = build_dimacs_from_file(
+        "src/text/big_grammar.txt",
+        "function id ( ) : Char begin id := konšt_int ; end",
+        solve=True,
+    )
+    for path, _grammar in outputs:
+        print("Generated DIMACS:", path)
