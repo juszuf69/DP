@@ -1,0 +1,101 @@
+dimacs_file,solver,grammar,word,word_length,positive_or_negative,status,result,time_ms
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pysat:g3,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,118.143
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pysat:g4,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,122.689
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pysat:gc3,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,265.594
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pysat:gc4,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,153.955
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pysat:m22,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,133.337
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pysat:mc,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,208.534
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pysat:mgh,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,143.374
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,z3,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,34664.574
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pycosat,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,74.259
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w1.cnf,pycryptosat,1,mod function <= <> then if > not / procedure = ( var,13,negative,ok,UNSAT,78.941
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pysat:g3,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,298.125
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pysat:g4,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,268.736
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pysat:gc3,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,269.975
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pysat:gc4,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,223.473
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pysat:m22,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,175.608
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pysat:mc,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,210.484
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pysat:mgh,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,180.534
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,z3,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,43144.920
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pycosat,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,88.819
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w2.cnf,pycryptosat,1,id >= + + and [ mod Char array var begin * then =,14,negative,ok,UNSAT,111.754
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pysat:g3,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,366.298
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pysat:g4,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,255.275
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pysat:gc3,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,257.929
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pysat:gc4,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,278.134
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pysat:m22,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,249.465
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pysat:mc,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,309.504
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pysat:mgh,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,262.460
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,z3,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,62264.918
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pycosat,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,145.203
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w3.cnf,pycryptosat,1,if type end <> = Boolean >= mod konšt_real = function end = < >= :=,16,negative,ok,UNSAT,168.946
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pysat:g3,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,101.452
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pysat:g4,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,118.459
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pysat:gc3,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,134.633
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pysat:gc4,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,126.034
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pysat:m22,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,76.996
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pysat:mc,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,86.768
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pysat:mgh,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,90.875
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,z3,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,24049.640
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pycosat,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,76.047
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w4.cnf,pycryptosat,1,begin / do begin or of while Char not ; not,11,negative,ok,UNSAT,116.258
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pysat:g3,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,163.071
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pysat:g4,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,151.609
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pysat:gc3,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,197.503
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pysat:gc4,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,276.173
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pysat:m22,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,164.609
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pysat:mc,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,210.530
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pysat:mgh,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,150.487
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,z3,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,48721.866
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pycosat,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,100.565
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w5.cnf,pycryptosat,1,while not not ( := - ( = mod array procedure function >= ),14,negative,ok,UNSAT,115.105
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pysat:g3,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,330.669
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pysat:g4,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,475.218
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pysat:gc3,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,406.278
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pysat:gc4,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,427.663
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pysat:m22,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,510.657
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pysat:mc,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,357.507
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pysat:mgh,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,208.029
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,z3,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,55453.691
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pycosat,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,115.166
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w6.cnf,pycryptosat,1,if = konšt_char ) konšt_boolean not Char ] mod type or function <> not konšt_char,15,negative,ok,UNSAT,138.902
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pysat:g3,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,101.990
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pysat:g4,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,92.671
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pysat:gc3,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,121.636
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pysat:gc4,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,171.015
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pysat:m22,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,115.790
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pysat:mc,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,122.913
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pysat:mgh,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,131.249
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,z3,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,29020.052
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pycosat,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,58.185
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w7.cnf,pycryptosat,1,konšt_real ( ; mod while konšt_real konšt_int record - type Real then,12,negative,ok,UNSAT,66.153
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pysat:g3,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,125.018
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pysat:g4,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,99.623
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pysat:gc3,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,99.168
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pysat:gc4,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,83.786
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pysat:m22,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,67.012
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pysat:mc,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,87.851
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pysat:mgh,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,84.121
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,z3,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,19760.834
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pycosat,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,44.028
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w8.cnf,pycryptosat,1,end mod of id [ end do while := ; ;,11,negative,ok,UNSAT,51.790
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pysat:g3,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,390.097
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pysat:g4,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,388.379
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pysat:gc3,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,372.736
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pysat:gc4,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,412.933
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pysat:m22,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,324.011
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pysat:mc,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,392.350
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pysat:mgh,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,327.601
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,z3,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,88088.143
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pycosat,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,191.085
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w9.cnf,pycryptosat,1,konšt_int record end : + end ; <> konšt_boolean . procedure <> id and Real not . Integer,18,negative,ok,UNSAT,258.511
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pysat:g3,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,118.885
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pysat:g4,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,118.318
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pysat:gc3,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,116.946
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pysat:gc4,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,141.651
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pysat:m22,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,110.720
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pysat:mc,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,163.684
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pysat:mgh,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,133.120
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,z3,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,27429.836
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pycosat,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,55.010
+src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w10.cnf,pycryptosat,1,id = of konšt_int Real Real konšt_int begin konšt_char mod or <>,12,negative,ok,UNSAT,71.453
