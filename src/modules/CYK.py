@@ -1,4 +1,4 @@
-from grammar_types import Grammar
+from domain.grammar_types import Grammar
 
 
 def cyk_accepts(grammar: Grammar, word_tokens: list[str]) -> bool:

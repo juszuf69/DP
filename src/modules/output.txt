@@ -1,0 +1,193 @@
+Grammar:
+%token ;
+%token ak
+%token koniec
+%token p1
+%token p2
+%token pokiaľ
+%token potom
+%token príkaz1
+%token príkaz2
+%token rob
+%token štart
+
+%start program
+%%
+program : štart príkazy koniec
+príkaz : výraz
+ | ak podmienka potom príkaz
+ | pokiaľ podmienka rob príkaz
+príkazy : príkaz ; príkazy
+ | 
+výraz : príkaz1
+ | príkaz2
+podmienka : p1
+ | p2
+%%
+
+Number of generated words: 80
+Word lengths are generated from an interval [30, 50]
+
+Generated words:
+štart pokiaľ p2 rob pokiaľ p1 rob pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; príkaz1 ; ak p2 potom príkaz1 ; príkaz1 ; ak p1 potom príkaz1 ; koniec
+štart pokiaľ p2 rob príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz1 ; koniec
+štart príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob pokiaľ p2 rob pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; koniec
+štart ak p2 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; koniec
+štart pokiaľ p1 rob príkaz1 ; príkaz2 ; ak p2 potom príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; ak p2 potom ak p1 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; koniec
+štart príkaz1 ; ak p1 potom ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; ak p1 potom ak p1 potom príkaz1 ; koniec
+štart ak p1 potom príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob ak p2 potom ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; koniec
+štart ak p2 potom príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; ak p1 potom ak p2 potom ak p1 potom príkaz2 ; príkaz1 ; koniec
+štart pokiaľ p2 rob príkaz2 ; ak p2 potom príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; ak p1 potom ak p1 potom príkaz2 ; príkaz1 ; koniec
+štart ak p1 potom ak p1 potom pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; koniec
+štart príkaz1 ; pokiaľ p2 rob ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; pokiaľ p1 rob príkaz1 ; koniec
+štart príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p2 potom príkaz1 ; ak p1 potom príkaz1 ; ak p2 potom príkaz1 ; koniec
+štart príkaz2 ; príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom ak p2 potom príkaz1 ; ak p2 potom príkaz1 ; príkaz1 ; ak p2 potom príkaz1 ; koniec
+štart príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; koniec
+štart príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob ak p2 potom pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz2 ; ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz1 ; koniec
+štart príkaz1 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; ak p2 potom pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; koniec
+štart príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; ak p2 potom príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p1 potom príkaz2 ; príkaz2 ; koniec
+štart ak p1 potom ak p2 potom ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz1 ; príkaz1 ; ak p1 potom príkaz1 ; koniec
+štart ak p1 potom ak p2 potom ak p2 potom ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; pokiaľ p1 rob ak p1 potom príkaz1 ; koniec
+štart príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob ak p1 potom ak p2 potom pokiaľ p1 rob príkaz2 ; koniec
+štart pokiaľ p1 rob príkaz2 ; ak p1 potom príkaz1 ; ak p1 potom pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; koniec
+štart príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; ak p2 potom príkaz1 ; pokiaľ p2 rob ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; ak p2 potom príkaz1 ; príkaz1 ; koniec
+štart pokiaľ p2 rob pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz2 ; koniec
+štart ak p2 potom pokiaľ p1 rob príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz2 ; príkaz2 ; ak p1 potom ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom príkaz2 ; koniec
+štart príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; ak p2 potom príkaz1 ; ak p1 potom pokiaľ p2 rob ak p1 potom ak p1 potom príkaz1 ; koniec
+štart ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob ak p2 potom pokiaľ p1 rob pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; koniec
+štart príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom pokiaľ p1 rob ak p1 potom príkaz1 ; príkaz1 ; príkaz2 ; príkaz2 ; ak p1 potom ak p2 potom príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; koniec
+štart ak p2 potom príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz1 ; ak p2 potom pokiaľ p1 rob príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; ak p1 potom ak p2 potom príkaz1 ; koniec
+štart pokiaľ p2 rob ak p1 potom ak p1 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; koniec
+štart príkaz2 ; príkaz1 ; ak p1 potom ak p2 potom pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz2 ; ak p1 potom pokiaľ p2 rob ak p1 potom príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; koniec
+štart ak p1 potom ak p1 potom pokiaľ p1 rob príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; príkaz2 ; koniec
+štart príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; koniec
+štart príkaz1 ; pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; koniec
+štart príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom ak p1 potom príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; koniec
+štart príkaz2 ; príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz1 ; ak p1 potom ak p1 potom príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz2 ; koniec
+štart príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz1 ; koniec
+štart príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob ak p2 potom príkaz1 ; ak p2 potom ak p1 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec
+štart príkaz2 ; ak p1 potom príkaz2 ; pokiaľ p1 rob ak p2 potom ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob ak p1 potom príkaz1 ; ak p2 potom príkaz2 ; príkaz2 ; koniec
+štart príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; koniec
+štart príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom ak p1 potom príkaz2 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob ak p1 potom ak p2 potom ak p2 potom príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p1 potom ak p1 potom príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz2 ; koniec
+štart príkaz2 ; príkaz2 ; ak p2 potom príkaz2 ; ak p2 potom ak p1 potom ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec
+štart pokiaľ p2 rob pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob ak p1 potom ak p1 potom pokiaľ p2 rob ak p2 potom príkaz2 ; koniec
+štart pokiaľ p1 rob príkaz2 ; príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p2 rob ak p1 potom príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz1 ; koniec
+štart pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p1 rob príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz2 ; ak p1 potom ak p1 potom pokiaľ p1 rob príkaz1 ; koniec
+štart príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom pokiaľ p2 rob príkaz2 ; koniec
+štart pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; koniec
+štart príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob ak p1 potom ak p2 potom ak p1 potom ak p2 potom ak p1 potom príkaz2 ; pokiaľ p1 rob príkaz1 ; koniec
+štart ak p1 potom ak p2 potom príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; ak p1 potom ak p2 potom ak p2 potom príkaz1 ; ak p2 potom príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; koniec
+štart pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec
+štart pokiaľ p1 rob ak p2 potom ak p2 potom pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; ak p2 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; koniec
+štart ak p2 potom príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec
+štart príkaz1 ; príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom príkaz2 ; pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec
+štart príkaz2 ; ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; ak p1 potom pokiaľ p2 rob ak p2 potom príkaz2 ; príkaz1 ; príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p1 potom ak p1 potom príkaz2 ; pokiaľ p1 rob ak p2 potom príkaz2 ; pokiaľ p1 rob príkaz2 ; koniec
+štart pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom príkaz2 ; ak p1 potom ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz2 ; príkaz1 ; koniec
+štart príkaz1 ; ak p1 potom ak p2 potom príkaz2 ; príkaz2 ; ak p2 potom pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz1 ; koniec
+štart ak p1 potom ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz1 ; ak p1 potom ak p2 potom ak p2 potom príkaz1 ; koniec
+štart ak p2 potom ak p1 potom príkaz2 ; pokiaľ p1 rob ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz2 ; ak p2 potom príkaz2 ; ak p2 potom pokiaľ p1 rob príkaz1 ; koniec
+štart príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob ak p1 potom pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; koniec
+štart príkaz2 ; príkaz1 ; príkaz1 ; ak p2 potom príkaz1 ; ak p1 potom príkaz2 ; ak p2 potom pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz2 ; koniec
+štart pokiaľ p2 rob ak p1 potom pokiaľ p2 rob pokiaľ p2 rob ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; koniec
+štart ak p2 potom príkaz1 ; pokiaľ p1 rob ak p2 potom ak p1 potom pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz1 ; pokiaľ p2 rob pokiaľ p2 rob pokiaľ p1 rob pokiaľ p2 rob ak p1 potom príkaz1 ; príkaz2 ; koniec
+štart príkaz1 ; pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec
+štart príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob ak p1 potom ak p1 potom ak p1 potom príkaz1 ; koniec
+štart pokiaľ p2 rob príkaz2 ; príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz2 ; koniec
+štart pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; ak p1 potom príkaz2 ; ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; koniec
+štart ak p1 potom príkaz2 ; ak p1 potom príkaz2 ; ak p2 potom pokiaľ p2 rob ak p1 potom príkaz1 ; ak p2 potom ak p1 potom príkaz2 ; príkaz2 ; ak p2 potom príkaz1 ; príkaz2 ; koniec
+štart ak p1 potom príkaz2 ; príkaz1 ; príkaz1 ; ak p1 potom ak p1 potom pokiaľ p1 rob príkaz2 ; ak p2 potom ak p2 potom ak p2 potom pokiaľ p1 rob ak p1 potom pokiaľ p2 rob ak p1 potom pokiaľ p2 rob príkaz1 ; koniec
+štart príkaz1 ; príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; ak p2 potom ak p1 potom príkaz1 ; príkaz1 ; pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz2 ; ak p1 potom ak p2 potom príkaz2 ; koniec
+štart pokiaľ p2 rob pokiaľ p1 rob ak p1 potom ak p2 potom pokiaľ p1 rob pokiaľ p2 rob pokiaľ p1 rob ak p1 potom ak p1 potom príkaz2 ; pokiaľ p1 rob príkaz1 ; koniec
+štart príkaz2 ; ak p2 potom ak p1 potom pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz2 ; ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p2 potom ak p2 potom príkaz2 ; príkaz2 ; koniec
+štart príkaz2 ; príkaz1 ; ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; ak p2 potom príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz1 ; príkaz1 ; ak p2 potom ak p2 potom príkaz1 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz2 ; koniec
+štart ak p2 potom ak p2 potom príkaz1 ; pokiaľ p2 rob ak p1 potom ak p2 potom príkaz2 ; ak p2 potom príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; ak p1 potom ak p1 potom ak p2 potom pokiaľ p2 rob príkaz2 ; koniec
+štart príkaz2 ; ak p1 potom príkaz2 ; ak p2 potom pokiaľ p1 rob ak p2 potom ak p1 potom ak p2 potom príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec
+štart príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec
+
+Statistics:
+štart príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz2 ; koniec: 1
+štart ak p2 potom príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz1 ; príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom príkaz2 ; pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec: 1
+štart príkaz1 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; ak p2 potom pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; koniec: 1
+štart pokiaľ p2 rob príkaz2 ; príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; ak p2 potom ak p1 potom príkaz1 ; príkaz1 ; pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz2 ; ak p1 potom ak p2 potom príkaz2 ; koniec: 1
+štart ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob ak p2 potom pokiaľ p1 rob pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; koniec: 1
+štart príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; ak p2 potom príkaz1 ; pokiaľ p2 rob ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; ak p2 potom príkaz1 ; príkaz1 ; koniec: 1
+štart ak p1 potom príkaz2 ; ak p1 potom príkaz2 ; ak p2 potom pokiaľ p2 rob ak p1 potom príkaz1 ; ak p2 potom ak p1 potom príkaz2 ; príkaz2 ; ak p2 potom príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz1 ; príkaz1 ; ak p2 potom príkaz1 ; ak p1 potom príkaz2 ; ak p2 potom pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz2 ; koniec: 1
+štart ak p1 potom ak p2 potom ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz1 ; príkaz1 ; ak p1 potom príkaz1 ; koniec: 1
+štart pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; koniec: 1
+štart pokiaľ p1 rob príkaz2 ; príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; koniec: 1
+štart príkaz2 ; pokiaľ p1 rob príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz2 ; ak p1 potom ak p1 potom pokiaľ p1 rob príkaz1 ; koniec: 1
+štart ak p2 potom ak p2 potom príkaz1 ; pokiaľ p2 rob ak p1 potom ak p2 potom príkaz2 ; ak p2 potom príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; ak p1 potom ak p1 potom ak p2 potom pokiaľ p2 rob príkaz2 ; koniec: 1
+štart ak p2 potom príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; ak p1 potom ak p2 potom ak p1 potom príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob ak p1 potom ak p2 potom ak p2 potom príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p1 potom ak p1 potom príkaz2 ; koniec: 1
+štart ak p1 potom ak p2 potom ak p2 potom ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; pokiaľ p1 rob ak p1 potom príkaz1 ; koniec: 1
+štart ak p1 potom príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob ak p2 potom ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz2 ; príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz1 ; ak p1 potom ak p1 potom príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; koniec: 1
+štart pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz2 ; ak p1 potom príkaz2 ; ak p2 potom pokiaľ p1 rob ak p2 potom ak p1 potom ak p2 potom príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec: 1
+štart ak p2 potom ak p1 potom príkaz2 ; pokiaľ p1 rob ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz2 ; ak p2 potom príkaz2 ; ak p2 potom pokiaľ p1 rob príkaz1 ; koniec: 1
+štart príkaz1 ; ak p1 potom ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; ak p1 potom ak p1 potom príkaz1 ; koniec: 1
+štart pokiaľ p2 rob príkaz2 ; ak p2 potom príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; ak p1 potom ak p1 potom príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz2 ; ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; ak p1 potom pokiaľ p2 rob ak p2 potom príkaz2 ; príkaz1 ; príkaz2 ; koniec: 1
+štart ak p1 potom príkaz2 ; príkaz1 ; príkaz1 ; ak p1 potom ak p1 potom pokiaľ p1 rob príkaz2 ; ak p2 potom ak p2 potom ak p2 potom pokiaľ p1 rob ak p1 potom pokiaľ p2 rob ak p1 potom pokiaľ p2 rob príkaz1 ; koniec: 1
+štart príkaz2 ; príkaz1 ; ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; ak p2 potom príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; koniec: 1
+štart príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob ak p2 potom pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz2 ; ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; koniec: 1
+štart pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom príkaz2 ; ak p1 potom ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz2 ; pokiaľ p2 rob ak p1 potom príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz1 ; koniec: 1
+štart pokiaľ p2 rob ak p1 potom ak p1 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; pokiaľ p2 rob pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob ak p1 potom pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz1 ; ak p1 potom ak p2 potom pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom príkaz2 ; ak p1 potom pokiaľ p2 rob ak p1 potom príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; koniec: 1
+štart pokiaľ p2 rob pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob ak p1 potom ak p1 potom pokiaľ p2 rob ak p2 potom príkaz2 ; koniec: 1
+štart príkaz1 ; ak p1 potom ak p2 potom príkaz2 ; príkaz2 ; ak p2 potom pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz1 ; koniec: 1
+štart príkaz2 ; ak p2 potom ak p1 potom pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz2 ; ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p2 potom ak p2 potom príkaz2 ; príkaz2 ; koniec: 1
+štart príkaz2 ; ak p1 potom príkaz2 ; pokiaľ p1 rob ak p2 potom ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob ak p1 potom príkaz1 ; ak p2 potom príkaz2 ; príkaz2 ; koniec: 1
+štart ak p1 potom ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz1 ; ak p1 potom ak p2 potom ak p2 potom príkaz1 ; koniec: 1
+štart pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; ak p1 potom príkaz2 ; ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob ak p1 potom ak p1 potom ak p1 potom príkaz1 ; koniec: 1
+štart pokiaľ p2 rob pokiaľ p1 rob pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; príkaz1 ; ak p2 potom príkaz1 ; príkaz1 ; ak p1 potom príkaz1 ; koniec: 1
+štart príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p1 potom pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz1 ; koniec: 1
+štart ak p2 potom pokiaľ p1 rob príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz2 ; príkaz2 ; ak p1 potom ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom príkaz2 ; koniec: 1
+štart ak p1 potom ak p1 potom pokiaľ p1 rob príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom ak p1 potom príkaz1 ; príkaz1 ; príkaz1 ; ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p2 potom príkaz1 ; ak p1 potom príkaz1 ; ak p2 potom príkaz1 ; koniec: 1
+štart príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz1 ; ak p1 potom príkaz1 ; príkaz1 ; ak p2 potom ak p2 potom príkaz1 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz2 ; koniec: 1
+štart pokiaľ p1 rob príkaz2 ; ak p1 potom príkaz1 ; ak p1 potom pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz1 ; ak p1 potom ak p2 potom príkaz1 ; príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; ak p2 potom príkaz1 ; ak p1 potom pokiaľ p2 rob ak p1 potom ak p1 potom príkaz1 ; koniec: 1
+štart príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob ak p1 potom príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob ak p1 potom ak p2 potom pokiaľ p1 rob príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom ak p2 potom príkaz1 ; ak p2 potom príkaz1 ; príkaz1 ; ak p2 potom príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p2 rob ak p1 potom pokiaľ p2 rob príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; pokiaľ p1 rob príkaz1 ; koniec: 1
+štart príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom pokiaľ p1 rob ak p1 potom príkaz1 ; príkaz1 ; príkaz2 ; príkaz2 ; ak p1 potom ak p2 potom príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob pokiaľ p2 rob pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; koniec: 1
+štart ak p2 potom príkaz1 ; pokiaľ p1 rob ak p2 potom ak p1 potom pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz1 ; pokiaľ p2 rob pokiaľ p2 rob pokiaľ p1 rob pokiaľ p2 rob ak p1 potom príkaz1 ; príkaz2 ; koniec: 1
+štart pokiaľ p2 rob pokiaľ p1 rob ak p1 potom ak p2 potom pokiaľ p1 rob pokiaľ p2 rob pokiaľ p1 rob ak p1 potom ak p1 potom príkaz2 ; pokiaľ p1 rob príkaz1 ; koniec: 1
+štart ak p2 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; koniec: 1
+štart pokiaľ p2 rob príkaz2 ; príkaz2 ; pokiaľ p2 rob pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz1 ; koniec: 1
+štart ak p1 potom ak p1 potom pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; koniec: 1
+štart pokiaľ p2 rob pokiaľ p2 rob príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz2 ; koniec: 1
+štart pokiaľ p2 rob ak p1 potom pokiaľ p2 rob pokiaľ p2 rob ak p1 potom pokiaľ p1 rob príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; koniec: 1
+štart príkaz2 ; príkaz2 ; ak p2 potom príkaz2 ; ak p2 potom ak p1 potom ak p2 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec: 1
+štart ak p1 potom ak p2 potom príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; ak p1 potom ak p2 potom ak p2 potom príkaz1 ; ak p2 potom príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; pokiaľ p1 rob pokiaľ p1 rob ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob ak p2 potom príkaz1 ; ak p2 potom ak p1 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; ak p2 potom príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; pokiaľ p2 rob príkaz2 ; ak p1 potom príkaz2 ; príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom pokiaľ p2 rob príkaz2 ; koniec: 1
+štart pokiaľ p1 rob ak p2 potom ak p2 potom pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; ak p2 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; koniec: 1
+štart príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz1 ; príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; koniec: 1
+štart príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob ak p1 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p1 potom ak p1 potom príkaz2 ; pokiaľ p1 rob ak p2 potom príkaz2 ; pokiaľ p1 rob príkaz2 ; koniec: 1
+štart pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec: 1
+štart ak p2 potom príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob ak p2 potom príkaz1 ; ak p2 potom pokiaľ p1 rob príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; ak p1 potom ak p2 potom príkaz1 ; koniec: 1
+štart príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob ak p1 potom ak p2 potom ak p1 potom ak p2 potom ak p1 potom príkaz2 ; pokiaľ p1 rob príkaz1 ; koniec: 1
+štart pokiaľ p1 rob príkaz1 ; príkaz2 ; ak p2 potom príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; ak p1 potom príkaz2 ; príkaz2 ; ak p2 potom ak p1 potom príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; koniec: 1
+štart príkaz1 ; ak p2 potom pokiaľ p2 rob príkaz2 ; pokiaľ p2 rob ak p2 potom pokiaľ p1 rob príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; ak p2 potom ak p1 potom príkaz2 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; koniec: 1
+štart príkaz1 ; pokiaľ p1 rob príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; koniec: 1

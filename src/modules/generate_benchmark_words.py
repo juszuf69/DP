@@ -4,15 +4,16 @@ import random
 from pathlib import Path
 from typing import List
 
-from CYK import cyk_accepts
-from grammar_types import Grammar
-from parser import parse_grammar_file_to_chomsky
+from modules.CYK import cyk_accepts
+from domain.grammar_types import Grammar
+from modules.parser import parse_grammar_file_to_chomsky
 
 
 def generate_words_from_grammar(
     grammar: Grammar,
     min_length: int,
     count: int,
+    max_length: int | None = None,
     negative: bool = False,
     seed: int | None = None,
     max_tries: int = 20000,
@@ -27,6 +28,8 @@ def generate_words_from_grammar(
         raise ValueError("min_length must be non-negative.")
     if count < 0:
         raise ValueError("count must be non-negative.")
+    if max_length is not None and max_length < min_length:
+        raise ValueError("max_length must be greater than or equal to min_length.")
 
     terminals = [terminal.value for terminal in grammar.Terminals]
     if not terminals:
@@ -48,11 +51,12 @@ def generate_words_from_grammar(
             if len(words) >= count:
                 return words
 
+    upper_bound = min_length + 8 if max_length is None else max_length
+
     while len(words) < count and tries < max_tries:
         tries += 1
 
-        # Keep lengths bounded for practical random search while respecting min_length.
-        length = rng.randint(min_length, min_length + 8)
+        length = rng.randint(min_length, upper_bound)
         tokens = [] if length == 0 else [rng.choice(terminals) for _ in range(length)]
         word = " ".join(tokens)
 
@@ -102,6 +106,7 @@ def generate_benchmark_words(
         generated = generate_words_from_grammar(
             grammar=grammar,
             min_length=min_length,
+            max_length=min_length + 8,
             count=count,
             negative=negative,
             seed=seed,

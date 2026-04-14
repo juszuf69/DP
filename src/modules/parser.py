@@ -1,9 +1,10 @@
 # parser.py
 from __future__ import annotations
 import re
+from pathlib import Path
 from typing import Dict, List, Set, Tuple, Optional
 
-from grammar_types import Terminal, NonTerminal, Rule, Grammar
+from domain.grammar_types import Terminal, NonTerminal, Rule, Grammar
 
 EPS_ALIASES = {"ε"}
 
@@ -13,12 +14,160 @@ EPS_ALIASES = {"ε"}
 
 _SECTION_NAMES = {"terminal", "terminals", "nonterminal", "nonterminals", "rules", "start"}
 
+
+def _project_root() -> Path:
+    return Path(__file__).resolve().parents[2]
+
+
+def _resolve_input_path(path: str) -> Path:
+    candidate = Path(path)
+    if candidate.exists():
+        return candidate
+
+    fallback = _project_root() / "src" / "text" / "input" / path
+    if fallback.exists():
+        return fallback
+
+    raise FileNotFoundError(f"Input grammar file not found: {path}")
+
+
+def _export_output_paths(input_path: Path) -> tuple[Path, Path]:
+    output_root = _project_root() / "src" / "text" / "output"
+    java_dir = output_root / "JavaGrammar"
+    chomsky_dir = output_root / "Chomsky"
+
+    filename = input_path.stem + ".txt"
+    return java_dir / filename, chomsky_dir / filename
+
+
+def _rhs_to_text(rhs: List[str]) -> str:
+    if len(rhs) == 1 and rhs[0] == "ε":
+        return "ε"
+    return " ".join(rhs)
+
+
+def _serialize_raw_cfg(
+    terminals: Set[str],
+    nonterminals: Set[str],
+    start: str,
+    productions: Dict[str, List[List[str]]],
+) -> str:
+    lines: List[str] = []
+    lines.append("terminal:")
+    lines.append(", ".join(sorted(terminals)))
+    lines.append("")
+    lines.append("nonterminal:")
+    lines.append(", ".join(sorted(nonterminals)))
+    lines.append("")
+    lines.append("start:")
+    lines.append(start)
+    lines.append("")
+    lines.append("rules:")
+
+    for lhs in sorted(productions.keys()):
+        for rhs in productions[lhs]:
+            lines.append(f"{lhs} - {_rhs_to_text(rhs)}")
+
+    return "\n".join(lines).strip() + "\n"
+
+
+def _serialize_java_cfg(
+    terminals: Set[str],
+    start: str,
+    productions: Dict[str, List[List[str]]],
+) -> str:
+    lines: List[str] = []
+    for terminal in sorted(terminals):
+        lines.append(f"%token {terminal}")
+
+    lines.append("")
+    lines.append(f"%start {start}")
+    lines.append("%%")
+
+    ordered_lhs = [start] if start in productions else []
+    ordered_lhs.extend([lhs for lhs in productions.keys() if lhs != start])
+
+    for lhs in ordered_lhs:
+        rhs_list = productions[lhs]
+        if not rhs_list:
+            continue
+
+        for idx, rhs in enumerate(rhs_list):
+            rhs_text = "" if (len(rhs) == 1 and rhs[0] == "ε") else " ".join(rhs)
+            prefix = f"{lhs}: " if idx == 0 else " | "
+            lines.append(prefix + rhs_text)
+
+    lines.append("%%")
+    return "\n".join(lines).strip() + "\n"
+
+
+def _serialize_cnf_cfg(
+    terminals: Set[str],
+    nonterminals: Set[str],
+    start: str,
+    cnf_productions: Dict[str, Set[Tuple[str, ...]]],
+) -> str:
+    lines: List[str] = []
+    lines.append("terminal:")
+    lines.append(", ".join(sorted(terminals)))
+    lines.append("")
+    lines.append("nonterminal:")
+    lines.append(", ".join(sorted(nonterminals)))
+    lines.append("")
+    lines.append("start:")
+    lines.append(start)
+    lines.append("")
+    lines.append("rules:")
+
+    for lhs in sorted(cnf_productions.keys()):
+        for rhs in sorted(cnf_productions[lhs]):
+            if len(rhs) == 0:
+                rhs_text = "ε"
+            else:
+                rhs_text = " ".join(rhs)
+            lines.append(f"{lhs} - {rhs_text}")
+
+    return "\n".join(lines).strip() + "\n"
+
+
+def _write_export_files(
+    input_path: Path,
+    raw_grammars: List[Tuple[Set[str], Set[str], str, Dict[str, List[List[str]]]]],
+    cnf_blocks: List[Tuple[Set[str], Set[str], str, Dict[str, Set[Tuple[str, ...]]]]],
+) -> None:
+    java_output_path, chomsky_output_path = _export_output_paths(input_path)
+    java_output_path.parent.mkdir(parents=True, exist_ok=True)
+    chomsky_output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    java_blocks: List[str] = []
+    for terminals, _nonterminals, start, productions in raw_grammars:
+        java_blocks.append(_serialize_java_cfg(terminals, start, productions).rstrip())
+
+    chomsky_blocks: List[str] = []
+    for terminals, nonterminals, start, cnf_productions in cnf_blocks:
+        chomsky_blocks.append(_serialize_cnf_cfg(terminals, nonterminals, start, cnf_productions).rstrip())
+
+    java_output_path.write_text("\n\n---\n\n".join(java_blocks).strip() + "\n", encoding="utf-8")
+    chomsky_output_path.write_text("\n\n---\n\n".join(chomsky_blocks).strip() + "\n", encoding="utf-8")
+
 def _strip_comment(line: str) -> str:
     return line.split("#", 1)[0].strip()
 
 def _split_csv(line: str) -> List[str]:
-    # Support both comma-separated and whitespace-separated declarations.
-    return [x.strip() for x in re.split(r"[\s,]+", line) if x.strip()]
+    # Preserve standalone comma as a valid terminal while still supporting comma-separated lists.
+    out: List[str] = []
+    for chunk in line.split():
+        piece = chunk.strip()
+        if not piece:
+            continue
+        if piece == ",":
+            out.append(",")
+            continue
+        if "," in piece:
+            out.extend([x for x in piece.split(",") if x])
+            continue
+        out.append(piece)
+    return out
 
 def _split_grammar_blocks(text: str) -> List[str]:
     """
@@ -177,7 +326,8 @@ def parse_cfg_file_raw_many(path: str) -> List[Tuple[Set[str], Set[str], str, Di
     Parse one file containing one or more CFGs separated by lines containing '---'.
     Returns one raw CFG tuple per grammar block.
     """
-    with open(path, "r", encoding="utf-8") as f:
+    input_path = _resolve_input_path(path)
+    with open(input_path, "r", encoding="utf-8") as f:
         text = f.read()
 
     blocks = _split_grammar_blocks(text)
@@ -485,16 +635,22 @@ def parse_grammar_file_to_chomsky_many(path: str) -> List[Grammar]:
     Parse all grammars from file and convert each to Chomsky normal form.
     """
     out: List[Grammar] = []
-    raw_grammars = parse_cfg_file_raw_many(path)
+    input_path = _resolve_input_path(path)
+    raw_grammars = parse_cfg_file_raw_many(str(input_path))
+    cnf_blocks: List[Tuple[Set[str], Set[str], str, Dict[str, Set[Tuple[str, ...]]]]] = []
+
     source_total = len(raw_grammars)
     for idx, (T, N, start, P) in enumerate(raw_grammars):
         T2, N2, start2, cnfP = cfg_to_cnf(T, N, start, P)
+        cnf_blocks.append((T2, N2, start2, cnfP))
         grammar = build_grammar_objects(T2, N2, start2, cnfP)
-        grammar.source_path = path
+        grammar.source_path = str(input_path)
         grammar.source_total = source_total
         if source_total > 1:
             grammar.source_index = idx
         out.append(grammar)
+
+    _write_export_files(input_path, raw_grammars, cnf_blocks)
     return out
 
 

@@ -2,9 +2,9 @@ from pysat.formula import CNF
 from pysat.solvers import Solver
 from pathlib import Path
 from typing import List, Tuple
-from grammar_types import NonTerminal, Grammar
-from CYK import cyk_accepts
-from parser import parse_grammar_file_to_chomsky
+from domain.grammar_types import NonTerminal, Grammar
+from modules.CYK import cyk_accepts
+from modules.parser import parse_grammar_file_to_chomsky
 
 
 class CFG_2_SAT():
@@ -19,6 +19,20 @@ class CFG_2_SAT():
 
         self.word = word.strip()
         self.word_tokens = [] if self.word == "" else self.word.split()
+        self.stats = {
+            "nonterminal_count": len(self.NonTerminals),
+            "rule_count": len(self.rules),
+            "singular_rule_count": sum(1 for r in self.rules if r.type == "SINGULAR"),
+            "double_rule_count": sum(1 for r in self.rules if r.type == "DOUBLE"),
+            "word_length": len(self.word_tokens),
+            "base_bool_variable_count": 0,
+            "tseitin_variable_count": 0,
+            "bool_variable_count": 0,
+            "fixed_value_clause_count": 0,
+            "tseitin_clause_count": 0,
+            "window_clause_count": 0,
+            "clause_count": 0,
+        }
 
         if len(self.word_tokens) == 0:
             if getattr(grammar, "accepts_epsilon", False):
@@ -29,7 +43,9 @@ class CFG_2_SAT():
             return
 
         self.bools = self.init_bools()
+        self.stats["base_bool_variable_count"] = len(self.bools)
         self.clauses = self.init_clauses()
+        self.stats["clause_count"] = len(self.clauses)
         self.dimacs_path = self.save_dimacs()
         if solve:
             self.solve_pysat()
@@ -95,14 +111,20 @@ class CFG_2_SAT():
     
     def init_clauses(self):
         clauses = []
+        fixed_value_clause_count = 0
+        tseitin_clause_count = 0
+        window_clause_count = 0
+        tseitin_variable_count = 0
 
         # fixed truth values
         for key in self.bools:
             val, var = self.bools[key]
             if val is True:
                 clauses.append([var])
+                fixed_value_clause_count += 1
             elif val is False:
                 clauses.append([-var])
+                fixed_value_clause_count += 1
 
         n = len(self.word_tokens)
 
@@ -137,6 +159,7 @@ class CFG_2_SAT():
                             z = next_var
                             next_var += 1
                             option_vars.append(z)
+                            tseitin_variable_count += 1
 
                             # z <-> (Bik & Ckj)
                             # z -> Bik and z -> Ckj
@@ -144,6 +167,7 @@ class CFG_2_SAT():
                             clauses.append([-z, Ckj])
                             # (Bik & Ckj) -> z
                             clauses.append([-Bik, -Ckj, z])
+                            tseitin_clause_count += 3
 
                     # Aij -> OR(option_vars)
                     # (-Aij v z1 v z2 v ...)
@@ -152,8 +176,18 @@ class CFG_2_SAT():
                     else:
                         # no way to derive length>=2 substring => force false
                         clauses.append([-Aij])
+                    window_clause_count += 1
+
+        self.stats["fixed_value_clause_count"] = fixed_value_clause_count
+        self.stats["tseitin_clause_count"] = tseitin_clause_count
+        self.stats["window_clause_count"] = window_clause_count
+        self.stats["tseitin_variable_count"] = tseitin_variable_count
+        self.stats["bool_variable_count"] = self.stats["base_bool_variable_count"] + tseitin_variable_count
 
         return clauses
+
+    def get_stats(self) -> dict[str, int]:
+        return dict(self.stats)
     
     def solve_pysat(self):
         cnf = CNF(from_clauses=self.clauses)
@@ -175,12 +209,12 @@ class CFG_2_SAT():
 
     def _dimacs_output_path(self) -> Path:
         if self.input_path is None:
-            input_path = Path("src/text/grammar.txt")
+            input_path = Path("src/text/input/grammar.txt")
         else:
             input_path = Path(self.input_path)
 
         suffix = input_path.suffix if input_path.suffix else ".txt"
-        output_dir = input_path.parent / "dimacs_outputs"
+        output_dir = input_path.parent.parent / "dimacs_outputs"
         source_total = getattr(self.grammar, "source_total", 1)
         if source_total > 1:
             output_dir = output_dir / input_path.stem
@@ -209,6 +243,14 @@ class CFG_2_SAT():
 
         with open(output_path, "w", encoding="utf-8") as dimacs_file:
             dimacs_file.write(f"c grammar={grammar_name} word={safe_word}\n")
+            dimacs_file.write(
+                "c stats "
+                f"nonterminals={self.stats['nonterminal_count']} "
+                f"rules={self.stats['rule_count']} "
+                f"word_length={self.stats['word_length']} "
+                f"bool_variables={self.stats['bool_variable_count']} "
+                f"clauses={self.stats['clause_count']}\n"
+            )
             dimacs_file.write(f"p cnf {num_variables} {len(self.clauses)}\n")
             for clause in self.clauses:
                 dimacs_file.write(" ".join(str(literal) for literal in clause) + " 0\n")
@@ -302,7 +344,7 @@ def generate_dimacs_from_file(file_name: str, word: str, solve: bool = False) ->
 
 if __name__ == "__main__":
     outputs = build_dimacs_from_file(
-        "src/text/big_grammar.txt",
+        "src/text/input/big_grammar.txt",
         "function id ( ) : Char begin id := konšt_int ; end",
         solve=True,
     )
