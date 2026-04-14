@@ -1,0 +1,485 @@
+terminal:
+a, b
+
+nonterminal:
+A, B, S, S0, T_a, T_b
+
+start:
+S0
+
+rules:
+A - T_a B
+A - T_b A
+B - T_a S
+B - T_b B
+B - a
+S - T_a A
+S - T_b S
+S - b
+S0 - ε
+S0 - T_a A
+S0 - T_b S
+S0 - b
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+A, B, S0, S0_BIN_0, S0_BIN_1, T_a, T_b
+
+start:
+S0
+
+rules:
+A - A B
+A - T_a A
+A - T_a T_b
+B - B A
+B - b
+S0 - A S0_BIN_1
+S0 - B S0_BIN_0
+S0_BIN_0 - A B
+S0_BIN_1 - B A
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+S, S0, S0_BIN_0, S_BIN_0, T_a, T_b
+
+start:
+S0
+
+rules:
+S - T_a S_BIN_0
+S - T_a T_b
+S0 - ε
+S0 - T_a S0_BIN_0
+S0 - T_a T_b
+S0_BIN_0 - S T_b
+S_BIN_0 - S T_b
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+A, A_BIN_0, S0, S0_BIN_0, T_a, T_b
+
+start:
+S0
+
+rules:
+A - T_a A_BIN_0
+A - T_a T_b
+A_BIN_0 - A T_b
+S0 - ε
+S0 - A A
+S0 - T_a S0_BIN_0
+S0 - T_a T_b
+S0_BIN_0 - A T_b
+T_a - a
+T_b - b
+
+---
+
+terminal:
+mama, noviny, obed, on, ona, ono, otec, platí, varí, číta, školné
+
+nonterminal:
+S0, podmet, predmet, prísudok, sloveso
+
+start:
+S0
+
+rules:
+S0 - podmet prísudok
+podmet - mama
+podmet - noviny
+podmet - obed
+podmet - on
+podmet - ona
+podmet - ono
+podmet - otec
+podmet - školné
+predmet - mama
+predmet - noviny
+predmet - obed
+predmet - otec
+predmet - školné
+prísudok - platí
+prísudok - sloveso predmet
+prísudok - varí
+prísudok - číta
+sloveso - platí
+sloveso - varí
+sloveso - číta
+
+---
+
+terminal:
+;, [, ], char, float, identifikator, int, konst_int
+
+nonterminal:
+S0, S0_BIN_0, T_;, T_[, T_], T_identifikator, T_konst_int, deklaracia, deklaracia_BIN_0, deklaracie, deklaracie_BIN_0, deklarator, pole, pole_BIN_0, typ
+
+start:
+S0
+
+rules:
+S0 - ε
+S0 - deklaracia deklaracie
+S0 - typ S0_BIN_0
+S0_BIN_0 - deklarator T_;
+T_; - ;
+T_[ - [
+T_] - ]
+T_identifikator - identifikator
+T_konst_int - konst_int
+deklaracia - typ deklaracia_BIN_0
+deklaracia_BIN_0 - deklarator T_;
+deklaracie - deklaracia deklaracie
+deklaracie - typ deklaracie_BIN_0
+deklaracie_BIN_0 - deklarator T_;
+deklarator - T_identifikator pole
+deklarator - identifikator
+pole - T_[ pole_BIN_0
+pole_BIN_0 - T_konst_int T_]
+typ - char
+typ - float
+typ - int
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+A, S0, T_a, T_b
+
+start:
+S0
+
+rules:
+A - T_a A
+A - T_b A
+A - b
+S0 - T_a A
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+A, A_BIN_0, B, B_BIN_0, S0, S0_BIN_0, S0_BIN_1, T_a, T_b
+
+start:
+S0
+
+rules:
+A - T_a A_BIN_0
+A - T_a T_b
+A_BIN_0 - T_b A
+B - T_b B_BIN_0
+B - T_b T_a
+B_BIN_0 - T_a B
+S0 - ε
+S0 - T_a S0_BIN_0
+S0 - T_a T_b
+S0 - T_b S0_BIN_1
+S0 - T_b T_a
+S0_BIN_0 - T_b A
+S0_BIN_1 - T_a B
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b, c, d
+
+nonterminal:
+A, A_BIN_0, S0, S0_BIN_0, T_b, T_c
+
+start:
+S0
+
+rules:
+A - T_b A_BIN_0
+A - d
+A_BIN_0 - T_c A
+S0 - T_b S0_BIN_0
+S0 - a
+S0 - d
+S0_BIN_0 - T_c A
+T_b - b
+T_c - c
+
+---
+
+terminal:
+0, 1, 2, 3
+
+nonterminal:
+A, S, S0, T_0, T_1, T_2, T_3
+
+start:
+S0
+
+rules:
+A - 2
+A - 3
+A - T_2 A
+A - T_3 A
+S - 2
+S - 3
+S - T_0 S
+S - T_1 S
+S - T_2 A
+S - T_3 A
+S0 - 2
+S0 - 3
+S0 - T_0 S
+S0 - T_1 S
+S0 - T_2 A
+S0 - T_3 A
+T_0 - 0
+T_1 - 1
+T_2 - 2
+T_3 - 3
+
+---
+
+terminal:
+b, d, e, g, h, i, l, n, t, w
+
+nonterminal:
+S0, S0_BIN_0, S0_BIN_1, S0_BIN_2, S0_BIN_3, S0_BIN_4, S0_BIN_5, S0_BIN_6, S0_BIN_7, S0_BIN_8, T_b, T_d, T_e, T_g, T_h, T_i, T_l, T_n, T_t, T_w
+
+start:
+S0
+
+rules:
+S0 - T_b S0_BIN_3
+S0 - T_e S0_BIN_6
+S0 - T_w S0_BIN_0
+S0 - T_w S0_BIN_7
+S0_BIN_0 - T_h S0_BIN_1
+S0_BIN_1 - T_i S0_BIN_2
+S0_BIN_2 - T_l T_e
+S0_BIN_3 - T_e S0_BIN_4
+S0_BIN_4 - T_g S0_BIN_5
+S0_BIN_5 - T_i T_n
+S0_BIN_6 - T_n T_d
+S0_BIN_7 - T_i S0_BIN_8
+S0_BIN_8 - T_t T_h
+T_b - b
+T_d - d
+T_e - e
+T_g - g
+T_h - h
+T_i - i
+T_l - l
+T_n - n
+T_t - t
+T_w - w
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+S, S0, T_a, T_b
+
+start:
+S0
+
+rules:
+S - T_a S
+S - T_b S
+S - a
+S - b
+S0 - ε
+S0 - T_a S
+S0 - T_b S
+S0 - a
+S0 - b
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+A, B, S, S0, T_a, T_b
+
+start:
+S0
+
+rules:
+A - T_a B
+A - T_b S
+A - b
+B - T_a S
+B - T_b A
+B - a
+S - T_a A
+S - T_b B
+S0 - ε
+S0 - T_a A
+S0 - T_b B
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+A, B, C, D, S0, T_a, T_b
+
+start:
+S0
+
+rules:
+A - T_a A
+A - T_b B
+A - a
+A - b
+B - T_b B
+B - b
+C - T_a D
+C - T_b C
+C - a
+C - b
+D - T_a D
+D - a
+S0 - ε
+S0 - T_a A
+S0 - T_b C
+S0 - a
+S0 - b
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b
+
+nonterminal:
+A, S, S0, T_a, T_b
+
+start:
+S0
+
+rules:
+A - T_b A
+A - b
+S - T_a A
+S - T_a S
+S - T_b A
+S - a
+S - b
+S0 - ε
+S0 - T_a A
+S0 - T_a S
+S0 - T_b A
+S0 - a
+S0 - b
+T_a - a
+T_b - b
+
+---
+
+terminal:
+a, b, c
+
+nonterminal:
+B, B_BIN_0, C, S, S0, S0_BIN_0, S_BIN_0, T_a, T_b
+
+start:
+S0
+
+rules:
+B - B B
+B - S B
+B - T_a B_BIN_0
+B - T_a T_b
+B - T_b B
+B - b
+B_BIN_0 - B T_b
+C - C C
+C - b
+C - c
+S - B B
+S - S B
+S - T_a S_BIN_0
+S - T_a T_b
+S - T_b B
+S - b
+S0 - ε
+S0 - B B
+S0 - S B
+S0 - T_a S0_BIN_0
+S0 - T_a T_b
+S0 - T_b B
+S0 - b
+S0_BIN_0 - B T_b
+S_BIN_0 - B T_b
+T_a - a
+T_b - b
+
+---
+
+terminal:
+;, ak, koniec, p1, p2, pokiaľ, potom, príkaz1, príkaz2, rob, štart
+
+nonterminal:
+S0, S0_BIN_0, T_;, T_ak, T_koniec, T_pokiaľ, T_potom, T_rob, T_štart, podmienka, príkaz, príkaz_BIN_0, príkaz_BIN_1, príkaz_BIN_2, príkaz_BIN_3, príkazy, príkazy_BIN_0
+
+start:
+S0
+
+rules:
+S0 - T_štart S0_BIN_0
+S0 - T_štart T_koniec
+S0_BIN_0 - príkazy T_koniec
+T_; - ;
+T_ak - ak
+T_koniec - koniec
+T_pokiaľ - pokiaľ
+T_potom - potom
+T_rob - rob
+T_štart - štart
+podmienka - p1
+podmienka - p2
+príkaz - T_ak príkaz_BIN_0
+príkaz - T_pokiaľ príkaz_BIN_2
+príkaz - príkaz1
+príkaz - príkaz2
+príkaz_BIN_0 - podmienka príkaz_BIN_1
+príkaz_BIN_1 - T_potom príkaz
+príkaz_BIN_2 - podmienka príkaz_BIN_3
+príkaz_BIN_3 - T_rob príkaz
+príkazy - príkaz T_;
+príkazy - príkaz príkazy_BIN_0
+príkazy_BIN_0 - T_; príkazy

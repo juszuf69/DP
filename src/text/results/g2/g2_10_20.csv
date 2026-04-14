@@ -1,0 +1,161 @@
+dimacs_file,solver,grammar,word,word_length,positive_or_negative,nonterminal_count,rule_count,singular_rule_count,double_rule_count,bool_variable_count,base_bool_variable_count,tseitin_variable_count,clause_count,fixed_value_clause_count,tseitin_clause_count,window_clause_count,status,result,time_ms
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pysat:g3,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.600
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pysat:g4,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.689
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pysat:gc3,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.656
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pysat:gc4,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.160
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pysat:m22,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.676
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pysat:mc,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.647
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pysat:mgh,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.593
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w1.cnf,pycryptosat,1,a a b c c b b c b c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.513
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pysat:g3,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,8.457
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pysat:g4,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,15.008
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pysat:gc3,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,10.461
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pysat:gc4,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,9.811
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pysat:m22,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,13.973
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pysat:mc,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,9.720
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pysat:mgh,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,9.952
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w2.cnf,pycryptosat,1,a a b b b b b c c b b b c c b b c c b,19,positive,4,6,3,3,4180,760,3420,11021,248,10260,513,ok,SAT,7.531
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pysat:g3,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,3.093
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pysat:g4,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,4.683
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pysat:gc3,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,4.669
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pysat:gc4,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,5.373
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pysat:m22,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,4.251
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pysat:mc,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,4.175
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pysat:mgh,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,3.231
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w3.cnf,pycryptosat,1,a a c b c b b c c c b c b b,14,positive,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,SAT,2.899
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pysat:g3,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,3.873
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pysat:g4,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,3.279
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pysat:gc3,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,2.607
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pysat:gc4,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,4.928
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pysat:m22,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,3.109
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pysat:mc,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,9.862
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pysat:mgh,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,3.995
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w4.cnf,pycryptosat,1,a a b c b b c b b b b b c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,5.114
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pysat:g3,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.523
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pysat:g4,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.624
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pysat:gc3,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.480
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pysat:gc4,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,3.218
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pysat:m22,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.248
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pysat:mc,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,3.232
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pysat:mgh,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.292
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w5.cnf,pycryptosat,1,a a c b b c c b c b,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.243
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pysat:g3,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,3.328
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pysat:g4,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.020
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pysat:gc3,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.927
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pysat:gc4,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.460
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pysat:m22,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.802
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pysat:mc,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,2.207
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pysat:mgh,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.508
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w6.cnf,pycryptosat,1,a a c c c c c c c c,10,positive,4,6,3,3,715,220,495,1706,86,1485,135,ok,SAT,1.415
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pysat:g3,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,11.072
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pysat:g4,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,16.215
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pysat:gc3,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,17.643
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pysat:gc4,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,14.064
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pysat:m22,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,9.153
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pysat:mc,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,31.963
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pysat:mgh,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,9.469
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w7.cnf,pycryptosat,1,a a b c c b b c c c c b b b b b b c,18,positive,4,6,3,3,3591,684,2907,9406,226,8721,459,ok,SAT,8.919
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pysat:g3,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,2.390
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pysat:g4,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,3.255
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pysat:gc3,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,2.691
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pysat:gc4,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,2.395
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pysat:m22,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,6.756
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pysat:mc,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,4.280
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pysat:mgh,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,3.148
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w8.cnf,pycryptosat,1,a a b b b c c b c c b b,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,1.912
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pysat:g3,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,4.204
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pysat:g4,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,3.460
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pysat:gc3,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,4.187
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pysat:gc4,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,5.145
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pysat:m22,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,5.640
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pysat:mc,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,4.667
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pysat:mgh,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,3.765
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w9.cnf,pycryptosat,1,a a c c c b c b b b b c c,13,positive,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,SAT,3.389
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pysat:g3,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,4.675
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pysat:g4,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,2.236
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pysat:gc3,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,3.683
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pysat:gc4,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,3.081
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pysat:m22,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,2.739
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pysat:mc,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,3.348
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pysat:mgh,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,2.036
+src\text\dimacs_outputs\benchmark_runs\g2\g1_positive_w10.cnf,pycryptosat,1,a a c c c b b c b b b c,12,positive,4,6,3,3,1170,312,858,2887,115,2574,198,ok,SAT,1.963
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pysat:g3,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,2.826
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pysat:g4,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,2.679
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pysat:gc3,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,2.486
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pysat:gc4,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,4.688
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pysat:m22,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,2.655
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pysat:mc,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,4.589
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pysat:mgh,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,3.062
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w11.cnf,pycryptosat,1,a c a c a a a b c b c c a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,3.329
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pysat:g3,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,11.148
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pysat:g4,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,13.158
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pysat:gc3,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,10.091
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pysat:gc4,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,9.895
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pysat:m22,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,8.343
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pysat:mc,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,12.201
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pysat:mgh,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,9.485
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w12.cnf,pycryptosat,1,c c b b c c b a b c b a c c c b a b b b,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,5.922
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pysat:g3,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,4.389
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pysat:g4,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,6.732
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pysat:gc3,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,4.946
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pysat:gc4,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,20.444
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pysat:m22,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,3.992
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pysat:mc,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,4.484
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pysat:mgh,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,2.927
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w13.cnf,pycryptosat,1,c c a b b b b b c b c c c b,14,negative,4,6,3,3,1785,420,1365,4516,148,4095,273,ok,UNSAT,2.170
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pysat:g3,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.570
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pysat:g4,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.400
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pysat:gc3,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.473
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pysat:gc4,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,5.386
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pysat:m22,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.592
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pysat:mc,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.912
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pysat:mgh,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,3.276
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w14.cnf,pycryptosat,1,a a a a b a a a c b a,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.150
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pysat:g3,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,7.105
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pysat:g4,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,7.785
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pysat:gc3,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,11.695
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pysat:gc4,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,11.115
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pysat:m22,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,8.360
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pysat:mc,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,8.843
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pysat:mgh,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,11.275
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w15.cnf,pycryptosat,1,a b c c b a b a a c b b a b b a b b b c,20,negative,4,6,3,3,4830,840,3990,12811,271,11970,570,ok,UNSAT,7.390
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pysat:g3,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,11.979
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pysat:g4,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,5.781
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pysat:gc3,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,7.890
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pysat:gc4,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,4.979
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pysat:m22,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,5.084
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pysat:mc,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,5.646
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pysat:mgh,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,4.631
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w16.cnf,pycryptosat,1,b c c b a c c c b c c a a,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,1.910
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pysat:g3,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,2.971
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pysat:g4,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,3.500
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pysat:gc3,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,2.660
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pysat:gc4,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,4.316
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pysat:m22,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,2.197
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pysat:mc,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,6.146
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pysat:mgh,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,4.501
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w17.cnf,pycryptosat,1,c c c b a b b b b b a b b,13,negative,4,6,3,3,1456,364,1092,3641,131,3276,234,ok,UNSAT,1.942
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pysat:g3,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,4.918
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pysat:g4,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,5.261
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pysat:gc3,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,9.113
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pysat:gc4,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,8.265
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pysat:m22,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,8.364
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pysat:mc,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,16.188
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pysat:mgh,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,9.305
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w18.cnf,pycryptosat,1,c b b a a a a a a a b a a a c a a,17,negative,4,6,3,3,3060,612,2448,7957,205,7344,408,ok,UNSAT,5.107
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pysat:g3,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,6.390
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pysat:g4,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,5.097
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pysat:gc3,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,7.217
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pysat:gc4,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,8.338
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pysat:m22,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,7.048
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pysat:mc,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,8.080
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pysat:mgh,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,6.033
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w19.cnf,pycryptosat,1,a a b c c c b a b b b c c a b c,16,negative,4,6,3,3,2584,544,2040,6665,185,6120,360,ok,UNSAT,3.362
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pysat:g3,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.822
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pysat:g4,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.682
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pysat:gc3,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,4.033
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pysat:gc4,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,2.501
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pysat:m22,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.579
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pysat:mc,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,2.767
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pysat:mgh,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,2.478
+src\text\dimacs_outputs\benchmark_runs\g2\g1_negative_w20.cnf,pycryptosat,1,c a b c c c b c b c b,11,negative,4,6,3,3,924,264,660,2245,100,1980,165,ok,UNSAT,1.174

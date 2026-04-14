@@ -19,25 +19,6 @@ S
 ---
 
 terminal:
-e,l,s,n,d
-
-nonterminal:
-S,A,B,C,D
-
-rules:
-S - e A
-A - l B
-A - n C
-B - s D
-C - d
-D - e
-
-start:
-S
-
----
-
-terminal:
 a,b
 
 nonterminal:

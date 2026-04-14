@@ -1,0 +1,17 @@
+terminal:
+a, b, c
+
+nonterminal:
+A, B, C, S0
+
+start:
+S0
+
+rules:
+A - a
+B - A C
+C - C C
+C - b
+C - c
+S0 - ε
+S0 - A B

@@ -1,0 +1,309 @@
+%token a
+%token b
+
+%start S
+%%
+S: 
+ | b S
+ | a A
+B: b B
+ | a S
+A: b A
+ | a B
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: B A B
+ | A B A
+B: B A
+ | b
+A: A B
+ | a A
+ | a b
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: 
+ | a S b
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: A A
+A: a A b
+ | 
+%%
+
+---
+
+%token mama
+%token noviny
+%token obed
+%token on
+%token ona
+%token ono
+%token otec
+%token platí
+%token varí
+%token číta
+%token školné
+
+%start veta
+%%
+veta: podmet prísudok
+predmet: podstmeno
+podmet: podstmeno
+ | zámeno
+prísudok: sloveso
+ | sloveso predmet
+podstmeno: mama
+ | otec
+ | školné
+ | obed
+ | noviny
+zámeno: on
+ | ona
+ | ono
+sloveso: varí
+ | číta
+ | platí
+%%
+
+---
+
+%token ;
+%token [
+%token ]
+%token char
+%token float
+%token identifikator
+%token int
+%token konst_int
+
+%start deklaracie
+%%
+deklaracie: deklaracia deklaracie
+ | 
+deklaracia: typ deklarator ;
+typ: char
+ | int
+ | float
+pole: 
+ | [ konst_int ]
+deklarator: identifikator pole
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: a A
+A: a A
+ | b A
+ | b
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: a b A
+ | b a B
+ | 
+B: b a B
+ | 
+A: a b A
+ | 
+%%
+
+---
+
+%token a
+%token b
+%token c
+%token d
+
+%start S
+%%
+S: a
+ | d
+ | b c A
+A: b c A
+ | d
+%%
+
+---
+
+%token 0
+%token 1
+%token 2
+%token 3
+
+%start S
+%%
+S: 0 S
+ | 1 S
+ | 2 A
+ | 3 A
+A: 2 A
+ | 3 A
+ | 
+%%
+
+---
+
+%token b
+%token d
+%token e
+%token g
+%token h
+%token i
+%token l
+%token n
+%token t
+%token w
+
+%start S
+%%
+S: b e g i n
+ | e n d
+ | w h i l e
+ | w i t h
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: a S
+ | b S
+ | 
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: a A
+ | b B
+ | 
+B: a S
+ | b A
+A: a B
+ | b S
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: 
+ | a A
+ | b C
+C: b C
+ | a D
+ | 
+D: a D
+ | 
+B: b B
+ | 
+A: a A
+ | b B
+ | 
+%%
+
+---
+
+%token a
+%token b
+
+%start S
+%%
+S: a A
+ | a S
+ | A
+ | a b B
+B: b B
+A: 
+ | b A
+%%
+
+---
+
+%token a
+%token b
+%token c
+
+%start S
+%%
+S: a A C
+ | b B
+ | B B
+C: C C
+ | b
+ | c
+B: 
+ | a B b
+ | S B
+A: a A b
+%%
+
+---
+
+%token ;
+%token ak
+%token koniec
+%token p1
+%token p2
+%token pokiaľ
+%token potom
+%token príkaz1
+%token príkaz2
+%token rob
+%token štart
+
+%start program
+%%
+program: štart príkazy koniec
+príkaz: výraz
+ | ak podmienka potom príkaz
+ | pokiaľ podmienka rob príkaz
+príkazy: príkaz ; príkazy
+ | 
+výraz: príkaz1
+ | príkaz2
+podmienka: p1
+ | p2
+%%
