@@ -19,10 +19,10 @@ rules:
 <deklarácia> - <zoznam_identifikátorov> <deklarácia>_BIN_0
 <deklarácia>_BIN_0 - T_: <deklarácia>_BIN_1
 <deklarácia>_BIN_1 - <typ> T_;
-<deklarácia_fp> - <forma> <deklarácia_fp>_BIN_1
-<deklarácia_fp> - <id> <deklarácia_fp>_BIN_0
-<deklarácia_fp>_BIN_0 - T_: <typ>
-<deklarácia_fp>_BIN_1 - <id> <deklarácia_fp>_BIN_2
+<deklarácia_fp> - <forma> <deklarácia_fp>_BIN_0
+<deklarácia_fp> - <id> <deklarácia_fp>_BIN_2
+<deklarácia_fp>_BIN_0 - <id> <deklarácia_fp>_BIN_1
+<deklarácia_fp>_BIN_1 - T_: <typ>
 <deklarácia_fp>_BIN_2 - T_: <typ>
 <deklarácia_premenných> - T_var <zoznam_deklarácií>
 <deklarácia_premenných> - var
@@ -50,29 +50,29 @@ rules:
 <dol> - konšt_int
 <forma> - var
 <formálne_parametre> - <deklarácia_fp> <zvyšok_dfp>
-<formálne_parametre> - <forma> <formálne_parametre>_BIN_1
-<formálne_parametre> - <id> <formálne_parametre>_BIN_0
-<formálne_parametre>_BIN_0 - T_: <typ>
-<formálne_parametre>_BIN_1 - <id> <formálne_parametre>_BIN_2
+<formálne_parametre> - <forma> <formálne_parametre>_BIN_0
+<formálne_parametre> - <id> <formálne_parametre>_BIN_2
+<formálne_parametre>_BIN_0 - <id> <formálne_parametre>_BIN_1
+<formálne_parametre>_BIN_1 - T_: <typ>
 <formálne_parametre>_BIN_2 - T_: <typ>
 <hlavička_podprogramu> - T_function <hlavička_podprogramu>_BIN_0
-<hlavička_podprogramu> - T_function <hlavička_podprogramu>_BIN_9
+<hlavička_podprogramu> - T_function <hlavička_podprogramu>_BIN_7
+<hlavička_podprogramu> - T_procedure <hlavička_podprogramu>_BIN_12
 <hlavička_podprogramu> - T_procedure <hlavička_podprogramu>_BIN_4
-<hlavička_podprogramu> - T_procedure <hlavička_podprogramu>_BIN_6
 <hlavička_podprogramu>_BIN_0 - <id> <hlavička_podprogramu>_BIN_1
 <hlavička_podprogramu>_BIN_1 - T_( <hlavička_podprogramu>_BIN_2
-<hlavička_podprogramu>_BIN_10 - T_( <hlavička_podprogramu>_BIN_11
-<hlavička_podprogramu>_BIN_11 - <formálne_parametre> <hlavička_podprogramu>_BIN_12
-<hlavička_podprogramu>_BIN_12 - T_) <hlavička_podprogramu>_BIN_13
-<hlavička_podprogramu>_BIN_13 - T_: <typ>
+<hlavička_podprogramu>_BIN_10 - T_) <hlavička_podprogramu>_BIN_11
+<hlavička_podprogramu>_BIN_11 - T_: <typ>
+<hlavička_podprogramu>_BIN_12 - <id> <hlavička_podprogramu>_BIN_13
+<hlavička_podprogramu>_BIN_13 - T_( T_)
 <hlavička_podprogramu>_BIN_2 - T_) <hlavička_podprogramu>_BIN_3
 <hlavička_podprogramu>_BIN_3 - T_: <typ>
 <hlavička_podprogramu>_BIN_4 - <id> <hlavička_podprogramu>_BIN_5
-<hlavička_podprogramu>_BIN_5 - T_( T_)
-<hlavička_podprogramu>_BIN_6 - <id> <hlavička_podprogramu>_BIN_7
-<hlavička_podprogramu>_BIN_7 - T_( <hlavička_podprogramu>_BIN_8
-<hlavička_podprogramu>_BIN_8 - <formálne_parametre> T_)
-<hlavička_podprogramu>_BIN_9 - <id> <hlavička_podprogramu>_BIN_10
+<hlavička_podprogramu>_BIN_5 - T_( <hlavička_podprogramu>_BIN_6
+<hlavička_podprogramu>_BIN_6 - <formálne_parametre> T_)
+<hlavička_podprogramu>_BIN_7 - <id> <hlavička_podprogramu>_BIN_8
+<hlavička_podprogramu>_BIN_8 - T_( <hlavička_podprogramu>_BIN_9
+<hlavička_podprogramu>_BIN_9 - <formálne_parametre> <hlavička_podprogramu>_BIN_10
 <hor> - konšt_int
 <id> - id
 <logický_op> - and
@@ -80,57 +80,57 @@ rules:
 <multiplikatívny_op> - *
 <multiplikatívny_op> - /
 <multiplikatívny_op> - mod
-<op1> - <op1> <op1>_BIN_5
-<op1> - <op2> <op1>_BIN_4
-<op1> - <op3> <op1>_BIN_6
-<op1> - <prem> <op1>_BIN_0
-<op1> - <prem> <op1>_BIN_1
+<op1> - <op1> <op1>_BIN_6
+<op1> - <op2> <op1>_BIN_1
+<op1> - <op3> <op1>_BIN_0
+<op1> - <prem> <op1>_BIN_2
+<op1> - <prem> <op1>_BIN_3
 <op1> - <unárny_op> <op4>
-<op1> - T_( <op1>_BIN_3
+<op1> - T_( <op1>_BIN_5
 <op1> - id
 <op1> - konšt_boolean
 <op1> - konšt_char
 <op1> - konšt_int
 <op1> - konšt_real
-<op1>_BIN_0 - T_. <id>
-<op1>_BIN_1 - T_[ <op1>_BIN_2
-<op1>_BIN_2 - <výraz> T_]
-<op1>_BIN_3 - <výraz> T_)
-<op1>_BIN_4 - <aditívny_op> <op3>
-<op1>_BIN_5 - <relačný_op> <op2>
-<op1>_BIN_6 - <multiplikatívny_op> <op4>
-<op2> - <op2> <op2>_BIN_4
-<op2> - <op3> <op2>_BIN_5
-<op2> - <prem> <op2>_BIN_0
-<op2> - <prem> <op2>_BIN_1
+<op1>_BIN_0 - <multiplikatívny_op> <op4>
+<op1>_BIN_1 - <aditívny_op> <op3>
+<op1>_BIN_2 - T_. <id>
+<op1>_BIN_3 - T_[ <op1>_BIN_4
+<op1>_BIN_4 - <výraz> T_]
+<op1>_BIN_5 - <výraz> T_)
+<op1>_BIN_6 - <relačný_op> <op2>
+<op2> - <op2> <op2>_BIN_1
+<op2> - <op3> <op2>_BIN_0
+<op2> - <prem> <op2>_BIN_2
+<op2> - <prem> <op2>_BIN_3
 <op2> - <unárny_op> <op4>
-<op2> - T_( <op2>_BIN_3
+<op2> - T_( <op2>_BIN_5
 <op2> - id
 <op2> - konšt_boolean
 <op2> - konšt_char
 <op2> - konšt_int
 <op2> - konšt_real
-<op2>_BIN_0 - T_. <id>
-<op2>_BIN_1 - T_[ <op2>_BIN_2
-<op2>_BIN_2 - <výraz> T_]
-<op2>_BIN_3 - <výraz> T_)
-<op2>_BIN_4 - <aditívny_op> <op3>
-<op2>_BIN_5 - <multiplikatívny_op> <op4>
-<op3> - <op3> <op3>_BIN_4
-<op3> - <prem> <op3>_BIN_0
+<op2>_BIN_0 - <multiplikatívny_op> <op4>
+<op2>_BIN_1 - <aditívny_op> <op3>
+<op2>_BIN_2 - T_. <id>
+<op2>_BIN_3 - T_[ <op2>_BIN_4
+<op2>_BIN_4 - <výraz> T_]
+<op2>_BIN_5 - <výraz> T_)
+<op3> - <op3> <op3>_BIN_0
 <op3> - <prem> <op3>_BIN_1
+<op3> - <prem> <op3>_BIN_2
 <op3> - <unárny_op> <op4>
-<op3> - T_( <op3>_BIN_3
+<op3> - T_( <op3>_BIN_4
 <op3> - id
 <op3> - konšt_boolean
 <op3> - konšt_char
 <op3> - konšt_int
 <op3> - konšt_real
-<op3>_BIN_0 - T_. <id>
-<op3>_BIN_1 - T_[ <op3>_BIN_2
-<op3>_BIN_2 - <výraz> T_]
-<op3>_BIN_3 - <výraz> T_)
-<op3>_BIN_4 - <multiplikatívny_op> <op4>
+<op3>_BIN_0 - <multiplikatívny_op> <op4>
+<op3>_BIN_1 - T_. <id>
+<op3>_BIN_2 - T_[ <op3>_BIN_3
+<op3>_BIN_3 - <výraz> T_]
+<op3>_BIN_4 - <výraz> T_)
 <op4> - <prem> <op4>_BIN_0
 <op4> - <prem> <op4>_BIN_1
 <op4> - <unárny_op> <op4>
@@ -145,31 +145,31 @@ rules:
 <op4>_BIN_2 - <výraz> T_]
 <op4>_BIN_3 - <výraz> T_)
 <prem> - <prem> <prem>_BIN_0
-<prem> - <prem> <prem>_BIN_1
+<prem> - <prem> <prem>_BIN_2
 <prem> - id
-<prem>_BIN_0 - T_. <id>
-<prem>_BIN_1 - T_[ <prem>_BIN_2
-<prem>_BIN_2 - <výraz> T_]
+<prem>_BIN_0 - T_[ <prem>_BIN_1
+<prem>_BIN_1 - <výraz> T_]
+<prem>_BIN_2 - T_. <id>
 <príkaz> - <id> <príkaz>_BIN_0
-<príkaz> - <id> <príkaz>_BIN_4
-<príkaz> - <výraz> <príkaz>_BIN_10
-<príkaz> - T_begin <príkaz>_BIN_8
+<príkaz> - <id> <príkaz>_BIN_5
+<príkaz> - <výraz> <príkaz>_BIN_9
+<príkaz> - T_begin <príkaz>_BIN_10
 <príkaz> - T_begin T_end
-<príkaz> - T_if <príkaz>_BIN_2
-<príkaz> - T_if <príkaz>_BIN_9
-<príkaz> - T_while <príkaz>_BIN_5
-<príkaz> - T_while <príkaz>_BIN_6
+<príkaz> - T_if <príkaz>_BIN_3
+<príkaz> - T_if <príkaz>_BIN_6
+<príkaz> - T_while <príkaz>_BIN_2
+<príkaz> - T_while <príkaz>_BIN_7
 <príkaz>_BIN_0 - T_( <príkaz>_BIN_1
 <príkaz>_BIN_1 - <skutočné_parametre> T_)
-<príkaz>_BIN_10 - T_:= <výraz>
-<príkaz>_BIN_2 - <výraz> <príkaz>_BIN_3
-<príkaz>_BIN_3 - T_then <príkaz>
-<príkaz>_BIN_4 - T_( T_)
-<príkaz>_BIN_5 - <výraz> T_do
-<príkaz>_BIN_6 - <výraz> <príkaz>_BIN_7
-<príkaz>_BIN_7 - T_do <príkaz>
-<príkaz>_BIN_8 - <príkazy> T_end
-<príkaz>_BIN_9 - <výraz> T_then
+<príkaz>_BIN_10 - <príkazy> T_end
+<príkaz>_BIN_2 - <výraz> T_do
+<príkaz>_BIN_3 - <výraz> <príkaz>_BIN_4
+<príkaz>_BIN_4 - T_then <príkaz>
+<príkaz>_BIN_5 - T_( T_)
+<príkaz>_BIN_6 - <výraz> T_then
+<príkaz>_BIN_7 - <výraz> <príkaz>_BIN_8
+<príkaz>_BIN_8 - T_do <príkaz>
+<príkaz>_BIN_9 - T_:= <výraz>
 <príkazy> - ;
 <príkazy> - <príkaz> <príkazy>_BIN_0
 <príkazy> - <príkaz> T_;
@@ -182,48 +182,48 @@ rules:
 <relačný_op> - >
 <relačný_op> - >=
 <skutočné_parametre> - <op1> <skutočné_parametre>_BIN_6
-<skutočné_parametre> - <op2> <skutočné_parametre>_BIN_5
-<skutočné_parametre> - <op3> <skutočné_parametre>_BIN_7
-<skutočné_parametre> - <prem> <skutočné_parametre>_BIN_0
-<skutočné_parametre> - <prem> <skutočné_parametre>_BIN_1
+<skutočné_parametre> - <op2> <skutočné_parametre>_BIN_1
+<skutočné_parametre> - <op3> <skutočné_parametre>_BIN_0
+<skutočné_parametre> - <prem> <skutočné_parametre>_BIN_3
+<skutočné_parametre> - <prem> <skutočné_parametre>_BIN_4
 <skutočné_parametre> - <sp> <zvyšok_sp>
 <skutočné_parametre> - <unárny_op> <op4>
-<skutočné_parametre> - <výraz> <skutočné_parametre>_BIN_4
-<skutočné_parametre> - T_( <skutočné_parametre>_BIN_3
+<skutočné_parametre> - <výraz> <skutočné_parametre>_BIN_2
+<skutočné_parametre> - T_( <skutočné_parametre>_BIN_7
 <skutočné_parametre> - id
 <skutočné_parametre> - konšt_boolean
 <skutočné_parametre> - konšt_char
 <skutočné_parametre> - konšt_int
 <skutočné_parametre> - konšt_real
-<skutočné_parametre>_BIN_0 - T_. <id>
-<skutočné_parametre>_BIN_1 - T_[ <skutočné_parametre>_BIN_2
-<skutočné_parametre>_BIN_2 - <výraz> T_]
-<skutočné_parametre>_BIN_3 - <výraz> T_)
-<skutočné_parametre>_BIN_4 - <logický_op> <op1>
-<skutočné_parametre>_BIN_5 - <aditívny_op> <op3>
+<skutočné_parametre>_BIN_0 - <multiplikatívny_op> <op4>
+<skutočné_parametre>_BIN_1 - <aditívny_op> <op3>
+<skutočné_parametre>_BIN_2 - <logický_op> <op1>
+<skutočné_parametre>_BIN_3 - T_. <id>
+<skutočné_parametre>_BIN_4 - T_[ <skutočné_parametre>_BIN_5
+<skutočné_parametre>_BIN_5 - <výraz> T_]
 <skutočné_parametre>_BIN_6 - <relačný_op> <op2>
-<skutočné_parametre>_BIN_7 - <multiplikatívny_op> <op4>
-<sp> - <op1> <sp>_BIN_6
-<sp> - <op2> <sp>_BIN_5
-<sp> - <op3> <sp>_BIN_7
-<sp> - <prem> <sp>_BIN_0
-<sp> - <prem> <sp>_BIN_1
+<skutočné_parametre>_BIN_7 - <výraz> T_)
+<sp> - <op1> <sp>_BIN_7
+<sp> - <op2> <sp>_BIN_1
+<sp> - <op3> <sp>_BIN_0
+<sp> - <prem> <sp>_BIN_3
+<sp> - <prem> <sp>_BIN_4
 <sp> - <unárny_op> <op4>
-<sp> - <výraz> <sp>_BIN_4
-<sp> - T_( <sp>_BIN_3
+<sp> - <výraz> <sp>_BIN_2
+<sp> - T_( <sp>_BIN_6
 <sp> - id
 <sp> - konšt_boolean
 <sp> - konšt_char
 <sp> - konšt_int
 <sp> - konšt_real
-<sp>_BIN_0 - T_. <id>
-<sp>_BIN_1 - T_[ <sp>_BIN_2
-<sp>_BIN_2 - <výraz> T_]
-<sp>_BIN_3 - <výraz> T_)
-<sp>_BIN_4 - <logický_op> <op1>
-<sp>_BIN_5 - <aditívny_op> <op3>
-<sp>_BIN_6 - <relačný_op> <op2>
-<sp>_BIN_7 - <multiplikatívny_op> <op4>
+<sp>_BIN_0 - <multiplikatívny_op> <op4>
+<sp>_BIN_1 - <aditívny_op> <op3>
+<sp>_BIN_2 - <logický_op> <op1>
+<sp>_BIN_3 - T_. <id>
+<sp>_BIN_4 - T_[ <sp>_BIN_5
+<sp>_BIN_5 - <výraz> T_]
+<sp>_BIN_6 - <výraz> T_)
+<sp>_BIN_7 - <relačný_op> <op2>
 <telo_podprogramu> - <deklarácie> <blok>
 <telo_podprogramu> - T_begin <telo_podprogramu>_BIN_0
 <telo_podprogramu> - T_begin T_end
@@ -260,27 +260,27 @@ rules:
 <typ_prvku>_BIN_6 - <zoznam_deklarácií> T_end
 <unárny_op> - -
 <unárny_op> - not
-<výraz> - <op1> <výraz>_BIN_6
-<výraz> - <op2> <výraz>_BIN_5
-<výraz> - <op3> <výraz>_BIN_7
-<výraz> - <prem> <výraz>_BIN_0
-<výraz> - <prem> <výraz>_BIN_1
+<výraz> - <op1> <výraz>_BIN_7
+<výraz> - <op2> <výraz>_BIN_1
+<výraz> - <op3> <výraz>_BIN_0
+<výraz> - <prem> <výraz>_BIN_3
+<výraz> - <prem> <výraz>_BIN_4
 <výraz> - <unárny_op> <op4>
-<výraz> - <výraz> <výraz>_BIN_4
-<výraz> - T_( <výraz>_BIN_3
+<výraz> - <výraz> <výraz>_BIN_2
+<výraz> - T_( <výraz>_BIN_6
 <výraz> - id
 <výraz> - konšt_boolean
 <výraz> - konšt_char
 <výraz> - konšt_int
 <výraz> - konšt_real
-<výraz>_BIN_0 - T_. <id>
-<výraz>_BIN_1 - T_[ <výraz>_BIN_2
-<výraz>_BIN_2 - <výraz> T_]
-<výraz>_BIN_3 - <výraz> T_)
-<výraz>_BIN_4 - <logický_op> <op1>
-<výraz>_BIN_5 - <aditívny_op> <op3>
-<výraz>_BIN_6 - <relačný_op> <op2>
-<výraz>_BIN_7 - <multiplikatívny_op> <op4>
+<výraz>_BIN_0 - <multiplikatívny_op> <op4>
+<výraz>_BIN_1 - <aditívny_op> <op3>
+<výraz>_BIN_2 - <logický_op> <op1>
+<výraz>_BIN_3 - T_. <id>
+<výraz>_BIN_4 - T_[ <výraz>_BIN_5
+<výraz>_BIN_5 - <výraz> T_]
+<výraz>_BIN_6 - <výraz> T_)
+<výraz>_BIN_7 - <relačný_op> <op2>
 <zoznam_deklarácií> - <deklarácia> <zoznam_deklarácií>
 <zoznam_deklarácií> - <zoznam_identifikátorov> <zoznam_deklarácií>_BIN_0
 <zoznam_deklarácií>_BIN_0 - T_: <zoznam_deklarácií>_BIN_1

@@ -2395,3 +2395,1507 @@
 2026-04-13 18:16:29,602 INFO benchmark: Finished pycryptosat status=ok result=UNSAT time_ms=5054.717
 2026-04-13 18:16:31,839 INFO benchmark: Writing 320 benchmark rows to src\text\results\big_grammar\big_grammar_solver_benchmark_results.csv
 2026-04-13 18:16:31,914 INFO benchmark: Benchmark finished successfully
+2026-04-15 08:49:58,510 INFO benchmark: Benchmark started
+2026-04-15 08:49:58,528 INFO benchmark: Grammar file: src\text\input\big_grammar.txt
+2026-04-15 08:49:58,528 INFO benchmark: Log file: src\text\results\big_grammar\big_grammar_benchmark.log
+2026-04-15 08:49:58,528 INFO benchmark: Length range: 10..20 positive=10 negative=10
+2026-04-15 08:49:58,528 INFO benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar (default)
+2026-04-15 08:49:58,528 INFO benchmark: Loading grammars from src\text\input\big_grammar.txt
+2026-04-15 08:49:58,601 INFO benchmark: Parsed 1 grammar(s); Java-only generator mode is enabled
+2026-04-15 08:49:58,601 INFO benchmark: Starting grammar 1/1
+2026-04-15 08:49:58,605 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 08:49:58,605 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-04-15 08:49:59,190 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 08:49:59,190 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-04-15 08:49:59,735 INFO benchmark: Java generator produced 10 positive words
+2026-04-15 08:49:59,735 INFO benchmark: Java generator produced 10 negative words
+2026-04-15 08:50:01,171 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w1.cnf
+2026-04-15 08:50:01,933 INFO benchmark: CNF size: variables=99736 clauses=266449
+2026-04-15 08:50:01,933 INFO benchmark: Running pysat:g3 for grammar=1 word_length=13
+2026-04-15 08:50:02,174 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=240.811
+2026-04-15 08:50:02,176 INFO benchmark: Running pysat:g4 for grammar=1 word_length=13
+2026-04-15 08:50:02,576 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=399.692
+2026-04-15 08:50:02,576 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=13
+2026-04-15 08:50:02,846 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=270.183
+2026-04-15 08:50:02,846 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=13
+2026-04-15 08:50:03,078 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=230.851
+2026-04-15 08:50:03,078 INFO benchmark: Running pysat:m22 for grammar=1 word_length=13
+2026-04-15 08:50:03,236 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=157.508
+2026-04-15 08:50:03,236 INFO benchmark: Running pysat:mc for grammar=1 word_length=13
+2026-04-15 08:50:03,559 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=323.378
+2026-04-15 08:50:03,559 INFO benchmark: Running pysat:mgh for grammar=1 word_length=13
+2026-04-15 08:50:03,734 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=174.464
+2026-04-15 08:50:03,735 INFO benchmark: Running pycryptosat for grammar=1 word_length=13
+2026-04-15 08:50:03,869 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=133.932
+2026-04-15 08:50:04,710 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w2.cnf
+2026-04-15 08:50:05,397 INFO benchmark: CNF size: variables=62260 clauses=163021
+2026-04-15 08:50:05,397 INFO benchmark: Running pysat:g3 for grammar=1 word_length=11
+2026-04-15 08:50:05,613 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=215.683
+2026-04-15 08:50:05,614 INFO benchmark: Running pysat:g4 for grammar=1 word_length=11
+2026-04-15 08:50:05,800 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=186.794
+2026-04-15 08:50:05,800 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=11
+2026-04-15 08:50:06,046 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=245.683
+2026-04-15 08:50:06,046 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=11
+2026-04-15 08:50:06,287 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=240.193
+2026-04-15 08:50:06,288 INFO benchmark: Running pysat:m22 for grammar=1 word_length=11
+2026-04-15 08:50:06,499 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=211.494
+2026-04-15 08:50:06,499 INFO benchmark: Running pysat:mc for grammar=1 word_length=11
+2026-04-15 08:50:06,742 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=243.388
+2026-04-15 08:50:06,743 INFO benchmark: Running pysat:mgh for grammar=1 word_length=11
+2026-04-15 08:50:07,071 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=328.315
+2026-04-15 08:50:07,072 INFO benchmark: Running pycryptosat for grammar=1 word_length=11
+2026-04-15 08:50:07,178 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=106.068
+2026-04-15 08:50:08,764 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w3.cnf
+2026-04-15 08:50:09,531 INFO benchmark: CNF size: variables=149840 clauses=406321
+2026-04-15 08:50:09,531 INFO benchmark: Running pysat:g3 for grammar=1 word_length=15
+2026-04-15 08:50:09,780 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=248.141
+2026-04-15 08:50:09,780 INFO benchmark: Running pysat:g4 for grammar=1 word_length=15
+2026-04-15 08:50:10,008 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=228.177
+2026-04-15 08:50:10,008 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=15
+2026-04-15 08:50:10,299 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=290.052
+2026-04-15 08:50:10,299 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=15
+2026-04-15 08:50:10,620 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=320.415
+2026-04-15 08:50:10,620 INFO benchmark: Running pysat:m22 for grammar=1 word_length=15
+2026-04-15 08:50:10,836 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=217.194
+2026-04-15 08:50:10,836 INFO benchmark: Running pysat:mc for grammar=1 word_length=15
+2026-04-15 08:50:11,138 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=301.200
+2026-04-15 08:50:11,138 INFO benchmark: Running pysat:mgh for grammar=1 word_length=15
+2026-04-15 08:50:11,379 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=240.235
+2026-04-15 08:50:11,380 INFO benchmark: Running pycryptosat for grammar=1 word_length=15
+2026-04-15 08:50:11,553 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=173.182
+2026-04-15 08:50:12,429 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w4.cnf
+2026-04-15 08:50:13,061 INFO benchmark: CNF size: variables=79534 clauses=210523
+2026-04-15 08:50:13,061 INFO benchmark: Running pysat:g3 for grammar=1 word_length=12
+2026-04-15 08:50:13,238 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=179.922
+2026-04-15 08:50:13,238 INFO benchmark: Running pysat:g4 for grammar=1 word_length=12
+2026-04-15 08:50:13,423 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=181.294
+2026-04-15 08:50:13,423 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=12
+2026-04-15 08:50:13,640 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=216.309
+2026-04-15 08:50:13,640 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=12
+2026-04-15 08:50:13,909 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=268.876
+2026-04-15 08:50:13,910 INFO benchmark: Running pysat:m22 for grammar=1 word_length=12
+2026-04-15 08:50:14,108 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=198.087
+2026-04-15 08:50:14,108 INFO benchmark: Running pysat:mc for grammar=1 word_length=12
+2026-04-15 08:50:14,328 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=219.787
+2026-04-15 08:50:14,329 INFO benchmark: Running pysat:mgh for grammar=1 word_length=12
+2026-04-15 08:50:14,475 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=146.747
+2026-04-15 08:50:14,476 INFO benchmark: Running pycryptosat for grammar=1 word_length=12
+2026-04-15 08:50:14,589 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=113.718
+2026-04-15 08:50:15,806 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w5.cnf
+2026-04-15 08:50:16,788 INFO benchmark: CNF size: variables=123095 clauses=331486
+2026-04-15 08:50:16,788 INFO benchmark: Running pysat:g3 for grammar=1 word_length=14
+2026-04-15 08:50:17,013 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=225.965
+2026-04-15 08:50:17,015 INFO benchmark: Running pysat:g4 for grammar=1 word_length=14
+2026-04-15 08:50:17,373 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=358.811
+2026-04-15 08:50:17,373 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=14
+2026-04-15 08:50:17,746 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=372.087
+2026-04-15 08:50:17,747 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=14
+2026-04-15 08:50:18,048 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=302.238
+2026-04-15 08:50:18,048 INFO benchmark: Running pysat:m22 for grammar=1 word_length=14
+2026-04-15 08:50:18,400 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=349.940
+2026-04-15 08:50:18,400 INFO benchmark: Running pysat:mc for grammar=1 word_length=14
+2026-04-15 08:50:18,695 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=294.753
+2026-04-15 08:50:18,695 INFO benchmark: Running pysat:mgh for grammar=1 word_length=14
+2026-04-15 08:50:18,893 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=198.826
+2026-04-15 08:50:18,893 INFO benchmark: Running pycryptosat for grammar=1 word_length=14
+2026-04-15 08:50:19,052 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=157.513
+2026-04-15 08:50:19,591 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w6.cnf
+2026-04-15 08:50:20,126 INFO benchmark: CNF size: variables=47685 clauses=123256
+2026-04-15 08:50:20,126 INFO benchmark: Running pysat:g3 for grammar=1 word_length=10
+2026-04-15 08:50:20,268 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=142.005
+2026-04-15 08:50:20,268 INFO benchmark: Running pysat:g4 for grammar=1 word_length=10
+2026-04-15 08:50:20,433 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=164.093
+2026-04-15 08:50:20,434 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=10
+2026-04-15 08:50:20,572 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=138.618
+2026-04-15 08:50:20,572 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=10
+2026-04-15 08:50:20,683 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=110.182
+2026-04-15 08:50:20,683 INFO benchmark: Running pysat:m22 for grammar=1 word_length=10
+2026-04-15 08:50:20,777 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=93.168
+2026-04-15 08:50:20,777 INFO benchmark: Running pysat:mc for grammar=1 word_length=10
+2026-04-15 08:50:20,902 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=125.396
+2026-04-15 08:50:20,903 INFO benchmark: Running pysat:mgh for grammar=1 word_length=10
+2026-04-15 08:50:20,986 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=83.814
+2026-04-15 08:50:20,986 INFO benchmark: Running pycryptosat for grammar=1 word_length=10
+2026-04-15 08:50:21,043 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=56.019
+2026-04-15 08:50:21,414 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w7.cnf
+2026-04-15 08:50:21,706 INFO benchmark: CNF size: variables=47685 clauses=123256
+2026-04-15 08:50:21,708 INFO benchmark: Running pysat:g3 for grammar=1 word_length=10
+2026-04-15 08:50:21,829 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=121.620
+2026-04-15 08:50:21,829 INFO benchmark: Running pysat:g4 for grammar=1 word_length=10
+2026-04-15 08:50:21,952 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=122.350
+2026-04-15 08:50:21,952 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=10
+2026-04-15 08:50:22,129 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=176.856
+2026-04-15 08:50:22,129 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=10
+2026-04-15 08:50:22,292 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=162.611
+2026-04-15 08:50:22,292 INFO benchmark: Running pysat:m22 for grammar=1 word_length=10
+2026-04-15 08:50:22,378 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=86.315
+2026-04-15 08:50:22,379 INFO benchmark: Running pysat:mc for grammar=1 word_length=10
+2026-04-15 08:50:22,504 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=125.057
+2026-04-15 08:50:22,505 INFO benchmark: Running pysat:mgh for grammar=1 word_length=10
+2026-04-15 08:50:22,656 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=151.223
+2026-04-15 08:50:22,656 INFO benchmark: Running pycryptosat for grammar=1 word_length=10
+2026-04-15 08:50:22,718 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=62.713
+2026-04-15 08:50:23,355 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w8.cnf
+2026-04-15 08:50:23,810 INFO benchmark: CNF size: variables=62260 clauses=163021
+2026-04-15 08:50:23,810 INFO benchmark: Running pysat:g3 for grammar=1 word_length=11
+2026-04-15 08:50:23,912 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=101.631
+2026-04-15 08:50:23,912 INFO benchmark: Running pysat:g4 for grammar=1 word_length=11
+2026-04-15 08:50:24,006 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=93.167
+2026-04-15 08:50:24,006 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=11
+2026-04-15 08:50:24,121 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=115.792
+2026-04-15 08:50:24,122 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=11
+2026-04-15 08:50:24,238 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=115.811
+2026-04-15 08:50:24,238 INFO benchmark: Running pysat:m22 for grammar=1 word_length=11
+2026-04-15 08:50:24,336 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=98.167
+2026-04-15 08:50:24,336 INFO benchmark: Running pysat:mc for grammar=1 word_length=11
+2026-04-15 08:50:24,461 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=125.136
+2026-04-15 08:50:24,463 INFO benchmark: Running pysat:mgh for grammar=1 word_length=11
+2026-04-15 08:50:24,558 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=95.616
+2026-04-15 08:50:24,559 INFO benchmark: Running pycryptosat for grammar=1 word_length=11
+2026-04-15 08:50:24,641 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=82.858
+2026-04-15 08:50:25,361 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w9.cnf
+2026-04-15 08:50:25,906 INFO benchmark: CNF size: variables=79534 clauses=210523
+2026-04-15 08:50:25,906 INFO benchmark: Running pysat:g3 for grammar=1 word_length=12
+2026-04-15 08:50:26,112 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=204.889
+2026-04-15 08:50:26,112 INFO benchmark: Running pysat:g4 for grammar=1 word_length=12
+2026-04-15 08:50:26,293 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=181.698
+2026-04-15 08:50:26,294 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=12
+2026-04-15 08:50:26,452 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=158.025
+2026-04-15 08:50:26,452 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=12
+2026-04-15 08:50:26,623 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=170.483
+2026-04-15 08:50:26,624 INFO benchmark: Running pysat:m22 for grammar=1 word_length=12
+2026-04-15 08:50:26,764 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=139.640
+2026-04-15 08:50:26,764 INFO benchmark: Running pysat:mc for grammar=1 word_length=12
+2026-04-15 08:50:26,908 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=143.987
+2026-04-15 08:50:26,908 INFO benchmark: Running pysat:mgh for grammar=1 word_length=12
+2026-04-15 08:50:27,035 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=126.664
+2026-04-15 08:50:27,035 INFO benchmark: Running pycryptosat for grammar=1 word_length=12
+2026-04-15 08:50:27,144 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=109.325
+2026-04-15 08:50:28,927 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w10.cnf
+2026-04-15 08:50:29,782 INFO benchmark: CNF size: variables=123095 clauses=331486
+2026-04-15 08:50:29,782 INFO benchmark: Running pysat:g3 for grammar=1 word_length=14
+2026-04-15 08:50:29,974 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=192.632
+2026-04-15 08:50:29,975 INFO benchmark: Running pysat:g4 for grammar=1 word_length=14
+2026-04-15 08:50:30,171 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=195.185
+2026-04-15 08:50:30,171 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=14
+2026-04-15 08:50:30,474 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=303.454
+2026-04-15 08:50:30,475 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=14
+2026-04-15 08:50:30,860 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=385.811
+2026-04-15 08:50:30,861 INFO benchmark: Running pysat:m22 for grammar=1 word_length=14
+2026-04-15 08:50:31,063 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=201.274
+2026-04-15 08:50:31,063 INFO benchmark: Running pysat:mc for grammar=1 word_length=14
+2026-04-15 08:50:31,289 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=226.541
+2026-04-15 08:50:31,289 INFO benchmark: Running pysat:mgh for grammar=1 word_length=14
+2026-04-15 08:50:31,479 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=189.394
+2026-04-15 08:50:31,479 INFO benchmark: Running pycryptosat for grammar=1 word_length=14
+2026-04-15 08:50:31,638 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=158.291
+2026-04-15 08:50:34,552 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w11.cnf
+2026-04-15 08:50:36,587 INFO benchmark: CNF size: variables=295260 clauses=817381
+2026-04-15 08:50:36,587 INFO benchmark: Running pysat:g3 for grammar=1 word_length=19
+2026-04-15 08:50:37,076 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=485.868
+2026-04-15 08:50:37,077 INFO benchmark: Running pysat:g4 for grammar=1 word_length=19
+2026-04-15 08:50:37,860 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=783.904
+2026-04-15 08:50:37,860 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=19
+2026-04-15 08:50:38,737 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=876.428
+2026-04-15 08:50:38,738 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=19
+2026-04-15 08:50:39,383 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=645.689
+2026-04-15 08:50:39,383 INFO benchmark: Running pysat:m22 for grammar=1 word_length=19
+2026-04-15 08:50:39,894 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=510.568
+2026-04-15 08:50:39,895 INFO benchmark: Running pysat:mc for grammar=1 word_length=19
+2026-04-15 08:50:40,438 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=544.374
+2026-04-15 08:50:40,439 INFO benchmark: Running pysat:mgh for grammar=1 word_length=19
+2026-04-15 08:50:41,119 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=679.650
+2026-04-15 08:50:41,119 INFO benchmark: Running pycryptosat for grammar=1 word_length=19
+2026-04-15 08:50:41,439 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=320.398
+2026-04-15 08:50:42,453 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w12.cnf
+2026-04-15 08:50:43,110 INFO benchmark: CNF size: variables=99736 clauses=266449
+2026-04-15 08:50:43,110 INFO benchmark: Running pysat:g3 for grammar=1 word_length=13
+2026-04-15 08:50:43,286 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=177.787
+2026-04-15 08:50:43,289 INFO benchmark: Running pysat:g4 for grammar=1 word_length=13
+2026-04-15 08:50:43,530 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=241.942
+2026-04-15 08:50:43,531 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=13
+2026-04-15 08:50:43,748 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=217.661
+2026-04-15 08:50:43,749 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=13
+2026-04-15 08:50:43,935 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=185.633
+2026-04-15 08:50:43,935 INFO benchmark: Running pysat:m22 for grammar=1 word_length=13
+2026-04-15 08:50:44,085 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=150.589
+2026-04-15 08:50:44,086 INFO benchmark: Running pysat:mc for grammar=1 word_length=13
+2026-04-15 08:50:44,296 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=209.694
+2026-04-15 08:50:44,297 INFO benchmark: Running pysat:mgh for grammar=1 word_length=13
+2026-04-15 08:50:44,528 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=231.497
+2026-04-15 08:50:44,528 INFO benchmark: Running pycryptosat for grammar=1 word_length=13
+2026-04-15 08:50:44,650 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=122.251
+2026-04-15 08:50:45,756 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w13.cnf
+2026-04-15 08:50:46,510 INFO benchmark: CNF size: variables=123095 clauses=331486
+2026-04-15 08:50:46,510 INFO benchmark: Running pysat:g3 for grammar=1 word_length=14
+2026-04-15 08:50:46,732 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=221.479
+2026-04-15 08:50:46,732 INFO benchmark: Running pysat:g4 for grammar=1 word_length=14
+2026-04-15 08:50:46,979 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=247.118
+2026-04-15 08:50:46,979 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=14
+2026-04-15 08:50:47,251 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=271.696
+2026-04-15 08:50:47,251 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=14
+2026-04-15 08:50:47,491 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=239.323
+2026-04-15 08:50:47,491 INFO benchmark: Running pysat:m22 for grammar=1 word_length=14
+2026-04-15 08:50:47,749 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=257.836
+2026-04-15 08:50:47,749 INFO benchmark: Running pysat:mc for grammar=1 word_length=14
+2026-04-15 08:50:48,073 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=323.934
+2026-04-15 08:50:48,074 INFO benchmark: Running pysat:mgh for grammar=1 word_length=14
+2026-04-15 08:50:48,352 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=277.939
+2026-04-15 08:50:48,352 INFO benchmark: Running pycryptosat for grammar=1 word_length=14
+2026-04-15 08:50:48,593 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=241.015
+2026-04-15 08:50:49,964 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w14.cnf
+2026-04-15 08:50:50,646 INFO benchmark: CNF size: variables=123095 clauses=331486
+2026-04-15 08:50:50,647 INFO benchmark: Running pysat:g3 for grammar=1 word_length=14
+2026-04-15 08:50:50,924 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=275.589
+2026-04-15 08:50:50,924 INFO benchmark: Running pysat:g4 for grammar=1 word_length=14
+2026-04-15 08:50:51,143 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=218.712
+2026-04-15 08:50:51,143 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=14
+2026-04-15 08:50:51,439 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=300.385
+2026-04-15 08:50:51,439 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=14
+2026-04-15 08:50:51,754 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=309.935
+2026-04-15 08:50:51,754 INFO benchmark: Running pysat:m22 for grammar=1 word_length=14
+2026-04-15 08:50:52,013 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=258.998
+2026-04-15 08:50:52,013 INFO benchmark: Running pysat:mc for grammar=1 word_length=14
+2026-04-15 08:50:52,355 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=340.936
+2026-04-15 08:50:52,355 INFO benchmark: Running pysat:mgh for grammar=1 word_length=14
+2026-04-15 08:50:52,581 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=226.642
+2026-04-15 08:50:52,582 INFO benchmark: Running pycryptosat for grammar=1 word_length=14
+2026-04-15 08:50:52,743 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=160.698
+2026-04-15 08:50:54,528 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w15.cnf
+2026-04-15 08:50:55,576 INFO benchmark: CNF size: variables=149840 clauses=406321
+2026-04-15 08:50:55,576 INFO benchmark: Running pysat:g3 for grammar=1 word_length=15
+2026-04-15 08:50:55,875 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=298.910
+2026-04-15 08:50:55,875 INFO benchmark: Running pysat:g4 for grammar=1 word_length=15
+2026-04-15 08:50:56,290 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=414.685
+2026-04-15 08:50:56,290 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=15
+2026-04-15 08:50:56,610 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=319.309
+2026-04-15 08:50:56,610 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=15
+2026-04-15 08:50:56,902 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=292.054
+2026-04-15 08:50:56,902 INFO benchmark: Running pysat:m22 for grammar=1 word_length=15
+2026-04-15 08:50:57,143 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=241.349
+2026-04-15 08:50:57,144 INFO benchmark: Running pysat:mc for grammar=1 word_length=15
+2026-04-15 08:50:57,434 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=289.752
+2026-04-15 08:50:57,435 INFO benchmark: Running pysat:mgh for grammar=1 word_length=15
+2026-04-15 08:50:57,661 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=226.294
+2026-04-15 08:50:57,662 INFO benchmark: Running pycryptosat for grammar=1 word_length=15
+2026-04-15 08:50:57,850 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=188.412
+2026-04-15 08:51:00,935 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w16.cnf
+2026-04-15 08:51:03,260 INFO benchmark: CNF size: variables=295260 clauses=817381
+2026-04-15 08:51:03,260 INFO benchmark: Running pysat:g3 for grammar=1 word_length=19
+2026-04-15 08:51:03,880 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=620.375
+2026-04-15 08:51:03,881 INFO benchmark: Running pysat:g4 for grammar=1 word_length=19
+2026-04-15 08:51:04,417 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=536.465
+2026-04-15 08:51:04,417 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=19
+2026-04-15 08:51:04,957 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=539.800
+2026-04-15 08:51:04,957 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=19
+2026-04-15 08:51:05,739 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=781.619
+2026-04-15 08:51:05,740 INFO benchmark: Running pysat:m22 for grammar=1 word_length=19
+2026-04-15 08:51:06,221 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=481.646
+2026-04-15 08:51:06,222 INFO benchmark: Running pysat:mc for grammar=1 word_length=19
+2026-04-15 08:51:07,139 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=916.689
+2026-04-15 08:51:07,139 INFO benchmark: Running pysat:mgh for grammar=1 word_length=19
+2026-04-15 08:51:08,503 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1364.494
+2026-04-15 08:51:08,504 INFO benchmark: Running pycryptosat for grammar=1 word_length=19
+2026-04-15 08:51:09,211 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=707.936
+2026-04-15 08:51:10,784 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w17.cnf
+2026-04-15 08:51:11,332 INFO benchmark: CNF size: variables=79534 clauses=210523
+2026-04-15 08:51:11,332 INFO benchmark: Running pysat:g3 for grammar=1 word_length=12
+2026-04-15 08:51:11,490 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=157.453
+2026-04-15 08:51:11,490 INFO benchmark: Running pysat:g4 for grammar=1 word_length=12
+2026-04-15 08:51:11,626 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=135.706
+2026-04-15 08:51:11,626 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=12
+2026-04-15 08:51:11,785 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=158.681
+2026-04-15 08:51:11,786 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=12
+2026-04-15 08:51:11,960 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=174.309
+2026-04-15 08:51:11,960 INFO benchmark: Running pysat:m22 for grammar=1 word_length=12
+2026-04-15 08:51:12,107 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=146.964
+2026-04-15 08:51:12,108 INFO benchmark: Running pysat:mc for grammar=1 word_length=12
+2026-04-15 08:51:12,348 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=239.771
+2026-04-15 08:51:12,348 INFO benchmark: Running pysat:mgh for grammar=1 word_length=12
+2026-04-15 08:51:12,488 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=140.635
+2026-04-15 08:51:12,488 INFO benchmark: Running pycryptosat for grammar=1 word_length=12
+2026-04-15 08:51:12,587 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=99.397
+2026-04-15 08:51:13,533 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w18.cnf
+2026-04-15 08:51:14,240 INFO benchmark: CNF size: variables=79534 clauses=210523
+2026-04-15 08:51:14,240 INFO benchmark: Running pysat:g3 for grammar=1 word_length=12
+2026-04-15 08:51:14,405 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=165.076
+2026-04-15 08:51:14,406 INFO benchmark: Running pysat:g4 for grammar=1 word_length=12
+2026-04-15 08:51:14,554 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=148.425
+2026-04-15 08:51:14,555 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=12
+2026-04-15 08:51:14,726 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=170.899
+2026-04-15 08:51:14,726 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=12
+2026-04-15 08:51:14,893 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=167.970
+2026-04-15 08:51:14,894 INFO benchmark: Running pysat:m22 for grammar=1 word_length=12
+2026-04-15 08:51:15,051 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=156.404
+2026-04-15 08:51:15,051 INFO benchmark: Running pysat:mc for grammar=1 word_length=12
+2026-04-15 08:51:15,226 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=174.662
+2026-04-15 08:51:15,226 INFO benchmark: Running pysat:mgh for grammar=1 word_length=12
+2026-04-15 08:51:15,356 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=129.528
+2026-04-15 08:51:15,356 INFO benchmark: Running pycryptosat for grammar=1 word_length=12
+2026-04-15 08:51:15,458 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=100.916
+2026-04-15 08:51:15,824 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w19.cnf
+2026-04-15 08:51:16,030 INFO benchmark: CNF size: variables=47685 clauses=123256
+2026-04-15 08:51:16,031 INFO benchmark: Running pysat:g3 for grammar=1 word_length=10
+2026-04-15 08:51:16,191 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=160.775
+2026-04-15 08:51:16,192 INFO benchmark: Running pysat:g4 for grammar=1 word_length=10
+2026-04-15 08:51:16,281 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=89.465
+2026-04-15 08:51:16,281 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=10
+2026-04-15 08:51:16,385 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=103.197
+2026-04-15 08:51:16,385 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=10
+2026-04-15 08:51:16,493 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=107.847
+2026-04-15 08:51:16,493 INFO benchmark: Running pysat:m22 for grammar=1 word_length=10
+2026-04-15 08:51:16,591 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=98.202
+2026-04-15 08:51:16,591 INFO benchmark: Running pysat:mc for grammar=1 word_length=10
+2026-04-15 08:51:16,707 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=115.525
+2026-04-15 08:51:16,707 INFO benchmark: Running pysat:mgh for grammar=1 word_length=10
+2026-04-15 08:51:16,799 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=91.043
+2026-04-15 08:51:16,800 INFO benchmark: Running pycryptosat for grammar=1 word_length=10
+2026-04-15 08:51:16,863 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=63.672
+2026-04-15 08:51:18,055 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w20.cnf
+2026-04-15 08:51:18,778 INFO benchmark: CNF size: variables=79534 clauses=210523
+2026-04-15 08:51:18,778 INFO benchmark: Running pysat:g3 for grammar=1 word_length=12
+2026-04-15 08:51:18,905 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=127.317
+2026-04-15 08:51:18,906 INFO benchmark: Running pysat:g4 for grammar=1 word_length=12
+2026-04-15 08:51:19,059 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=153.219
+2026-04-15 08:51:19,059 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=12
+2026-04-15 08:51:19,255 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=195.506
+2026-04-15 08:51:19,255 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=12
+2026-04-15 08:51:19,456 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=200.928
+2026-04-15 08:51:19,457 INFO benchmark: Running pysat:m22 for grammar=1 word_length=12
+2026-04-15 08:51:19,645 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=187.866
+2026-04-15 08:51:19,645 INFO benchmark: Running pysat:mc for grammar=1 word_length=12
+2026-04-15 08:51:19,825 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=179.776
+2026-04-15 08:51:19,825 INFO benchmark: Running pysat:mgh for grammar=1 word_length=12
+2026-04-15 08:51:19,985 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=159.655
+2026-04-15 08:51:19,986 INFO benchmark: Running pycryptosat for grammar=1 word_length=12
+2026-04-15 08:51:20,095 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=109.775
+2026-04-15 08:51:20,124 INFO benchmark: Writing 160 benchmark rows to src\text\results\big_grammar\big_grammar_solver_benchmark_results.csv
+2026-04-15 08:51:20,173 INFO benchmark: Benchmark finished successfully
+2026-04-15 08:51:52,231 INFO benchmark: Benchmark started
+2026-04-15 08:51:52,232 INFO benchmark: Grammar file: src\text\input\big_grammar.txt
+2026-04-15 08:51:52,232 INFO benchmark: Log file: src\text\results\big_grammar\big_grammar_benchmark.log
+2026-04-15 08:51:52,232 INFO benchmark: Length range: 20..30 positive=10 negative=10
+2026-04-15 08:51:52,233 INFO benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar (default)
+2026-04-15 08:51:52,233 INFO benchmark: Loading grammars from src\text\input\big_grammar.txt
+2026-04-15 08:51:52,248 INFO benchmark: Parsed 1 grammar(s); Java-only generator mode is enabled
+2026-04-15 08:51:52,248 INFO benchmark: Starting grammar 1/1
+2026-04-15 08:51:52,251 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 08:51:52,251 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=20, max_length=30, repetitions=40)
+2026-04-15 08:51:52,786 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 08:51:52,787 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=20, max_length=30, repetitions=40)
+2026-04-15 08:51:53,283 INFO benchmark: Java generator produced 10 positive words
+2026-04-15 08:51:53,323 INFO benchmark: Java generator produced 10 negative words
+2026-04-15 08:51:58,160 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w1.cnf
+2026-04-15 08:52:01,284 INFO benchmark: CNF size: variables=580700 clauses=1634101
+2026-04-15 08:52:01,285 INFO benchmark: Running pysat:g3 for grammar=1 word_length=24
+2026-04-15 08:52:02,337 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1057.096
+2026-04-15 08:52:02,337 INFO benchmark: Running pysat:g4 for grammar=1 word_length=24
+2026-04-15 08:52:03,642 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1299.505
+2026-04-15 08:52:03,642 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=24
+2026-04-15 08:52:04,999 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1357.112
+2026-04-15 08:52:04,999 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=24
+2026-04-15 08:52:06,104 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1104.652
+2026-04-15 08:52:06,104 INFO benchmark: Running pysat:m22 for grammar=1 word_length=24
+2026-04-15 08:52:07,011 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=907.269
+2026-04-15 08:52:07,011 INFO benchmark: Running pysat:mc for grammar=1 word_length=24
+2026-04-15 08:52:08,167 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1155.201
+2026-04-15 08:52:08,167 INFO benchmark: Running pysat:mgh for grammar=1 word_length=24
+2026-04-15 08:52:09,101 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=933.480
+2026-04-15 08:52:09,102 INFO benchmark: Running pycryptosat for grammar=1 word_length=24
+2026-04-15 08:52:09,805 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=703.447
+2026-04-15 08:52:13,616 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w2.cnf
+2026-04-15 08:52:15,907 INFO benchmark: CNF size: variables=451099 clauses=1262218
+2026-04-15 08:52:15,907 INFO benchmark: Running pysat:g3 for grammar=1 word_length=22
+2026-04-15 08:52:16,605 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=697.957
+2026-04-15 08:52:16,605 INFO benchmark: Running pysat:g4 for grammar=1 word_length=22
+2026-04-15 08:52:17,320 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=715.132
+2026-04-15 08:52:17,321 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=22
+2026-04-15 08:52:18,238 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=917.765
+2026-04-15 08:52:18,238 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=22
+2026-04-15 08:52:19,152 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=913.349
+2026-04-15 08:52:19,152 INFO benchmark: Running pysat:m22 for grammar=1 word_length=22
+2026-04-15 08:52:20,247 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=1095.158
+2026-04-15 08:52:20,248 INFO benchmark: Running pysat:mc for grammar=1 word_length=22
+2026-04-15 08:52:21,257 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1009.517
+2026-04-15 08:52:21,258 INFO benchmark: Running pysat:mgh for grammar=1 word_length=22
+2026-04-15 08:52:22,192 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=934.247
+2026-04-15 08:52:22,192 INFO benchmark: Running pycryptosat for grammar=1 word_length=22
+2026-04-15 08:52:22,859 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=667.311
+2026-04-15 08:52:27,662 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w3.cnf
+2026-04-15 08:52:30,616 INFO benchmark: CNF size: variables=580700 clauses=1634101
+2026-04-15 08:52:30,616 INFO benchmark: Running pysat:g3 for grammar=1 word_length=24
+2026-04-15 08:52:31,498 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=882.175
+2026-04-15 08:52:31,498 INFO benchmark: Running pysat:g4 for grammar=1 word_length=24
+2026-04-15 08:52:32,483 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=985.866
+2026-04-15 08:52:32,485 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=24
+2026-04-15 08:52:33,610 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1124.720
+2026-04-15 08:52:33,610 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=24
+2026-04-15 08:52:34,773 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1163.384
+2026-04-15 08:52:34,773 INFO benchmark: Running pysat:m22 for grammar=1 word_length=24
+2026-04-15 08:52:35,708 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=934.815
+2026-04-15 08:52:35,708 INFO benchmark: Running pysat:mc for grammar=1 word_length=24
+2026-04-15 08:52:36,759 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1050.535
+2026-04-15 08:52:36,759 INFO benchmark: Running pysat:mgh for grammar=1 word_length=24
+2026-04-15 08:52:37,738 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=979.370
+2026-04-15 08:52:37,738 INFO benchmark: Running pycryptosat for grammar=1 word_length=24
+2026-04-15 08:52:38,412 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=673.143
+2026-04-15 08:52:43,401 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w4.cnf
+2026-04-15 08:52:46,370 INFO benchmark: CNF size: variables=580700 clauses=1634101
+2026-04-15 08:52:46,370 INFO benchmark: Running pysat:g3 for grammar=1 word_length=24
+2026-04-15 08:52:47,290 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=920.085
+2026-04-15 08:52:47,290 INFO benchmark: Running pysat:g4 for grammar=1 word_length=24
+2026-04-15 08:52:48,287 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=996.208
+2026-04-15 08:52:48,287 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=24
+2026-04-15 08:52:49,422 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1133.948
+2026-04-15 08:52:49,422 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=24
+2026-04-15 08:52:50,584 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1162.051
+2026-04-15 08:52:50,584 INFO benchmark: Running pysat:m22 for grammar=1 word_length=24
+2026-04-15 08:52:51,463 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=880.203
+2026-04-15 08:52:51,465 INFO benchmark: Running pysat:mc for grammar=1 word_length=24
+2026-04-15 08:52:52,621 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1157.045
+2026-04-15 08:52:52,622 INFO benchmark: Running pysat:mgh for grammar=1 word_length=24
+2026-04-15 08:52:53,555 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=932.901
+2026-04-15 08:52:53,555 INFO benchmark: Running pycryptosat for grammar=1 word_length=24
+2026-04-15 08:52:54,267 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=711.792
+2026-04-15 08:52:59,120 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w5.cnf
+2026-04-15 08:53:02,168 INFO benchmark: CNF size: variables=580700 clauses=1634101
+2026-04-15 08:53:02,168 INFO benchmark: Running pysat:g3 for grammar=1 word_length=24
+2026-04-15 08:53:03,083 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=914.675
+2026-04-15 08:53:03,084 INFO benchmark: Running pysat:g4 for grammar=1 word_length=24
+2026-04-15 08:53:04,077 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=993.058
+2026-04-15 08:53:04,077 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=24
+2026-04-15 08:53:05,154 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1076.827
+2026-04-15 08:53:05,154 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=24
+2026-04-15 08:53:06,267 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1112.688
+2026-04-15 08:53:06,267 INFO benchmark: Running pysat:m22 for grammar=1 word_length=24
+2026-04-15 08:53:07,156 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=888.209
+2026-04-15 08:53:07,156 INFO benchmark: Running pysat:mc for grammar=1 word_length=24
+2026-04-15 08:53:08,305 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1149.033
+2026-04-15 08:53:08,306 INFO benchmark: Running pysat:mgh for grammar=1 word_length=24
+2026-04-15 08:53:09,248 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=942.721
+2026-04-15 08:53:09,248 INFO benchmark: Running pycryptosat for grammar=1 word_length=24
+2026-04-15 08:53:10,010 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=760.584
+2026-04-15 08:53:16,750 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w6.cnf
+2026-04-15 08:53:21,134 INFO benchmark: CNF size: variables=818244 clauses=2318653
+2026-04-15 08:53:21,135 INFO benchmark: Running pysat:g3 for grammar=1 word_length=27
+2026-04-15 08:53:22,536 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1401.124
+2026-04-15 08:53:22,536 INFO benchmark: Running pysat:g4 for grammar=1 word_length=27
+2026-04-15 08:53:24,045 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1508.970
+2026-04-15 08:53:24,046 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=27
+2026-04-15 08:53:25,699 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1652.557
+2026-04-15 08:53:25,699 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=27
+2026-04-15 08:53:27,301 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1603.112
+2026-04-15 08:53:27,301 INFO benchmark: Running pysat:m22 for grammar=1 word_length=27
+2026-04-15 08:53:28,690 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=1387.604
+2026-04-15 08:53:28,691 INFO benchmark: Running pysat:mc for grammar=1 word_length=27
+2026-04-15 08:53:30,195 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1505.015
+2026-04-15 08:53:30,196 INFO benchmark: Running pysat:mgh for grammar=1 word_length=27
+2026-04-15 08:53:31,450 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1253.604
+2026-04-15 08:53:31,450 INFO benchmark: Running pycryptosat for grammar=1 word_length=27
+2026-04-15 08:53:32,470 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1020.233
+2026-04-15 08:53:38,500 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w7.cnf
+2026-04-15 08:53:42,070 INFO benchmark: CNF size: variables=733005 clauses=2072656
+2026-04-15 08:53:42,075 INFO benchmark: Running pysat:g3 for grammar=1 word_length=26
+2026-04-15 08:53:43,251 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1176.252
+2026-04-15 08:53:43,251 INFO benchmark: Running pysat:g4 for grammar=1 word_length=26
+2026-04-15 08:53:44,534 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1282.479
+2026-04-15 08:53:44,535 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=26
+2026-04-15 08:53:45,997 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1463.172
+2026-04-15 08:53:45,997 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=26
+2026-04-15 08:53:47,436 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1437.637
+2026-04-15 08:53:47,436 INFO benchmark: Running pysat:m22 for grammar=1 word_length=26
+2026-04-15 08:53:48,793 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=1358.058
+2026-04-15 08:53:48,795 INFO benchmark: Running pysat:mc for grammar=1 word_length=26
+2026-04-15 08:53:50,186 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1391.028
+2026-04-15 08:53:50,187 INFO benchmark: Running pysat:mgh for grammar=1 word_length=26
+2026-04-15 08:53:51,375 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1189.172
+2026-04-15 08:53:51,375 INFO benchmark: Running pycryptosat for grammar=1 word_length=26
+2026-04-15 08:53:52,310 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=934.361
+2026-04-15 08:53:56,996 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w8.cnf
+2026-04-15 08:54:00,030 INFO benchmark: CNF size: variables=580700 clauses=1634101
+2026-04-15 08:54:00,030 INFO benchmark: Running pysat:g3 for grammar=1 word_length=24
+2026-04-15 08:54:00,917 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=887.156
+2026-04-15 08:54:00,918 INFO benchmark: Running pysat:g4 for grammar=1 word_length=24
+2026-04-15 08:54:01,967 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1048.554
+2026-04-15 08:54:01,968 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=24
+2026-04-15 08:54:03,056 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1088.877
+2026-04-15 08:54:03,057 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=24
+2026-04-15 08:54:04,161 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1105.098
+2026-04-15 08:54:04,162 INFO benchmark: Running pysat:m22 for grammar=1 word_length=24
+2026-04-15 08:54:05,026 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=864.212
+2026-04-15 08:54:05,027 INFO benchmark: Running pysat:mc for grammar=1 word_length=24
+2026-04-15 08:54:06,087 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1060.110
+2026-04-15 08:54:06,087 INFO benchmark: Running pysat:mgh for grammar=1 word_length=24
+2026-04-15 08:54:07,101 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1013.128
+2026-04-15 08:54:07,101 INFO benchmark: Running pycryptosat for grammar=1 word_length=24
+2026-04-15 08:54:07,797 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=696.663
+2026-04-15 08:54:11,143 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w9.cnf
+2026-04-15 08:54:13,160 INFO benchmark: CNF size: variables=394240 clauses=1099561
+2026-04-15 08:54:13,160 INFO benchmark: Running pysat:g3 for grammar=1 word_length=21
+2026-04-15 08:54:13,831 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=670.208
+2026-04-15 08:54:13,831 INFO benchmark: Running pysat:g4 for grammar=1 word_length=21
+2026-04-15 08:54:14,496 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=664.544
+2026-04-15 08:54:14,497 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=21
+2026-04-15 08:54:15,249 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=753.490
+2026-04-15 08:54:15,251 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=21
+2026-04-15 08:54:15,990 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=738.972
+2026-04-15 08:54:15,990 INFO benchmark: Running pysat:m22 for grammar=1 word_length=21
+2026-04-15 08:54:16,587 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=598.176
+2026-04-15 08:54:16,588 INFO benchmark: Running pysat:mc for grammar=1 word_length=21
+2026-04-15 08:54:17,284 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=696.046
+2026-04-15 08:54:17,285 INFO benchmark: Running pysat:mgh for grammar=1 word_length=21
+2026-04-15 08:54:17,897 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=612.797
+2026-04-15 08:54:17,897 INFO benchmark: Running pycryptosat for grammar=1 word_length=21
+2026-04-15 08:54:18,348 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=449.579
+2026-04-15 08:54:21,779 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w10.cnf
+2026-04-15 08:54:23,863 INFO benchmark: CNF size: variables=394240 clauses=1099561
+2026-04-15 08:54:23,863 INFO benchmark: Running pysat:g3 for grammar=1 word_length=21
+2026-04-15 08:54:24,510 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=645.046
+2026-04-15 08:54:24,510 INFO benchmark: Running pysat:g4 for grammar=1 word_length=21
+2026-04-15 08:54:25,146 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=635.815
+2026-04-15 08:54:25,146 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=21
+2026-04-15 08:54:25,852 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=705.992
+2026-04-15 08:54:25,852 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=21
+2026-04-15 08:54:26,588 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=736.119
+2026-04-15 08:54:26,589 INFO benchmark: Running pysat:m22 for grammar=1 word_length=21
+2026-04-15 08:54:27,180 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=590.615
+2026-04-15 08:54:27,180 INFO benchmark: Running pysat:mc for grammar=1 word_length=21
+2026-04-15 08:54:27,887 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=707.690
+2026-04-15 08:54:27,889 INFO benchmark: Running pysat:mgh for grammar=1 word_length=21
+2026-04-15 08:54:28,559 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=671.010
+2026-04-15 08:54:28,560 INFO benchmark: Running pycryptosat for grammar=1 word_length=21
+2026-04-15 08:54:29,080 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=520.376
+2026-04-15 08:54:37,192 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w11.cnf
+2026-04-15 08:54:41,976 INFO benchmark: CNF size: variables=1008040 clauses=2867521
+2026-04-15 08:54:41,976 INFO benchmark: Running pysat:g3 for grammar=1 word_length=29
+2026-04-15 08:54:43,552 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1576.494
+2026-04-15 08:54:43,552 INFO benchmark: Running pysat:g4 for grammar=1 word_length=29
+2026-04-15 08:54:45,280 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1728.223
+2026-04-15 08:54:45,280 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=29
+2026-04-15 08:54:48,416 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=3134.498
+2026-04-15 08:54:48,416 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=29
+2026-04-15 08:54:52,307 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=3891.019
+2026-04-15 08:54:52,307 INFO benchmark: Running pysat:m22 for grammar=1 word_length=29
+2026-04-15 08:54:54,069 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=1761.420
+2026-04-15 08:54:54,070 INFO benchmark: Running pysat:mc for grammar=1 word_length=29
+2026-04-15 08:54:56,211 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2142.834
+2026-04-15 08:54:56,211 INFO benchmark: Running pysat:mgh for grammar=1 word_length=29
+2026-04-15 08:54:58,047 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1835.057
+2026-04-15 08:54:58,047 INFO benchmark: Running pycryptosat for grammar=1 word_length=29
+2026-04-15 08:54:59,496 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1453.798
+2026-04-15 08:55:15,088 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w12.cnf
+2026-04-15 08:55:25,029 INFO benchmark: CNF size: variables=909846 clauses=2583379
+2026-04-15 08:55:25,030 INFO benchmark: Running pysat:g3 for grammar=1 word_length=28
+2026-04-15 08:55:26,631 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1601.936
+2026-04-15 08:55:26,632 INFO benchmark: Running pysat:g4 for grammar=1 word_length=28
+2026-04-15 08:55:28,361 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1731.923
+2026-04-15 08:55:28,361 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=28
+2026-04-15 08:55:30,370 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=2005.842
+2026-04-15 08:55:30,371 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=28
+2026-04-15 08:55:32,298 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1927.357
+2026-04-15 08:55:32,298 INFO benchmark: Running pysat:m22 for grammar=1 word_length=28
+2026-04-15 08:55:34,486 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2188.096
+2026-04-15 08:55:34,487 INFO benchmark: Running pysat:mc for grammar=1 word_length=28
+2026-04-15 08:55:37,526 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=3038.942
+2026-04-15 08:55:37,526 INFO benchmark: Running pysat:mgh for grammar=1 word_length=28
+2026-04-15 08:55:39,693 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2166.566
+2026-04-15 08:55:39,693 INFO benchmark: Running pycryptosat for grammar=1 word_length=28
+2026-04-15 08:55:40,985 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1291.928
+2026-04-15 08:55:46,207 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w13.cnf
+2026-04-15 08:55:51,402 INFO benchmark: CNF size: variables=513176 clauses=1440169
+2026-04-15 08:55:51,403 INFO benchmark: Running pysat:g3 for grammar=1 word_length=23
+2026-04-15 08:55:52,915 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1512.349
+2026-04-15 08:55:52,915 INFO benchmark: Running pysat:g4 for grammar=1 word_length=23
+2026-04-15 08:55:53,946 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1030.146
+2026-04-15 08:55:53,947 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=23
+2026-04-15 08:55:54,974 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1026.916
+2026-04-15 08:55:54,974 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=23
+2026-04-15 08:55:56,011 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1039.045
+2026-04-15 08:55:56,011 INFO benchmark: Running pysat:m22 for grammar=1 word_length=23
+2026-04-15 08:55:56,831 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=817.243
+2026-04-15 08:55:56,831 INFO benchmark: Running pysat:mc for grammar=1 word_length=23
+2026-04-15 08:55:58,386 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1554.807
+2026-04-15 08:55:58,386 INFO benchmark: Running pysat:mgh for grammar=1 word_length=23
+2026-04-15 08:55:59,949 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1562.345
+2026-04-15 08:55:59,949 INFO benchmark: Running pycryptosat for grammar=1 word_length=23
+2026-04-15 08:56:01,489 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1542.641
+2026-04-15 08:56:06,019 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w14.cnf
+2026-04-15 08:56:09,220 INFO benchmark: CNF size: variables=451099 clauses=1262218
+2026-04-15 08:56:09,221 INFO benchmark: Running pysat:g3 for grammar=1 word_length=22
+2026-04-15 08:56:10,203 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=981.544
+2026-04-15 08:56:10,204 INFO benchmark: Running pysat:g4 for grammar=1 word_length=22
+2026-04-15 08:56:11,259 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1055.874
+2026-04-15 08:56:11,259 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=22
+2026-04-15 08:56:12,336 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1075.826
+2026-04-15 08:56:12,336 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=22
+2026-04-15 08:56:13,360 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1023.512
+2026-04-15 08:56:13,360 INFO benchmark: Running pysat:m22 for grammar=1 word_length=22
+2026-04-15 08:56:14,452 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=1092.500
+2026-04-15 08:56:14,453 INFO benchmark: Running pysat:mc for grammar=1 word_length=22
+2026-04-15 08:56:15,785 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1331.916
+2026-04-15 08:56:15,786 INFO benchmark: Running pysat:mgh for grammar=1 word_length=22
+2026-04-15 08:56:16,688 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=903.024
+2026-04-15 08:56:16,688 INFO benchmark: Running pycryptosat for grammar=1 word_length=22
+2026-04-15 08:56:17,281 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=592.762
+2026-04-15 08:56:21,256 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w15.cnf
+2026-04-15 08:56:23,350 INFO benchmark: CNF size: variables=394240 clauses=1099561
+2026-04-15 08:56:23,350 INFO benchmark: Running pysat:g3 for grammar=1 word_length=21
+2026-04-15 08:56:24,071 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=720.162
+2026-04-15 08:56:24,072 INFO benchmark: Running pysat:g4 for grammar=1 word_length=21
+2026-04-15 08:56:24,717 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=644.992
+2026-04-15 08:56:24,717 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=21
+2026-04-15 08:56:25,472 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=755.551
+2026-04-15 08:56:25,472 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=21
+2026-04-15 08:56:26,345 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=872.308
+2026-04-15 08:56:26,346 INFO benchmark: Running pysat:m22 for grammar=1 word_length=21
+2026-04-15 08:56:26,950 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=605.187
+2026-04-15 08:56:26,951 INFO benchmark: Running pysat:mc for grammar=1 word_length=21
+2026-04-15 08:56:27,661 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=710.499
+2026-04-15 08:56:27,662 INFO benchmark: Running pysat:mgh for grammar=1 word_length=21
+2026-04-15 08:56:28,283 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=620.409
+2026-04-15 08:56:28,283 INFO benchmark: Running pycryptosat for grammar=1 word_length=21
+2026-04-15 08:56:28,714 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=430.888
+2026-04-15 08:56:34,226 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w16.cnf
+2026-04-15 08:56:37,366 INFO benchmark: CNF size: variables=580700 clauses=1634101
+2026-04-15 08:56:37,367 INFO benchmark: Running pysat:g3 for grammar=1 word_length=24
+2026-04-15 08:56:38,377 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1010.305
+2026-04-15 08:56:38,378 INFO benchmark: Running pysat:g4 for grammar=1 word_length=24
+2026-04-15 08:56:39,533 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1155.357
+2026-04-15 08:56:39,533 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=24
+2026-04-15 08:56:40,759 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1226.164
+2026-04-15 08:56:40,759 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=24
+2026-04-15 08:56:41,927 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1166.449
+2026-04-15 08:56:41,927 INFO benchmark: Running pysat:m22 for grammar=1 word_length=24
+2026-04-15 08:56:42,763 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=837.605
+2026-04-15 08:56:42,765 INFO benchmark: Running pysat:mc for grammar=1 word_length=24
+2026-04-15 08:56:44,137 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1371.735
+2026-04-15 08:56:44,137 INFO benchmark: Running pysat:mgh for grammar=1 word_length=24
+2026-04-15 08:56:45,166 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1028.575
+2026-04-15 08:56:45,166 INFO benchmark: Running pycryptosat for grammar=1 word_length=24
+2026-04-15 08:56:45,870 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=703.962
+2026-04-15 08:56:49,457 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w17.cnf
+2026-04-15 08:56:51,547 INFO benchmark: CNF size: variables=394240 clauses=1099561
+2026-04-15 08:56:51,547 INFO benchmark: Running pysat:g3 for grammar=1 word_length=21
+2026-04-15 08:56:52,165 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=617.460
+2026-04-15 08:56:52,166 INFO benchmark: Running pysat:g4 for grammar=1 word_length=21
+2026-04-15 08:56:52,860 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=694.529
+2026-04-15 08:56:52,860 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=21
+2026-04-15 08:56:53,621 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=760.523
+2026-04-15 08:56:53,622 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=21
+2026-04-15 08:56:54,623 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1002.467
+2026-04-15 08:56:54,625 INFO benchmark: Running pysat:m22 for grammar=1 word_length=21
+2026-04-15 08:56:55,297 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=671.885
+2026-04-15 08:56:55,297 INFO benchmark: Running pysat:mc for grammar=1 word_length=21
+2026-04-15 08:56:56,071 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=773.714
+2026-04-15 08:56:56,071 INFO benchmark: Running pysat:mgh for grammar=1 word_length=21
+2026-04-15 08:56:56,743 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=671.808
+2026-04-15 08:56:56,743 INFO benchmark: Running pycryptosat for grammar=1 word_length=21
+2026-04-15 08:56:57,244 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=500.131
+2026-04-15 08:57:04,608 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w18.cnf
+2026-04-15 08:57:08,812 INFO benchmark: CNF size: variables=818244 clauses=2318653
+2026-04-15 08:57:08,813 INFO benchmark: Running pysat:g3 for grammar=1 word_length=27
+2026-04-15 08:57:10,528 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1715.232
+2026-04-15 08:57:10,528 INFO benchmark: Running pysat:g4 for grammar=1 word_length=27
+2026-04-15 08:57:11,948 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=1419.053
+2026-04-15 08:57:11,948 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=27
+2026-04-15 08:57:13,696 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=1747.553
+2026-04-15 08:57:13,696 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=27
+2026-04-15 08:57:15,545 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=1848.900
+2026-04-15 08:57:15,546 INFO benchmark: Running pysat:m22 for grammar=1 word_length=27
+2026-04-15 08:57:17,025 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=1479.245
+2026-04-15 08:57:17,025 INFO benchmark: Running pysat:mc for grammar=1 word_length=27
+2026-04-15 08:57:18,606 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=1580.322
+2026-04-15 08:57:18,606 INFO benchmark: Running pysat:mgh for grammar=1 word_length=27
+2026-04-15 08:57:20,043 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1436.484
+2026-04-15 08:57:20,043 INFO benchmark: Running pycryptosat for grammar=1 word_length=27
+2026-04-15 08:57:21,034 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=990.419
+2026-04-15 08:57:31,168 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w19.cnf
+2026-04-15 08:57:37,976 INFO benchmark: CNF size: variables=1113055 clauses=3171766
+2026-04-15 08:57:37,977 INFO benchmark: Running pysat:g3 for grammar=1 word_length=30
+2026-04-15 08:57:39,795 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=1817.693
+2026-04-15 08:57:39,795 INFO benchmark: Running pysat:g4 for grammar=1 word_length=30
+2026-04-15 08:57:41,905 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=2109.998
+2026-04-15 08:57:41,906 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=30
+2026-04-15 08:57:45,080 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=3174.539
+2026-04-15 08:57:45,081 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=30
+2026-04-15 08:57:47,879 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=2799.459
+2026-04-15 08:57:47,880 INFO benchmark: Running pysat:m22 for grammar=1 word_length=30
+2026-04-15 08:57:50,350 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2470.607
+2026-04-15 08:57:50,351 INFO benchmark: Running pysat:mc for grammar=1 word_length=30
+2026-04-15 08:57:52,899 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2548.221
+2026-04-15 08:57:52,899 INFO benchmark: Running pysat:mgh for grammar=1 word_length=30
+2026-04-15 08:57:54,925 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2025.493
+2026-04-15 08:57:54,925 INFO benchmark: Running pycryptosat for grammar=1 word_length=30
+2026-04-15 08:57:56,440 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1514.401
+2026-04-15 08:58:08,162 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w20.cnf
+2026-04-15 08:58:15,381 INFO benchmark: CNF size: variables=1113055 clauses=3171766
+2026-04-15 08:58:15,382 INFO benchmark: Running pysat:g3 for grammar=1 word_length=30
+2026-04-15 08:58:17,890 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2508.004
+2026-04-15 08:58:17,890 INFO benchmark: Running pysat:g4 for grammar=1 word_length=30
+2026-04-15 08:58:20,833 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=2942.344
+2026-04-15 08:58:20,833 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=30
+2026-04-15 08:58:23,968 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=3135.621
+2026-04-15 08:58:23,968 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=30
+2026-04-15 08:58:27,127 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=3158.465
+2026-04-15 08:58:27,128 INFO benchmark: Running pysat:m22 for grammar=1 word_length=30
+2026-04-15 08:58:29,430 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2302.283
+2026-04-15 08:58:29,431 INFO benchmark: Running pysat:mc for grammar=1 word_length=30
+2026-04-15 08:58:31,888 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2457.521
+2026-04-15 08:58:31,888 INFO benchmark: Running pysat:mgh for grammar=1 word_length=30
+2026-04-15 08:58:34,388 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2500.269
+2026-04-15 08:58:34,388 INFO benchmark: Running pycryptosat for grammar=1 word_length=30
+2026-04-15 08:58:36,083 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1694.158
+2026-04-15 08:58:36,540 INFO benchmark: Writing 160 benchmark rows to src\text\results\big_grammar\big_grammar_solver_benchmark_results.csv
+2026-04-15 08:58:36,567 INFO benchmark: Benchmark finished successfully
+2026-04-15 08:59:32,592 INFO benchmark: Benchmark started
+2026-04-15 08:59:32,593 INFO benchmark: Grammar file: src\text\input\big_grammar.txt
+2026-04-15 08:59:32,593 INFO benchmark: Log file: src\text\results\big_grammar\big_grammar_benchmark.log
+2026-04-15 08:59:32,593 INFO benchmark: Length range: 30..40 positive=10 negative=10
+2026-04-15 08:59:32,593 INFO benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar (default)
+2026-04-15 08:59:32,594 INFO benchmark: Loading grammars from src\text\input\big_grammar.txt
+2026-04-15 08:59:32,611 INFO benchmark: Parsed 1 grammar(s); Java-only generator mode is enabled
+2026-04-15 08:59:32,611 INFO benchmark: Starting grammar 1/1
+2026-04-15 08:59:32,616 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 08:59:32,616 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=30, max_length=40, repetitions=40)
+2026-04-15 08:59:33,128 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 08:59:33,128 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=30, max_length=40, repetitions=40)
+2026-04-15 08:59:33,628 INFO benchmark: Java generator produced 10 positive words
+2026-04-15 08:59:33,628 INFO benchmark: Java generator produced 10 negative words
+2026-04-15 08:59:56,086 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w1.cnf
+2026-04-15 09:00:10,387 INFO benchmark: CNF size: variables=2226211 clauses=6411874
+2026-04-15 09:00:10,387 INFO benchmark: Running pysat:g3 for grammar=1 word_length=38
+2026-04-15 09:00:14,612 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4221.048
+2026-04-15 09:00:14,612 INFO benchmark: Running pysat:g4 for grammar=1 word_length=38
+2026-04-15 09:00:19,128 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=4514.748
+2026-04-15 09:00:19,128 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=38
+2026-04-15 09:00:24,259 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5131.275
+2026-04-15 09:00:24,259 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=38
+2026-04-15 09:00:29,492 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=5232.746
+2026-04-15 09:00:29,492 INFO benchmark: Running pysat:m22 for grammar=1 word_length=38
+2026-04-15 09:00:33,402 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3909.140
+2026-04-15 09:00:33,402 INFO benchmark: Running pysat:mc for grammar=1 word_length=38
+2026-04-15 09:00:38,282 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=4879.966
+2026-04-15 09:00:38,282 INFO benchmark: Running pysat:mgh for grammar=1 word_length=38
+2026-04-15 09:00:42,189 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=3906.630
+2026-04-15 09:00:42,190 INFO benchmark: Running pycryptosat for grammar=1 word_length=38
+2026-04-15 09:00:45,240 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3053.700
+2026-04-15 09:01:03,736 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w2.cnf
+2026-04-15 09:01:14,037 INFO benchmark: CNF size: variables=1899210 clauses=5457871
+2026-04-15 09:01:14,037 INFO benchmark: Running pysat:g3 for grammar=1 word_length=36
+2026-04-15 09:01:18,063 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4025.452
+2026-04-15 09:01:18,063 INFO benchmark: Running pysat:g4 for grammar=1 word_length=36
+2026-04-15 09:01:21,626 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3563.146
+2026-04-15 09:01:21,627 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=36
+2026-04-15 09:01:25,774 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=4147.380
+2026-04-15 09:01:25,774 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=36
+2026-04-15 09:01:29,965 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=4190.430
+2026-04-15 09:01:29,965 INFO benchmark: Running pysat:m22 for grammar=1 word_length=36
+2026-04-15 09:01:33,390 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3423.997
+2026-04-15 09:01:33,390 INFO benchmark: Running pysat:mc for grammar=1 word_length=36
+2026-04-15 09:01:37,788 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=4398.391
+2026-04-15 09:01:37,788 INFO benchmark: Running pysat:mgh for grammar=1 word_length=36
+2026-04-15 09:01:41,426 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=3637.850
+2026-04-15 09:01:41,427 INFO benchmark: Running pycryptosat for grammar=1 word_length=36
+2026-04-15 09:01:44,185 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2757.844
+2026-04-15 09:01:56,221 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w3.cnf
+2026-04-15 09:02:03,015 INFO benchmark: CNF size: variables=1225120 clauses=3496801
+2026-04-15 09:02:03,015 INFO benchmark: Running pysat:g3 for grammar=1 word_length=31
+2026-04-15 09:02:05,171 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2155.549
+2026-04-15 09:02:05,171 INFO benchmark: Running pysat:g4 for grammar=1 word_length=31
+2026-04-15 09:02:07,313 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=2142.906
+2026-04-15 09:02:07,313 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=31
+2026-04-15 09:02:09,971 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=2655.995
+2026-04-15 09:02:09,971 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=31
+2026-04-15 09:02:12,529 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=2558.002
+2026-04-15 09:02:12,529 INFO benchmark: Running pysat:m22 for grammar=1 word_length=31
+2026-04-15 09:02:14,833 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2303.080
+2026-04-15 09:02:14,833 INFO benchmark: Running pysat:mc for grammar=1 word_length=31
+2026-04-15 09:02:17,197 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2371.014
+2026-04-15 09:02:17,197 INFO benchmark: Running pysat:mgh for grammar=1 word_length=31
+2026-04-15 09:02:19,224 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2019.832
+2026-04-15 09:02:19,225 INFO benchmark: Running pycryptosat for grammar=1 word_length=31
+2026-04-15 09:02:20,799 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1574.286
+2026-04-15 09:02:37,577 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w4.cnf
+2026-04-15 09:02:48,070 INFO benchmark: CNF size: variables=1899210 clauses=5457871
+2026-04-15 09:02:48,070 INFO benchmark: Running pysat:g3 for grammar=1 word_length=36
+2026-04-15 09:02:51,503 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=3433.089
+2026-04-15 09:02:51,503 INFO benchmark: Running pysat:g4 for grammar=1 word_length=36
+2026-04-15 09:02:55,005 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3501.580
+2026-04-15 09:02:55,006 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=36
+2026-04-15 09:02:58,780 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=3775.052
+2026-04-15 09:02:58,781 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=36
+2026-04-15 09:03:02,808 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=4026.944
+2026-04-15 09:03:02,809 INFO benchmark: Running pysat:m22 for grammar=1 word_length=36
+2026-04-15 09:03:06,058 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3249.018
+2026-04-15 09:03:06,058 INFO benchmark: Running pysat:mc for grammar=1 word_length=36
+2026-04-15 09:03:11,159 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=5101.350
+2026-04-15 09:03:11,159 INFO benchmark: Running pysat:mgh for grammar=1 word_length=36
+2026-04-15 09:03:14,712 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=3552.780
+2026-04-15 09:03:14,714 INFO benchmark: Running pycryptosat for grammar=1 word_length=36
+2026-04-15 09:03:17,065 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2351.264
+2026-04-15 09:03:38,848 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w5.cnf
+2026-04-15 09:03:53,107 INFO benchmark: CNF size: variables=2402920 clauses=6927961
+2026-04-15 09:03:53,107 INFO benchmark: Running pysat:g3 for grammar=1 word_length=39
+2026-04-15 09:03:57,867 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4759.907
+2026-04-15 09:03:57,868 INFO benchmark: Running pysat:g4 for grammar=1 word_length=39
+2026-04-15 09:04:02,966 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5097.677
+2026-04-15 09:04:02,966 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=39
+2026-04-15 09:04:08,777 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5810.955
+2026-04-15 09:04:08,778 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=39
+2026-04-15 09:04:14,391 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=5613.672
+2026-04-15 09:04:14,391 INFO benchmark: Running pysat:m22 for grammar=1 word_length=39
+2026-04-15 09:04:18,696 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=4304.264
+2026-04-15 09:04:18,697 INFO benchmark: Running pysat:mc for grammar=1 word_length=39
+2026-04-15 09:04:24,017 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=5319.297
+2026-04-15 09:04:24,017 INFO benchmark: Running pysat:mgh for grammar=1 word_length=39
+2026-04-15 09:04:28,363 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=4346.309
+2026-04-15 09:04:28,363 INFO benchmark: Running pycryptosat for grammar=1 word_length=39
+2026-04-15 09:04:31,424 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3060.542
+2026-04-15 09:04:47,173 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w6.cnf
+2026-04-15 09:04:56,840 INFO benchmark: CNF size: variables=1605905 clauses=4603516
+2026-04-15 09:04:56,840 INFO benchmark: Running pysat:g3 for grammar=1 word_length=34
+2026-04-15 09:05:00,371 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=3531.441
+2026-04-15 09:05:00,372 INFO benchmark: Running pysat:g4 for grammar=1 word_length=34
+2026-04-15 09:05:03,628 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3256.701
+2026-04-15 09:05:03,629 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=34
+2026-04-15 09:05:07,222 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=3593.390
+2026-04-15 09:05:07,223 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=34
+2026-04-15 09:05:10,617 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=3394.303
+2026-04-15 09:05:10,617 INFO benchmark: Running pysat:m22 for grammar=1 word_length=34
+2026-04-15 09:05:13,463 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2846.356
+2026-04-15 09:05:13,463 INFO benchmark: Running pysat:mc for grammar=1 word_length=34
+2026-04-15 09:05:17,027 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=3562.675
+2026-04-15 09:05:17,027 INFO benchmark: Running pysat:mgh for grammar=1 word_length=34
+2026-04-15 09:05:19,999 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2972.691
+2026-04-15 09:05:20,000 INFO benchmark: Running pycryptosat for grammar=1 word_length=34
+2026-04-15 09:05:22,025 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2024.827
+2026-04-15 09:05:32,784 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w7.cnf
+2026-04-15 09:05:39,513 INFO benchmark: CNF size: variables=1113055 clauses=3171766
+2026-04-15 09:05:39,515 INFO benchmark: Running pysat:g3 for grammar=1 word_length=30
+2026-04-15 09:05:41,578 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2063.502
+2026-04-15 09:05:41,579 INFO benchmark: Running pysat:g4 for grammar=1 word_length=30
+2026-04-15 09:05:43,663 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=2084.741
+2026-04-15 09:05:43,663 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=30
+2026-04-15 09:05:46,008 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=2345.182
+2026-04-15 09:05:46,010 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=30
+2026-04-15 09:05:48,739 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=2729.158
+2026-04-15 09:05:48,739 INFO benchmark: Running pysat:m22 for grammar=1 word_length=30
+2026-04-15 09:05:50,930 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2191.227
+2026-04-15 09:05:50,930 INFO benchmark: Running pysat:mc for grammar=1 word_length=30
+2026-04-15 09:05:53,368 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2436.616
+2026-04-15 09:05:53,368 INFO benchmark: Running pysat:mgh for grammar=1 word_length=30
+2026-04-15 09:05:55,525 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2157.656
+2026-04-15 09:05:55,526 INFO benchmark: Running pycryptosat for grammar=1 word_length=30
+2026-04-15 09:05:56,998 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1471.074
+2026-04-15 09:06:16,634 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w8.cnf
+2026-04-15 09:06:28,838 INFO benchmark: CNF size: variables=2058384 clauses=5922073
+2026-04-15 09:06:28,838 INFO benchmark: Running pysat:g3 for grammar=1 word_length=37
+2026-04-15 09:06:32,940 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4101.747
+2026-04-15 09:06:32,940 INFO benchmark: Running pysat:g4 for grammar=1 word_length=37
+2026-04-15 09:06:37,133 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=4192.497
+2026-04-15 09:06:37,133 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=37
+2026-04-15 09:06:41,719 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=4585.722
+2026-04-15 09:06:41,728 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=37
+2026-04-15 09:06:46,283 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=4554.286
+2026-04-15 09:06:46,283 INFO benchmark: Running pysat:m22 for grammar=1 word_length=37
+2026-04-15 09:06:50,153 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3868.635
+2026-04-15 09:06:50,153 INFO benchmark: Running pysat:mc for grammar=1 word_length=37
+2026-04-15 09:06:54,471 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=4317.792
+2026-04-15 09:06:54,471 INFO benchmark: Running pysat:mgh for grammar=1 word_length=37
+2026-04-15 09:06:58,149 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=3677.904
+2026-04-15 09:06:58,150 INFO benchmark: Running pycryptosat for grammar=1 word_length=37
+2026-04-15 09:07:01,170 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3018.793
+2026-04-15 09:07:15,804 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w9.cnf
+2026-04-15 09:07:24,659 INFO benchmark: CNF size: variables=1605905 clauses=4603516
+2026-04-15 09:07:24,660 INFO benchmark: Running pysat:g3 for grammar=1 word_length=34
+2026-04-15 09:07:27,522 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2862.658
+2026-04-15 09:07:27,522 INFO benchmark: Running pysat:g4 for grammar=1 word_length=34
+2026-04-15 09:07:30,771 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3249.166
+2026-04-15 09:07:30,772 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=34
+2026-04-15 09:07:34,257 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=3484.783
+2026-04-15 09:07:34,257 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=34
+2026-04-15 09:07:38,088 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=3830.259
+2026-04-15 09:07:38,088 INFO benchmark: Running pysat:m22 for grammar=1 word_length=34
+2026-04-15 09:07:40,980 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2891.805
+2026-04-15 09:07:40,980 INFO benchmark: Running pysat:mc for grammar=1 word_length=34
+2026-04-15 09:07:44,804 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=3823.624
+2026-04-15 09:07:44,805 INFO benchmark: Running pysat:mgh for grammar=1 word_length=34
+2026-04-15 09:07:47,760 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2955.345
+2026-04-15 09:07:47,760 INFO benchmark: Running pycryptosat for grammar=1 word_length=34
+2026-04-15 09:07:50,199 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2438.545
+2026-04-15 09:08:00,775 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w10.cnf
+2026-04-15 09:08:06,759 INFO benchmark: CNF size: variables=1113055 clauses=3171766
+2026-04-15 09:08:06,760 INFO benchmark: Running pysat:g3 for grammar=1 word_length=30
+2026-04-15 09:08:08,967 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2208.216
+2026-04-15 09:08:08,968 INFO benchmark: Running pysat:g4 for grammar=1 word_length=30
+2026-04-15 09:08:11,226 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=2257.870
+2026-04-15 09:08:11,227 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=30
+2026-04-15 09:08:13,701 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=2475.263
+2026-04-15 09:08:13,701 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=30
+2026-04-15 09:08:16,331 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=2629.370
+2026-04-15 09:08:16,331 INFO benchmark: Running pysat:m22 for grammar=1 word_length=30
+2026-04-15 09:08:18,515 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2183.346
+2026-04-15 09:08:18,516 INFO benchmark: Running pysat:mc for grammar=1 word_length=30
+2026-04-15 09:08:21,099 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2583.255
+2026-04-15 09:08:21,099 INFO benchmark: Running pysat:mgh for grammar=1 word_length=30
+2026-04-15 09:08:23,100 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2001.294
+2026-04-15 09:08:23,100 INFO benchmark: Running pycryptosat for grammar=1 word_length=30
+2026-04-15 09:08:25,063 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1962.113
+2026-04-15 09:08:49,123 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w11.cnf
+2026-04-15 09:09:03,688 INFO benchmark: CNF size: variables=2402920 clauses=6927961
+2026-04-15 09:09:03,688 INFO benchmark: Running pysat:g3 for grammar=1 word_length=39
+2026-04-15 09:09:08,537 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4849.070
+2026-04-15 09:09:08,537 INFO benchmark: Running pysat:g4 for grammar=1 word_length=39
+2026-04-15 09:09:13,388 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=4853.965
+2026-04-15 09:09:13,388 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=39
+2026-04-15 09:09:19,388 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5999.578
+2026-04-15 09:09:19,388 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=39
+2026-04-15 09:09:25,063 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=5670.866
+2026-04-15 09:09:25,063 INFO benchmark: Running pysat:m22 for grammar=1 word_length=39
+2026-04-15 09:09:29,250 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=4187.549
+2026-04-15 09:09:29,251 INFO benchmark: Running pysat:mc for grammar=1 word_length=39
+2026-04-15 09:09:34,347 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=5096.720
+2026-04-15 09:09:34,348 INFO benchmark: Running pysat:mgh for grammar=1 word_length=39
+2026-04-15 09:09:38,729 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=4381.291
+2026-04-15 09:09:38,730 INFO benchmark: Running pycryptosat for grammar=1 word_length=39
+2026-04-15 09:09:42,037 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3309.647
+2026-04-15 09:10:00,154 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w12.cnf
+2026-04-15 09:10:10,680 INFO benchmark: CNF size: variables=1899210 clauses=5457871
+2026-04-15 09:10:10,681 INFO benchmark: Running pysat:g3 for grammar=1 word_length=36
+2026-04-15 09:10:14,161 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=3481.002
+2026-04-15 09:10:14,161 INFO benchmark: Running pysat:g4 for grammar=1 word_length=36
+2026-04-15 09:10:17,774 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3612.108
+2026-04-15 09:10:17,774 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=36
+2026-04-15 09:10:21,845 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=4069.750
+2026-04-15 09:10:21,845 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=36
+2026-04-15 09:10:26,448 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=4603.162
+2026-04-15 09:10:26,448 INFO benchmark: Running pysat:m22 for grammar=1 word_length=36
+2026-04-15 09:10:29,783 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3334.663
+2026-04-15 09:10:29,783 INFO benchmark: Running pysat:mc for grammar=1 word_length=36
+2026-04-15 09:10:33,783 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=4000.307
+2026-04-15 09:10:33,783 INFO benchmark: Running pysat:mgh for grammar=1 word_length=36
+2026-04-15 09:10:37,237 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=3462.075
+2026-04-15 09:10:37,237 INFO benchmark: Running pycryptosat for grammar=1 word_length=36
+2026-04-15 09:10:39,717 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2469.786
+2026-04-15 09:11:01,893 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w13.cnf
+2026-04-15 09:11:16,003 INFO benchmark: CNF size: variables=2402920 clauses=6927961
+2026-04-15 09:11:16,003 INFO benchmark: Running pysat:g3 for grammar=1 word_length=39
+2026-04-15 09:11:20,178 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4175.086
+2026-04-15 09:11:20,178 INFO benchmark: Running pysat:g4 for grammar=1 word_length=39
+2026-04-15 09:11:25,437 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5259.302
+2026-04-15 09:11:25,438 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=39
+2026-04-15 09:11:30,658 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5220.679
+2026-04-15 09:11:30,659 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=39
+2026-04-15 09:11:35,856 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=5197.000
+2026-04-15 09:11:35,856 INFO benchmark: Running pysat:m22 for grammar=1 word_length=39
+2026-04-15 09:11:39,840 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3983.636
+2026-04-15 09:11:39,840 INFO benchmark: Running pysat:mc for grammar=1 word_length=39
+2026-04-15 09:11:44,514 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=4672.830
+2026-04-15 09:11:44,514 INFO benchmark: Running pysat:mgh for grammar=1 word_length=39
+2026-04-15 09:11:48,606 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=4091.827
+2026-04-15 09:11:48,606 INFO benchmark: Running pycryptosat for grammar=1 word_length=39
+2026-04-15 09:11:51,962 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3356.141
+2026-04-15 09:12:09,268 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w14.cnf
+2026-04-15 09:12:19,051 INFO benchmark: CNF size: variables=1748460 clauses=5018581
+2026-04-15 09:12:19,051 INFO benchmark: Running pysat:g3 for grammar=1 word_length=35
+2026-04-15 09:12:22,392 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=3340.583
+2026-04-15 09:12:22,393 INFO benchmark: Running pysat:g4 for grammar=1 word_length=35
+2026-04-15 09:12:25,527 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3134.451
+2026-04-15 09:12:25,527 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=35
+2026-04-15 09:12:29,271 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=3743.845
+2026-04-15 09:12:29,271 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=35
+2026-04-15 09:12:33,151 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=3879.488
+2026-04-15 09:12:33,151 INFO benchmark: Running pysat:m22 for grammar=1 word_length=35
+2026-04-15 09:12:36,232 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3080.523
+2026-04-15 09:12:36,233 INFO benchmark: Running pysat:mc for grammar=1 word_length=35
+2026-04-15 09:12:39,818 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=3585.381
+2026-04-15 09:12:39,818 INFO benchmark: Running pysat:mgh for grammar=1 word_length=35
+2026-04-15 09:12:42,779 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2961.296
+2026-04-15 09:12:42,780 INFO benchmark: Running pycryptosat for grammar=1 word_length=35
+2026-04-15 09:12:44,934 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2153.573
+2026-04-15 09:12:54,281 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w15.cnf
+2026-04-15 09:12:59,995 INFO benchmark: CNF size: variables=1113055 clauses=3171766
+2026-04-15 09:12:59,995 INFO benchmark: Running pysat:g3 for grammar=1 word_length=30
+2026-04-15 09:13:01,998 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2002.985
+2026-04-15 09:13:01,999 INFO benchmark: Running pysat:g4 for grammar=1 word_length=30
+2026-04-15 09:13:04,018 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=2020.061
+2026-04-15 09:13:04,018 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=30
+2026-04-15 09:13:06,290 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=2271.551
+2026-04-15 09:13:06,291 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=30
+2026-04-15 09:13:08,767 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=2475.473
+2026-04-15 09:13:08,767 INFO benchmark: Running pysat:m22 for grammar=1 word_length=30
+2026-04-15 09:13:10,885 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2118.594
+2026-04-15 09:13:10,886 INFO benchmark: Running pysat:mc for grammar=1 word_length=30
+2026-04-15 09:13:13,397 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2510.232
+2026-04-15 09:13:13,397 INFO benchmark: Running pysat:mgh for grammar=1 word_length=30
+2026-04-15 09:13:15,294 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=1897.143
+2026-04-15 09:13:15,295 INFO benchmark: Running pycryptosat for grammar=1 word_length=30
+2026-04-15 09:13:16,730 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=1435.288
+2026-04-15 09:13:28,245 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w16.cnf
+2026-04-15 09:13:34,481 INFO benchmark: CNF size: variables=1225120 clauses=3496801
+2026-04-15 09:13:34,482 INFO benchmark: Running pysat:g3 for grammar=1 word_length=31
+2026-04-15 09:13:36,727 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2245.034
+2026-04-15 09:13:36,727 INFO benchmark: Running pysat:g4 for grammar=1 word_length=31
+2026-04-15 09:13:39,203 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=2475.360
+2026-04-15 09:13:39,203 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=31
+2026-04-15 09:13:41,957 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=2753.976
+2026-04-15 09:13:41,957 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=31
+2026-04-15 09:13:44,676 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=2718.303
+2026-04-15 09:13:44,676 INFO benchmark: Running pysat:m22 for grammar=1 word_length=31
+2026-04-15 09:13:46,937 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2260.789
+2026-04-15 09:13:46,937 INFO benchmark: Running pysat:mc for grammar=1 word_length=31
+2026-04-15 09:13:49,726 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=2788.384
+2026-04-15 09:13:49,726 INFO benchmark: Running pysat:mgh for grammar=1 word_length=31
+2026-04-15 09:13:52,256 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2529.510
+2026-04-15 09:13:52,256 INFO benchmark: Running pycryptosat for grammar=1 word_length=31
+2026-04-15 09:13:54,301 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2044.436
+2026-04-15 09:14:13,374 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w17.cnf
+2026-04-15 09:14:24,914 INFO benchmark: CNF size: variables=2058384 clauses=5922073
+2026-04-15 09:14:24,914 INFO benchmark: Running pysat:g3 for grammar=1 word_length=37
+2026-04-15 09:14:28,738 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=3829.203
+2026-04-15 09:14:28,738 INFO benchmark: Running pysat:g4 for grammar=1 word_length=37
+2026-04-15 09:14:32,453 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3710.004
+2026-04-15 09:14:32,455 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=37
+2026-04-15 09:14:37,180 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=4726.025
+2026-04-15 09:14:37,181 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=37
+2026-04-15 09:14:41,868 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=4687.650
+2026-04-15 09:14:41,869 INFO benchmark: Running pysat:m22 for grammar=1 word_length=37
+2026-04-15 09:14:45,584 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3713.515
+2026-04-15 09:14:45,584 INFO benchmark: Running pysat:mc for grammar=1 word_length=37
+2026-04-15 09:14:49,876 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=4291.955
+2026-04-15 09:14:49,876 INFO benchmark: Running pysat:mgh for grammar=1 word_length=37
+2026-04-15 09:14:53,577 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=3700.703
+2026-04-15 09:14:53,577 INFO benchmark: Running pycryptosat for grammar=1 word_length=37
+2026-04-15 09:14:56,196 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2618.281
+2026-04-15 09:15:13,369 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w18.cnf
+2026-04-15 09:15:24,390 INFO benchmark: CNF size: variables=1899210 clauses=5457871
+2026-04-15 09:15:24,391 INFO benchmark: Running pysat:g3 for grammar=1 word_length=36
+2026-04-15 09:15:27,867 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=3476.079
+2026-04-15 09:15:27,867 INFO benchmark: Running pysat:g4 for grammar=1 word_length=36
+2026-04-15 09:15:31,330 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3462.821
+2026-04-15 09:15:31,330 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=36
+2026-04-15 09:15:35,383 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=4052.658
+2026-04-15 09:15:35,383 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=36
+2026-04-15 09:15:39,377 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=3993.358
+2026-04-15 09:15:39,377 INFO benchmark: Running pysat:m22 for grammar=1 word_length=36
+2026-04-15 09:15:42,818 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=3440.723
+2026-04-15 09:15:42,818 INFO benchmark: Running pysat:mc for grammar=1 word_length=36
+2026-04-15 09:15:46,768 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=3949.229
+2026-04-15 09:15:46,768 INFO benchmark: Running pysat:mgh for grammar=1 word_length=36
+2026-04-15 09:15:50,012 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=3243.926
+2026-04-15 09:15:50,013 INFO benchmark: Running pycryptosat for grammar=1 word_length=36
+2026-04-15 09:15:52,535 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2521.442
+2026-04-15 09:16:07,395 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w19.cnf
+2026-04-15 09:16:15,894 INFO benchmark: CNF size: variables=1605905 clauses=4603516
+2026-04-15 09:16:15,895 INFO benchmark: Running pysat:g3 for grammar=1 word_length=34
+2026-04-15 09:16:18,697 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=2802.892
+2026-04-15 09:16:18,697 INFO benchmark: Running pysat:g4 for grammar=1 word_length=34
+2026-04-15 09:16:22,133 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=3436.077
+2026-04-15 09:16:22,134 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=34
+2026-04-15 09:16:26,537 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=4402.381
+2026-04-15 09:16:26,537 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=34
+2026-04-15 09:16:30,061 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=3524.241
+2026-04-15 09:16:30,061 INFO benchmark: Running pysat:m22 for grammar=1 word_length=34
+2026-04-15 09:16:32,847 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=2785.900
+2026-04-15 09:16:32,847 INFO benchmark: Running pysat:mc for grammar=1 word_length=34
+2026-04-15 09:16:36,190 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=3341.091
+2026-04-15 09:16:36,190 INFO benchmark: Running pysat:mgh for grammar=1 word_length=34
+2026-04-15 09:16:38,971 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=2781.045
+2026-04-15 09:16:38,972 INFO benchmark: Running pycryptosat for grammar=1 word_length=34
+2026-04-15 09:16:41,201 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=2229.883
+2026-04-15 09:17:03,653 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w20.cnf
+2026-04-15 09:17:16,962 INFO benchmark: CNF size: variables=2402920 clauses=6927961
+2026-04-15 09:17:16,963 INFO benchmark: Running pysat:g3 for grammar=1 word_length=39
+2026-04-15 09:17:21,689 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4731.195
+2026-04-15 09:17:21,689 INFO benchmark: Running pysat:g4 for grammar=1 word_length=39
+2026-04-15 09:17:26,562 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=4867.327
+2026-04-15 09:17:26,562 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=39
+2026-04-15 09:17:31,922 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5359.999
+2026-04-15 09:17:31,922 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=39
+2026-04-15 09:17:37,594 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=5672.058
+2026-04-15 09:17:37,635 INFO benchmark: Running pysat:m22 for grammar=1 word_length=39
+2026-04-15 09:17:41,900 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=4265.116
+2026-04-15 09:17:41,900 INFO benchmark: Running pysat:mc for grammar=1 word_length=39
+2026-04-15 09:17:47,751 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=5850.452
+2026-04-15 09:17:47,752 INFO benchmark: Running pysat:mgh for grammar=1 word_length=39
+2026-04-15 09:17:53,140 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5388.868
+2026-04-15 09:17:53,140 INFO benchmark: Running pycryptosat for grammar=1 word_length=39
+2026-04-15 09:17:56,686 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3546.107
+2026-04-15 09:17:57,617 INFO benchmark: Writing 160 benchmark rows to src\text\results\big_grammar\big_grammar_solver_benchmark_results.csv
+2026-04-15 09:17:57,643 INFO benchmark: Benchmark finished successfully
+2026-04-15 09:19:53,134 INFO benchmark: Benchmark started
+2026-04-15 09:19:53,134 INFO benchmark: Grammar file: src\text\input\big_grammar.txt
+2026-04-15 09:19:53,134 INFO benchmark: Log file: src\text\results\big_grammar\big_grammar_benchmark.log
+2026-04-15 09:19:53,134 INFO benchmark: Length range: 40..50 positive=10 negative=10
+2026-04-15 09:19:53,134 INFO benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar (default)
+2026-04-15 09:19:53,134 INFO benchmark: Loading grammars from src\text\input\big_grammar.txt
+2026-04-15 09:19:53,151 INFO benchmark: Parsed 1 grammar(s); Java-only generator mode is enabled
+2026-04-15 09:19:53,151 INFO benchmark: Starting grammar 1/1
+2026-04-15 09:19:53,154 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 09:19:53,155 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=40, max_length=50, repetitions=40)
+2026-04-15 09:19:53,855 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-15 09:19:53,855 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=40, max_length=50, repetitions=40)
+2026-04-15 09:19:54,542 INFO benchmark: Java generator produced 10 positive words
+2026-04-15 09:19:54,542 INFO benchmark: Java generator produced 10 negative words
+2026-04-15 09:20:29,850 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w1.cnf
+2026-04-15 09:20:50,421 INFO benchmark: CNF size: variables=3662520 clauses=10614961
+2026-04-15 09:20:50,421 INFO benchmark: Running pysat:g3 for grammar=1 word_length=45
+2026-04-15 09:20:57,360 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=6938.325
+2026-04-15 09:20:57,360 INFO benchmark: Running pysat:g4 for grammar=1 word_length=45
+2026-04-15 09:21:04,420 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=7059.051
+2026-04-15 09:21:04,420 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=45
+2026-04-15 09:21:12,733 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=8312.953
+2026-04-15 09:21:12,733 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=45
+2026-04-15 09:21:20,597 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=7863.593
+2026-04-15 09:21:20,597 INFO benchmark: Running pysat:m22 for grammar=1 word_length=45
+2026-04-15 09:21:27,136 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=6539.422
+2026-04-15 09:21:27,137 INFO benchmark: Running pysat:mc for grammar=1 word_length=45
+2026-04-15 09:21:34,843 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=7705.676
+2026-04-15 09:21:34,843 INFO benchmark: Running pysat:mgh for grammar=1 word_length=45
+2026-04-15 09:21:41,068 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=6225.124
+2026-04-15 09:21:41,068 INFO benchmark: Running pycryptosat for grammar=1 word_length=45
+2026-04-15 09:21:45,601 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=4531.959
+2026-04-15 09:22:26,256 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w2.cnf
+2026-04-15 09:22:54,968 INFO benchmark: CNF size: variables=4430776 clauses=12868969
+2026-04-15 09:22:54,968 INFO benchmark: Running pysat:g3 for grammar=1 word_length=48
+2026-04-15 09:23:04,033 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=9064.551
+2026-04-15 09:23:04,033 INFO benchmark: Running pysat:g4 for grammar=1 word_length=48
+2026-04-15 09:23:12,253 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=8220.016
+2026-04-15 09:23:12,254 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=48
+2026-04-15 09:23:21,526 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=9273.093
+2026-04-15 09:23:21,546 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=48
+2026-04-15 09:23:31,296 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=9749.886
+2026-04-15 09:23:31,297 INFO benchmark: Running pysat:m22 for grammar=1 word_length=48
+2026-04-15 09:23:39,129 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=7832.039
+2026-04-15 09:23:39,130 INFO benchmark: Running pysat:mc for grammar=1 word_length=48
+2026-04-15 09:23:48,239 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=9110.063
+2026-04-15 09:23:48,240 INFO benchmark: Running pysat:mgh for grammar=1 word_length=48
+2026-04-15 09:23:56,476 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=8235.876
+2026-04-15 09:23:56,476 INFO benchmark: Running pycryptosat for grammar=1 word_length=48
+2026-04-15 09:24:02,651 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=6174.077
+2026-04-15 09:24:33,068 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w3.cnf
+2026-04-15 09:24:49,676 INFO benchmark: CNF size: variables=2988629 clauses=8640808
+2026-04-15 09:24:49,678 INFO benchmark: Running pysat:g3 for grammar=1 word_length=42
+2026-04-15 09:24:54,892 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5215.179
+2026-04-15 09:24:54,892 INFO benchmark: Running pysat:g4 for grammar=1 word_length=42
+2026-04-15 09:25:00,042 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5149.484
+2026-04-15 09:25:00,042 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=42
+2026-04-15 09:25:06,029 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5986.759
+2026-04-15 09:25:06,030 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=42
+2026-04-15 09:25:12,220 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6190.060
+2026-04-15 09:25:12,221 INFO benchmark: Running pysat:m22 for grammar=1 word_length=42
+2026-04-15 09:25:18,089 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5868.420
+2026-04-15 09:25:18,090 INFO benchmark: Running pysat:mc for grammar=1 word_length=42
+2026-04-15 09:25:26,115 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=8025.589
+2026-04-15 09:25:26,116 INFO benchmark: Running pysat:mgh for grammar=1 word_length=42
+2026-04-15 09:25:33,067 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=6951.027
+2026-04-15 09:25:33,067 INFO benchmark: Running pycryptosat for grammar=1 word_length=42
+2026-04-15 09:25:38,241 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=5174.451
+2026-04-15 09:26:09,706 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w4.cnf
+2026-04-15 09:26:28,177 INFO benchmark: CNF size: variables=3427710 clauses=9926731
+2026-04-15 09:26:28,178 INFO benchmark: Running pysat:g3 for grammar=1 word_length=44
+2026-04-15 09:26:34,007 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5829.045
+2026-04-15 09:26:34,007 INFO benchmark: Running pysat:g4 for grammar=1 word_length=44
+2026-04-15 09:26:39,926 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5918.133
+2026-04-15 09:26:39,926 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=44
+2026-04-15 09:26:46,751 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6825.011
+2026-04-15 09:26:46,751 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=44
+2026-04-15 09:26:54,070 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=7318.479
+2026-04-15 09:26:54,071 INFO benchmark: Running pysat:m22 for grammar=1 word_length=44
+2026-04-15 09:26:59,669 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5598.297
+2026-04-15 09:26:59,669 INFO benchmark: Running pysat:mc for grammar=1 word_length=44
+2026-04-15 09:27:10,049 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=10379.259
+2026-04-15 09:27:10,049 INFO benchmark: Running pysat:mgh for grammar=1 word_length=44
+2026-04-15 09:27:19,183 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=9134.780
+2026-04-15 09:27:19,183 INFO benchmark: Running pycryptosat for grammar=1 word_length=44
+2026-04-15 09:27:26,668 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=7483.876
+2026-04-15 09:28:00,131 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w5.cnf
+2026-04-15 09:28:19,574 INFO benchmark: CNF size: variables=3203156 clauses=9268909
+2026-04-15 09:28:19,574 INFO benchmark: Running pysat:g3 for grammar=1 word_length=43
+2026-04-15 09:28:25,212 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5637.732
+2026-04-15 09:28:25,213 INFO benchmark: Running pysat:g4 for grammar=1 word_length=43
+2026-04-15 09:28:31,152 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5939.470
+2026-04-15 09:28:31,152 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=43
+2026-04-15 09:28:38,585 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=7432.912
+2026-04-15 09:28:38,586 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=43
+2026-04-15 09:28:45,516 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6930.039
+2026-04-15 09:28:45,517 INFO benchmark: Running pysat:m22 for grammar=1 word_length=43
+2026-04-15 09:28:51,008 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5491.877
+2026-04-15 09:28:51,008 INFO benchmark: Running pysat:mc for grammar=1 word_length=43
+2026-04-15 09:28:58,631 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=7621.777
+2026-04-15 09:28:58,632 INFO benchmark: Running pysat:mgh for grammar=1 word_length=43
+2026-04-15 09:29:04,322 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5689.895
+2026-04-15 09:29:04,322 INFO benchmark: Running pycryptosat for grammar=1 word_length=43
+2026-04-15 09:29:09,392 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=5070.547
+2026-04-15 09:29:35,127 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w6.cnf
+2026-04-15 09:29:49,646 INFO benchmark: CNF size: variables=2783900 clauses=8041741
+2026-04-15 09:29:49,647 INFO benchmark: Running pysat:g3 for grammar=1 word_length=41
+2026-04-15 09:29:54,826 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5178.693
+2026-04-15 09:29:54,826 INFO benchmark: Running pysat:g4 for grammar=1 word_length=41
+2026-04-15 09:29:59,834 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5007.910
+2026-04-15 09:29:59,834 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=41
+2026-04-15 09:30:06,793 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6959.016
+2026-04-15 09:30:06,793 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=41
+2026-04-15 09:30:12,857 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6063.392
+2026-04-15 09:30:12,857 INFO benchmark: Running pysat:m22 for grammar=1 word_length=41
+2026-04-15 09:30:17,916 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5058.763
+2026-04-15 09:30:17,917 INFO benchmark: Running pysat:mc for grammar=1 word_length=41
+2026-04-15 09:30:23,766 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=5848.583
+2026-04-15 09:30:23,766 INFO benchmark: Running pysat:mgh for grammar=1 word_length=41
+2026-04-15 09:30:28,820 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5053.656
+2026-04-15 09:30:28,820 INFO benchmark: Running pycryptosat for grammar=1 word_length=41
+2026-04-15 09:30:32,567 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3747.307
+2026-04-15 09:31:02,600 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w7.cnf
+2026-04-15 09:31:19,171 INFO benchmark: CNF size: variables=3203156 clauses=9268909
+2026-04-15 09:31:19,172 INFO benchmark: Running pysat:g3 for grammar=1 word_length=43
+2026-04-15 09:31:25,132 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5961.085
+2026-04-15 09:31:25,132 INFO benchmark: Running pysat:g4 for grammar=1 word_length=43
+2026-04-15 09:31:31,086 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5952.321
+2026-04-15 09:31:31,086 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=43
+2026-04-15 09:31:37,935 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6849.052
+2026-04-15 09:31:37,936 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=43
+2026-04-15 09:31:44,822 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6886.598
+2026-04-15 09:31:44,822 INFO benchmark: Running pysat:m22 for grammar=1 word_length=43
+2026-04-15 09:31:50,270 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5447.561
+2026-04-15 09:31:50,271 INFO benchmark: Running pysat:mc for grammar=1 word_length=43
+2026-04-15 09:31:57,563 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=7294.001
+2026-04-15 09:31:57,565 INFO benchmark: Running pysat:mgh for grammar=1 word_length=43
+2026-04-15 09:32:03,146 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5581.008
+2026-04-15 09:32:03,147 INFO benchmark: Running pycryptosat for grammar=1 word_length=43
+2026-04-15 09:32:07,523 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=4377.739
+2026-04-15 09:32:36,045 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w8.cnf
+2026-04-15 09:32:51,967 INFO benchmark: CNF size: variables=2988629 clauses=8640808
+2026-04-15 09:32:51,968 INFO benchmark: Running pysat:g3 for grammar=1 word_length=42
+2026-04-15 09:32:56,914 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4946.602
+2026-04-15 09:32:56,915 INFO benchmark: Running pysat:g4 for grammar=1 word_length=42
+2026-04-15 09:33:01,904 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=4988.515
+2026-04-15 09:33:01,904 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=42
+2026-04-15 09:33:07,990 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6085.972
+2026-04-15 09:33:07,990 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=42
+2026-04-15 09:33:14,016 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6025.641
+2026-04-15 09:33:14,016 INFO benchmark: Running pysat:m22 for grammar=1 word_length=42
+2026-04-15 09:33:19,113 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5096.558
+2026-04-15 09:33:19,114 INFO benchmark: Running pysat:mc for grammar=1 word_length=42
+2026-04-15 09:33:24,787 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=5674.030
+2026-04-15 09:33:24,788 INFO benchmark: Running pysat:mgh for grammar=1 word_length=42
+2026-04-15 09:33:30,095 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5306.110
+2026-04-15 09:33:30,095 INFO benchmark: Running pycryptosat for grammar=1 word_length=42
+2026-04-15 09:33:33,664 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3569.653
+2026-04-15 09:34:09,526 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w9.cnf
+2026-04-15 09:34:35,689 INFO benchmark: CNF size: variables=3907815 clauses=11334286
+2026-04-15 09:34:35,689 INFO benchmark: Running pysat:g3 for grammar=1 word_length=46
+2026-04-15 09:34:42,643 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=6954.109
+2026-04-15 09:34:42,643 INFO benchmark: Running pysat:g4 for grammar=1 word_length=46
+2026-04-15 09:34:50,126 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=7481.290
+2026-04-15 09:34:50,126 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=46
+2026-04-15 09:34:58,824 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=8698.408
+2026-04-15 09:34:58,824 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=46
+2026-04-15 09:35:07,163 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=8338.491
+2026-04-15 09:35:07,163 INFO benchmark: Running pysat:m22 for grammar=1 word_length=46
+2026-04-15 09:35:13,934 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=6771.069
+2026-04-15 09:35:13,935 INFO benchmark: Running pysat:mc for grammar=1 word_length=46
+2026-04-15 09:35:22,278 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=8342.802
+2026-04-15 09:35:22,278 INFO benchmark: Running pysat:mgh for grammar=1 word_length=46
+2026-04-15 09:35:28,767 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=6489.251
+2026-04-15 09:35:28,768 INFO benchmark: Running pycryptosat for grammar=1 word_length=46
+2026-04-15 09:35:34,410 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=5641.101
+2026-04-15 09:36:06,104 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_positive_w10.cnf
+2026-04-15 09:36:23,714 INFO benchmark: CNF size: variables=2988629 clauses=8640808
+2026-04-15 09:36:23,715 INFO benchmark: Running pysat:g3 for grammar=1 word_length=42
+2026-04-15 09:36:30,865 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=7149.709
+2026-04-15 09:36:30,866 INFO benchmark: Running pysat:g4 for grammar=1 word_length=42
+2026-04-15 09:36:37,897 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=7031.444
+2026-04-15 09:36:37,898 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=42
+2026-04-15 09:36:45,135 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=7237.572
+2026-04-15 09:36:45,135 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=42
+2026-04-15 09:36:52,109 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6974.152
+2026-04-15 09:36:52,110 INFO benchmark: Running pysat:m22 for grammar=1 word_length=42
+2026-04-15 09:36:58,126 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=6015.045
+2026-04-15 09:36:58,126 INFO benchmark: Running pysat:mc for grammar=1 word_length=42
+2026-04-15 09:37:04,298 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=6171.735
+2026-04-15 09:37:04,298 INFO benchmark: Running pysat:mgh for grammar=1 word_length=42
+2026-04-15 09:37:09,996 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5697.723
+2026-04-15 09:37:09,997 INFO benchmark: Running pycryptosat for grammar=1 word_length=42
+2026-04-15 09:37:14,067 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=4070.370
+2026-04-15 09:37:41,698 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w11.cnf
+2026-04-15 09:37:57,247 INFO benchmark: CNF size: variables=2783900 clauses=8041741
+2026-04-15 09:37:57,248 INFO benchmark: Running pysat:g3 for grammar=1 word_length=41
+2026-04-15 09:38:02,168 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4920.747
+2026-04-15 09:38:02,169 INFO benchmark: Running pysat:g4 for grammar=1 word_length=41
+2026-04-15 09:38:07,232 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5063.283
+2026-04-15 09:38:07,232 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=41
+2026-04-15 09:38:13,325 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6092.051
+2026-04-15 09:38:13,325 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=41
+2026-04-15 09:38:19,306 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=5980.614
+2026-04-15 09:38:19,306 INFO benchmark: Running pysat:m22 for grammar=1 word_length=41
+2026-04-15 09:38:24,163 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=4857.589
+2026-04-15 09:38:24,163 INFO benchmark: Running pysat:mc for grammar=1 word_length=41
+2026-04-15 09:38:29,865 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=5700.511
+2026-04-15 09:38:29,865 INFO benchmark: Running pysat:mgh for grammar=1 word_length=41
+2026-04-15 09:38:34,591 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=4725.490
+2026-04-15 09:38:34,591 INFO benchmark: Running pycryptosat for grammar=1 word_length=41
+2026-04-15 09:38:38,012 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3421.619
+2026-04-15 09:39:05,880 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w12.cnf
+2026-04-15 09:39:24,881 INFO benchmark: CNF size: variables=3203156 clauses=9268909
+2026-04-15 09:39:24,882 INFO benchmark: Running pysat:g3 for grammar=1 word_length=43
+2026-04-15 09:39:30,440 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5558.112
+2026-04-15 09:39:30,440 INFO benchmark: Running pysat:g4 for grammar=1 word_length=43
+2026-04-15 09:39:35,938 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5497.815
+2026-04-15 09:39:35,939 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=43
+2026-04-15 09:39:42,722 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6783.428
+2026-04-15 09:39:42,723 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=43
+2026-04-15 09:39:49,903 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=7180.197
+2026-04-15 09:39:49,903 INFO benchmark: Running pysat:m22 for grammar=1 word_length=43
+2026-04-15 09:39:55,380 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5475.983
+2026-04-15 09:39:55,380 INFO benchmark: Running pysat:mc for grammar=1 word_length=43
+2026-04-15 09:40:02,557 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=7177.631
+2026-04-15 09:40:02,558 INFO benchmark: Running pysat:mgh for grammar=1 word_length=43
+2026-04-15 09:40:08,767 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=6208.422
+2026-04-15 09:40:08,767 INFO benchmark: Running pycryptosat for grammar=1 word_length=43
+2026-04-15 09:40:12,737 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3970.035
+2026-04-15 09:40:35,930 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w13.cnf
+2026-04-15 09:40:50,645 INFO benchmark: CNF size: variables=2588740 clauses=7471021
+2026-04-15 09:40:50,645 INFO benchmark: Running pysat:g3 for grammar=1 word_length=40
+2026-04-15 09:40:55,376 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4730.887
+2026-04-15 09:40:55,376 INFO benchmark: Running pysat:g4 for grammar=1 word_length=40
+2026-04-15 09:40:59,910 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=4534.112
+2026-04-15 09:40:59,910 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=40
+2026-04-15 09:41:05,826 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5914.690
+2026-04-15 09:41:05,826 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=40
+2026-04-15 09:41:12,624 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6798.109
+2026-04-15 09:41:12,624 INFO benchmark: Running pysat:m22 for grammar=1 word_length=40
+2026-04-15 09:41:17,535 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=4910.685
+2026-04-15 09:41:17,536 INFO benchmark: Running pysat:mc for grammar=1 word_length=40
+2026-04-15 09:41:24,016 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=6480.824
+2026-04-15 09:41:24,017 INFO benchmark: Running pysat:mgh for grammar=1 word_length=40
+2026-04-15 09:41:28,629 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=4611.859
+2026-04-15 09:41:28,629 INFO benchmark: Running pycryptosat for grammar=1 word_length=40
+2026-04-15 09:41:31,802 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=3172.072
+2026-04-15 09:41:59,407 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w14.cnf
+2026-04-15 09:42:17,140 INFO benchmark: CNF size: variables=3203156 clauses=9268909
+2026-04-15 09:42:17,141 INFO benchmark: Running pysat:g3 for grammar=1 word_length=43
+2026-04-15 09:42:22,744 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5604.039
+2026-04-15 09:42:22,745 INFO benchmark: Running pysat:g4 for grammar=1 word_length=43
+2026-04-15 09:42:28,715 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5970.022
+2026-04-15 09:42:28,716 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=43
+2026-04-15 09:42:35,340 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6624.435
+2026-04-15 09:42:35,340 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=43
+2026-04-15 09:42:41,784 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6443.873
+2026-04-15 09:42:41,785 INFO benchmark: Running pysat:m22 for grammar=1 word_length=43
+2026-04-15 09:42:47,058 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5273.063
+2026-04-15 09:42:47,058 INFO benchmark: Running pysat:mc for grammar=1 word_length=43
+2026-04-15 09:42:53,563 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=6504.591
+2026-04-15 09:42:53,563 INFO benchmark: Running pysat:mgh for grammar=1 word_length=43
+2026-04-15 09:42:59,169 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5606.421
+2026-04-15 09:42:59,169 INFO benchmark: Running pycryptosat for grammar=1 word_length=43
+2026-04-15 09:43:03,174 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=4003.724
+2026-04-15 09:43:28,286 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w15.cnf
+2026-04-15 09:43:43,559 INFO benchmark: CNF size: variables=2783900 clauses=8041741
+2026-04-15 09:43:43,559 INFO benchmark: Running pysat:g3 for grammar=1 word_length=41
+2026-04-15 09:43:48,449 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=4889.843
+2026-04-15 09:43:48,449 INFO benchmark: Running pysat:g4 for grammar=1 word_length=41
+2026-04-15 09:43:53,438 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=4989.065
+2026-04-15 09:43:53,438 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=41
+2026-04-15 09:43:59,132 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=5692.793
+2026-04-15 09:43:59,132 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=41
+2026-04-15 09:44:06,430 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=7298.658
+2026-04-15 09:44:06,431 INFO benchmark: Running pysat:m22 for grammar=1 word_length=41
+2026-04-15 09:44:11,415 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=4984.323
+2026-04-15 09:44:11,416 INFO benchmark: Running pysat:mc for grammar=1 word_length=41
+2026-04-15 09:44:18,856 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=7440.187
+2026-04-15 09:44:18,857 INFO benchmark: Running pysat:mgh for grammar=1 word_length=41
+2026-04-15 09:44:24,459 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5602.008
+2026-04-15 09:44:24,460 INFO benchmark: Running pycryptosat for grammar=1 word_length=41
+2026-04-15 09:44:28,497 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=4037.783
+2026-04-15 09:45:19,026 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w16.cnf
+2026-04-15 09:45:50,289 INFO benchmark: CNF size: variables=4708900 clauses=13685701
+2026-04-15 09:45:50,290 INFO benchmark: Running pysat:g3 for grammar=1 word_length=49
+2026-04-15 09:45:59,481 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=9190.927
+2026-04-15 09:45:59,481 INFO benchmark: Running pysat:g4 for grammar=1 word_length=49
+2026-04-15 09:46:10,909 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=11428.079
+2026-04-15 09:46:10,910 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=49
+2026-04-15 09:46:21,962 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=11051.782
+2026-04-15 09:46:21,963 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=49
+2026-04-15 09:46:34,364 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=12400.681
+2026-04-15 09:46:34,364 INFO benchmark: Running pysat:m22 for grammar=1 word_length=49
+2026-04-15 09:46:42,612 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=8248.467
+2026-04-15 09:46:42,612 INFO benchmark: Running pysat:mc for grammar=1 word_length=49
+2026-04-15 09:46:52,646 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=10033.139
+2026-04-15 09:46:52,647 INFO benchmark: Running pysat:mgh for grammar=1 word_length=49
+2026-04-15 09:47:00,995 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=8348.281
+2026-04-15 09:47:00,996 INFO benchmark: Running pycryptosat for grammar=1 word_length=49
+2026-04-15 09:47:08,165 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=7169.085
+2026-04-15 09:47:41,842 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w17.cnf
+2026-04-15 09:48:00,910 INFO benchmark: CNF size: variables=2988629 clauses=8640808
+2026-04-15 09:48:00,910 INFO benchmark: Running pysat:g3 for grammar=1 word_length=42
+2026-04-15 09:48:06,526 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5614.462
+2026-04-15 09:48:06,526 INFO benchmark: Running pysat:g4 for grammar=1 word_length=42
+2026-04-15 09:48:12,291 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=5765.309
+2026-04-15 09:48:12,292 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=42
+2026-04-15 09:48:19,257 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=6965.313
+2026-04-15 09:48:19,257 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=42
+2026-04-15 09:48:25,795 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=6537.450
+2026-04-15 09:48:25,795 INFO benchmark: Running pysat:m22 for grammar=1 word_length=42
+2026-04-15 09:48:31,543 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5747.952
+2026-04-15 09:48:31,543 INFO benchmark: Running pysat:mc for grammar=1 word_length=42
+2026-04-15 09:48:38,182 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=6638.491
+2026-04-15 09:48:38,182 INFO benchmark: Running pysat:mgh for grammar=1 word_length=42
+2026-04-15 09:48:43,830 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5647.345
+2026-04-15 09:48:43,830 INFO benchmark: Running pycryptosat for grammar=1 word_length=42
+2026-04-15 09:48:47,922 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=4091.704
+2026-04-15 09:49:26,540 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w18.cnf
+2026-04-15 09:49:52,819 INFO benchmark: CNF size: variables=4163824 clauses=12085393
+2026-04-15 09:49:52,820 INFO benchmark: Running pysat:g3 for grammar=1 word_length=47
+2026-04-15 09:50:03,371 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=10550.845
+2026-04-15 09:50:03,371 INFO benchmark: Running pysat:g4 for grammar=1 word_length=47
+2026-04-15 09:50:12,501 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=9130.416
+2026-04-15 09:50:12,501 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=47
+2026-04-15 09:50:23,157 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=10656.159
+2026-04-15 09:50:23,157 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=47
+2026-04-15 09:50:33,565 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=10407.024
+2026-04-15 09:50:33,566 INFO benchmark: Running pysat:m22 for grammar=1 word_length=47
+2026-04-15 09:50:43,610 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=10044.358
+2026-04-15 09:50:43,611 INFO benchmark: Running pysat:mc for grammar=1 word_length=47
+2026-04-15 09:50:54,191 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=10580.608
+2026-04-15 09:50:54,192 INFO benchmark: Running pysat:mgh for grammar=1 word_length=47
+2026-04-15 09:51:02,416 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=8223.330
+2026-04-15 09:51:02,417 INFO benchmark: Running pycryptosat for grammar=1 word_length=47
+2026-04-15 09:51:08,896 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=6479.438
+2026-04-15 09:51:46,102 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w19.cnf
+2026-04-15 09:52:04,712 INFO benchmark: CNF size: variables=3427710 clauses=9926731
+2026-04-15 09:52:04,712 INFO benchmark: Running pysat:g3 for grammar=1 word_length=44
+2026-04-15 09:52:10,688 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=5974.928
+2026-04-15 09:52:10,689 INFO benchmark: Running pysat:g4 for grammar=1 word_length=44
+2026-04-15 09:52:16,847 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=6159.267
+2026-04-15 09:52:16,847 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=44
+2026-04-15 09:52:24,399 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=7551.668
+2026-04-15 09:52:24,400 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=44
+2026-04-15 09:52:31,685 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=7284.706
+2026-04-15 09:52:31,685 INFO benchmark: Running pysat:m22 for grammar=1 word_length=44
+2026-04-15 09:52:37,515 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=5830.302
+2026-04-15 09:52:37,516 INFO benchmark: Running pysat:mc for grammar=1 word_length=44
+2026-04-15 09:52:44,447 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=6932.799
+2026-04-15 09:52:44,447 INFO benchmark: Running pysat:mgh for grammar=1 word_length=44
+2026-04-15 09:52:50,434 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=5984.786
+2026-04-15 09:52:50,434 INFO benchmark: Running pycryptosat for grammar=1 word_length=44
+2026-04-15 09:52:54,923 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=4489.099
+2026-04-15 09:53:35,616 INFO benchmark: Benchmarking DIMACS src\text\dimacs_outputs\benchmark_runs\big_grammar\g1_negative_w20.cnf
+2026-04-15 09:54:00,929 INFO benchmark: CNF size: variables=4163824 clauses=12085393
+2026-04-15 09:54:00,930 INFO benchmark: Running pysat:g3 for grammar=1 word_length=47
+2026-04-15 09:54:09,357 INFO benchmark: Finished pysat:g3 status=ok result=SAT time_ms=8426.724
+2026-04-15 09:54:09,358 INFO benchmark: Running pysat:g4 for grammar=1 word_length=47
+2026-04-15 09:54:17,147 INFO benchmark: Finished pysat:g4 status=ok result=SAT time_ms=7790.398
+2026-04-15 09:54:17,148 INFO benchmark: Running pysat:gc3 for grammar=1 word_length=47
+2026-04-15 09:54:27,825 INFO benchmark: Finished pysat:gc3 status=ok result=SAT time_ms=10677.148
+2026-04-15 09:54:27,826 INFO benchmark: Running pysat:gc4 for grammar=1 word_length=47
+2026-04-15 09:54:37,501 INFO benchmark: Finished pysat:gc4 status=ok result=SAT time_ms=9676.286
+2026-04-15 09:54:37,503 INFO benchmark: Running pysat:m22 for grammar=1 word_length=47
+2026-04-15 09:54:45,438 INFO benchmark: Finished pysat:m22 status=ok result=SAT time_ms=7935.768
+2026-04-15 09:54:45,439 INFO benchmark: Running pysat:mc for grammar=1 word_length=47
+2026-04-15 09:54:53,979 INFO benchmark: Finished pysat:mc status=ok result=SAT time_ms=8540.250
+2026-04-15 09:54:53,980 INFO benchmark: Running pysat:mgh for grammar=1 word_length=47
+2026-04-15 09:55:01,312 INFO benchmark: Finished pysat:mgh status=ok result=SAT time_ms=7332.028
+2026-04-15 09:55:01,312 INFO benchmark: Running pycryptosat for grammar=1 word_length=47
+2026-04-15 09:55:06,479 INFO benchmark: Finished pycryptosat status=ok result=SAT time_ms=5166.472
+2026-04-15 09:55:08,101 INFO benchmark: Writing 160 benchmark rows to src\text\results\big_grammar\big_grammar_solver_benchmark_results.csv
+2026-04-15 09:55:08,140 INFO benchmark: Benchmark finished successfully

@@ -12,15 +12,10 @@ from typing import Callable
 from pysat.formula import CNF
 from pysat.solvers import Solver as PySatSolver
 
-from CFG_2_SAT import CFG_2_SAT, parse_input_file_to_chomsky
-from modules.generate_benchmark_words import generate_words_from_grammar
+from CFG_2_SAT import CFG_2_SAT
+from modules.parser import parse_grammar_file_to_chomsky
 
 logger = logging.getLogger("benchmark")
-
-try:
-    import z3  # type: ignore
-except Exception:
-    z3 = None
 
 try:
     from pycryptosat import Solver as CryptoSolver  # type: ignore
@@ -191,45 +186,6 @@ def benchmark_dimacs_file(
     return rows
 
 
-def _generate_up_to_words(
-    grammar,
-    negative: bool,
-    target_count: int,
-    min_length: int,
-    max_length: int,
-    seed: int | None,
-) -> list[str]:
-    """
-    Generate up to target_count words. If target is not possible, fallback to the biggest feasible count.
-    """
-    for count in range(target_count, -1, -1):
-        try:
-            logger.info(
-                "Generating %s words (count=%s, min_length=%s, max_length=%s)",
-                "negative" if negative else "positive",
-                count,
-                min_length,
-                max_length,
-            )
-            return generate_words_from_grammar(
-                grammar=grammar,
-                min_length=min_length,
-                max_length=max_length,
-                count=count,
-                negative=negative,
-                seed=seed,
-                max_tries=50000,
-            )
-        except ValueError:
-            logger.warning(
-                "Could not generate %s words at count=%s; retrying lower count",
-                "negative" if negative else "positive",
-                count,
-            )
-            continue
-    return []
-
-
 def _parse_java_generated_words(output_path: Path) -> list[str]:
     if not output_path.exists():
         return []
@@ -256,12 +212,13 @@ def _parse_java_generated_words(output_path: Path) -> list[str]:
     return words
 
 
-def _generate_positive_words_with_java_jar(
+def _generate_words_with_java_jar(
     java_grammar_file: str,
     min_length: int,
     max_length: int,
     target_count: int,
     jar_path: str,
+    label: str,
 ) -> list[str]:
     if target_count <= 0:
         return []
@@ -275,15 +232,16 @@ def _generate_positive_words_with_java_jar(
     output_path = cwd / "output.txt"
     seen: set[str] = set()
     words: list[str] = []
-    logger.info("Using Java word generator jar: %s", jar)
+    logger.info("Using Java word generator jar for %s words: %s", label, jar)
 
     # Retry with larger repetition counts when duplicates are produced.
     for attempt in range(3):
         repetitions = max(target_count * (4 + attempt * 2), target_count + 20)
         logger.info(
-            "Java generation attempt %s/%s for %s words (min_length=%s, max_length=%s, repetitions=%s)",
+            "Java generation attempt %s/%s for %s words (target=%s, min_length=%s, max_length=%s, repetitions=%s)",
             attempt + 1,
             3,
+            label,
             target_count,
             min_length,
             max_length,
@@ -297,6 +255,7 @@ def _generate_positive_words_with_java_jar(
             str(min_length),
             str(max_length),
             str(repetitions),
+            label,
         ]
 
         try:
@@ -374,74 +333,72 @@ def benchmark_from_grammar_file(
     max_length: int = 18,
     positive_count: int = 10,
     negative_count: int = 10,
-    seed: int | None = None,
     java_jar_path: str | None = None,
 ) -> list[dict[str, str]]:
-    if not seed:
-        seed = int(time.time())
+    if java_jar_path is None:
+        raise ValueError("Java-only benchmark mode requires --java-jar.")
+
     grammar_path = Path(grammar_file)
     logger.info("Loading grammars from %s", grammar_path)
-    grammars = parse_input_file_to_chomsky(grammar_file)
+    grammars = parse_grammar_file_to_chomsky(grammar_file)
     java_grammar_path = grammar_path.parent.parent / "output" / "JavaGrammar" / f"{grammar_path.stem}.txt"
     all_rows: list[dict[str, str]] = []
 
-    use_java_generator = java_jar_path is not None
     java_grammar_blocks: list[str] = []
-    if use_java_generator and java_grammar_path.exists():
+    if java_grammar_path.exists():
         java_grammar_blocks = _split_grammar_blocks(java_grammar_path.read_text(encoding="utf-8", errors="ignore"))
-    elif use_java_generator:
-        logger.warning("Java grammar export not found at %s; Java generation will be skipped", java_grammar_path)
-    logger.info("Parsed %s grammar(s); Java generator enabled=%s", len(grammars), use_java_generator)
+    else:
+        logger.warning("Java grammar export not found at %s; no words will be generated", java_grammar_path)
+    logger.info("Parsed %s grammar(s); Java-only generator mode is enabled", len(grammars))
 
     for grammar_idx, grammar in enumerate(grammars, start=1):
         logger.info("Starting grammar %s/%s", grammar_idx, len(grammars))
         pos_words: list[str] = []
-        if use_java_generator and grammar_idx <= len(java_grammar_blocks):
+        neg_words: list[str] = []
+        if grammar_idx <= len(java_grammar_blocks):
             temp_grammar_path = _write_java_grammar_block_temp_file(java_grammar_blocks[grammar_idx - 1])
             try:
-                pos_words = _generate_positive_words_with_java_jar(
+                pos_words = _generate_words_with_java_jar(
                     java_grammar_file=str(temp_grammar_path),
                     min_length=min_length,
                     max_length=max_length,
                     target_count=positive_count,
                     jar_path=java_jar_path,
+                    label="positive",
+                )
+                neg_words = _generate_words_with_java_jar(
+                    java_grammar_file=str(temp_grammar_path),
+                    min_length=min_length,
+                    max_length=max_length,
+                    target_count=negative_count,
+                    jar_path=java_jar_path,
+                    label="negative",
                 )
             finally:
                 temp_grammar_path.unlink(missing_ok=True)
             logger.info("Java generator produced %s positive words", len(pos_words))
-        elif use_java_generator:
+            logger.info("Java generator produced %s negative words", len(neg_words))
+        else:
             logger.warning(
-                "Missing Java grammar block for grammar index %s (available=%s); using Python fallback",
+                "Missing Java grammar block for grammar index %s (available=%s); skipping this grammar",
                 grammar_idx,
                 len(java_grammar_blocks),
             )
 
         if len(pos_words) < positive_count:
-            remaining = positive_count - len(pos_words)
-            fallback_words = _generate_up_to_words(
-                grammar=grammar,
-                negative=False,
-                target_count=remaining,
-                min_length=min_length,
-                max_length=max_length,
-                seed=None if seed is None else seed + grammar_idx * 1000 + 1,
+            logger.warning(
+                "Java generator produced only %s/%s positive words for grammar=%s",
+                len(pos_words),
+                positive_count,
+                grammar_idx,
             )
-            logger.info("Python fallback produced %s additional positive words", len(fallback_words))
-            existing = set(pos_words)
-            for word in fallback_words:
-                if word not in existing:
-                    pos_words.append(word)
-                    existing.add(word)
-
-        neg_words = _generate_up_to_words(
-            grammar=grammar,
-            negative=True,
-            target_count=negative_count,
-            min_length=min_length,
-            max_length=max_length,
-            seed=None if seed is None else seed + grammar_idx * 1000 + 2,
-        )
-        logger.info("Generated %s negative words", len(neg_words))
+        if len(neg_words) < negative_count:
+            logger.warning(
+                "Java generator produced only %s/%s negative words for grammar=%s",
+                len(neg_words),
+                negative_count,
+                grammar_idx,
+            )
 
         cases: list[tuple[str, str]] = [("positive", w) for w in pos_words]
         cases.extend(("negative", w) for w in neg_words)
@@ -526,11 +483,10 @@ def main() -> int:
     parser.add_argument("--max-length", type=int, default=18, help="Maximal generated word length.")
     parser.add_argument("--positive-count", type=int, default=10, help="Positive words per grammar.")
     parser.add_argument("--negative-count", type=int, default=10, help="Negative words per grammar.")
-    parser.add_argument("--seed", type=int, default=None, help="Optional RNG seed.")
     parser.add_argument(
         "--java-jar",
         default=None,
-        help="Optional Java generator JAR for positive words (recommended for long lengths).",
+        help="Java generator JAR used for both positive and negative word generation.",
     )
     args = parser.parse_args()
 
@@ -544,8 +500,12 @@ def main() -> int:
         print(f"Missing grammar file: {grammar_file}")
         return 1
 
-    if args.java_jar is not None and not Path(args.java_jar).exists():
-        print(f"Missing Java JAR: {args.java_jar}")
+    java_jar = args.java_jar
+    if java_jar is None:
+        java_jar = str(Path(__file__).resolve().parent / "modules" / "WordGenerator.jar")
+
+    if not Path(java_jar).exists():
+        print(f"Missing Java JAR: {java_jar}")
         return 1
 
     log_file = grammar_path.parent.parent / "results" / grammar_path.stem / f"{grammar_path.stem}_benchmark.log"
@@ -564,7 +524,9 @@ def main() -> int:
     logger.info("Log file: %s", log_file)
     logger.info("Length range: %s..%s positive=%s negative=%s", args.min_length, args.max_length, args.positive_count, args.negative_count)
     if args.java_jar:
-        logger.info("Java generator jar: %s", args.java_jar)
+        logger.info("Java generator jar: %s", java_jar)
+    else:
+        logger.info("Java generator jar: %s (default)", java_jar)
 
     try:
         all_rows = benchmark_from_grammar_file(
@@ -573,8 +535,7 @@ def main() -> int:
             max_length=args.max_length,
             positive_count=args.positive_count,
             negative_count=args.negative_count,
-            seed=args.seed,
-            java_jar_path=args.java_jar,
+            java_jar_path=java_jar,
         )
     except Exception:
         logger.exception("Benchmark failed")

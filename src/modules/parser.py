@@ -630,7 +630,7 @@ def build_grammar_objects(
 # Public function you import
 # ---------------------------
 
-def parse_grammar_file_to_chomsky_many(path: str) -> List[Grammar]:
+def parse_grammar_file_to_chomsky(path: str) -> List[Grammar]:
     """
     Parse all grammars from file and convert each to Chomsky normal form.
     """
@@ -652,23 +652,3 @@ def parse_grammar_file_to_chomsky_many(path: str) -> List[Grammar]:
 
     _write_export_files(input_path, raw_grammars, cnf_blocks)
     return out
-
-
-def parse_grammar_file_to_chomsky(path: str) -> List[Grammar]:
-    """
-    Parse all grammars from file and convert each to Chomsky normal form.
-    This is the main API used by callers.
-    """
-    return parse_grammar_file_to_chomsky_many(path)
-
-
-def parse_grammar_file_to_chomsky_by_index(path: str, grammar_index: int = 0) -> Grammar:
-    """
-    Convenience helper for selecting one grammar by index.
-    """
-    grammars = parse_grammar_file_to_chomsky_many(path)
-    if grammar_index < 0 or grammar_index >= len(grammars):
-        raise IndexError(
-            f"grammar_index {grammar_index} out of range for file '{path}' containing {len(grammars)} grammars"
-        )
-    return grammars[grammar_index]
