@@ -5,9 +5,9 @@
 %start S
 %%
 S: A B
+A: a
 C: C C
  | b
  | c
-A: a
 B: A C
 %%

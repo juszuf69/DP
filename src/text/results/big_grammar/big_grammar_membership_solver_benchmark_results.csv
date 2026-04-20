@@ -1,0 +1,41 @@
+solver,grammar,word,word_length,positive_or_negative,nonterminal_count,rule_count,status,result,time_ms
+sat:m22,1,"type id = Char ; var var var id : Integer ; id , id : Char ; var",19,positive,180,324,ok,ACCEPT,4236.340
+cyk,1,"type id = Char ; var var var id : Integer ; id , id : Char ; var",19,positive,180,324,ok,ACCEPT,1.738
+sat:m22,1,type id = Integer ; var procedure id ( ) type id = record end ; begin end,18,positive,180,324,ok,ACCEPT,3524.347
+cyk,1,type id = Integer ; var procedure id ( ) type id = record end ; begin end,18,positive,180,324,ok,ACCEPT,0.571
+sat:m22,1,type id = Real ; var var id : record end ; var var,14,positive,180,324,ok,ACCEPT,1540.658
+cyk,1,type id = Real ; var var id : record end ; var var,14,positive,180,324,ok,ACCEPT,0.550
+sat:m22,1,type id = Real ; var var var id : Boolean ; var,13,positive,180,324,ok,ACCEPT,1274.475
+cyk,1,type id = Real ; var var var id : Boolean ; var,13,positive,180,324,ok,ACCEPT,0.596
+sat:m22,1,type id = Real ; var id : record end ; var var var,14,positive,180,324,ok,ACCEPT,1598.823
+cyk,1,type id = Real ; var id : record end ; var var var,14,positive,180,324,ok,ACCEPT,0.567
+sat:m22,1,type id = id ; var var id : Char ; id : Real ;,15,positive,180,324,ok,ACCEPT,2363.069
+cyk,1,type id = id ; var var id : Char ; id : Real ;,15,positive,180,324,ok,ACCEPT,1.867
+sat:m22,1,type id = id ; type id = Boolean ;,10,positive,180,324,ok,ACCEPT,494.567
+cyk,1,type id = id ; type id = Boolean ;,10,positive,180,324,ok,ACCEPT,0.375
+sat:m22,1,type id = Real ; var id : Real ; var var,12,positive,180,324,ok,ACCEPT,879.810
+cyk,1,type id = Real ; var id : Real ; var var,12,positive,180,324,ok,ACCEPT,0.472
+sat:m22,1,type id = Boolean ; type id = id ; var var,12,positive,180,324,ok,ACCEPT,849.642
+cyk,1,type id = Boolean ; type id = id ; var var,12,positive,180,324,ok,ACCEPT,0.449
+sat:m22,1,"type id = id ; var id , id : id ; id , id , id : id ;",20,positive,180,324,ok,ACCEPT,4657.104
+cyk,1,"type id = id ; var id , id : id ; id , id , id : id ;",20,positive,180,324,ok,ACCEPT,2.274
+sat:m22,1,type id = Real ; var var var var var id : Real ;,14,negative,180,324,ok,ACCEPT,1601.225
+cyk,1,type id = Real ; var var var var var id : Real ;,14,negative,180,324,ok,ACCEPT,0.708
+sat:m22,1,"type id = Boolean ; var var id , id : Real ; id : Boolean ;",17,negative,180,324,ok,ACCEPT,2529.526
+cyk,1,"type id = Boolean ; var var id , id : Real ; id : Boolean ;",17,negative,180,324,ok,ACCEPT,0.704
+sat:m22,1,type id = Boolean ; var var var id : id ; var var var,15,negative,180,324,ok,ACCEPT,1966.412
+cyk,1,type id = Boolean ; var var var id : id ; var var var,15,negative,180,324,ok,ACCEPT,0.760
+sat:m22,1,"type id = Real ; var id , id : id ; id : Integer ;",16,negative,180,324,ok,ACCEPT,3078.169
+cyk,1,"type id = Real ; var id , id : id ; id : Integer ;",16,negative,180,324,ok,ACCEPT,1.789
+sat:m22,1,type id = Boolean ; var var id : Boolean ; var var var,14,negative,180,324,ok,ACCEPT,1681.650
+cyk,1,type id = Boolean ; var var id : Boolean ; var var var,14,negative,180,324,ok,ACCEPT,0.641
+sat:m22,1,type id = Boolean ; var var var var id : id ;,13,negative,180,324,ok,ACCEPT,1250.039
+cyk,1,type id = Boolean ; var var var var id : id ;,13,negative,180,324,ok,ACCEPT,0.555
+sat:m22,1,"type id = Char ; var var id : Integer ; var var var id , id : Boolean ;",20,negative,180,324,ok,ACCEPT,4560.253
+cyk,1,"type id = Char ; var var id : Integer ; var var var id , id : Boolean ;",20,negative,180,324,ok,ACCEPT,2.050
+sat:m22,1,type id = Integer ; var var var id : id ;,12,negative,180,324,ok,ACCEPT,955.332
+cyk,1,type id = Integer ; var var var id : id ;,12,negative,180,324,ok,ACCEPT,0.551
+sat:m22,1,type id = Integer ; var id : record end ; var,12,negative,180,324,ok,ACCEPT,956.303
+cyk,1,type id = Integer ; var id : record end ; var,12,negative,180,324,ok,ACCEPT,0.447
+sat:m22,1,type id = Real ; type id = Char ; var var var,13,negative,180,324,ok,ACCEPT,1321.832
+cyk,1,type id = Real ; type id = Char ; var var var,13,negative,180,324,ok,ACCEPT,0.438

@@ -48,96 +48,96 @@
 %start <program>
 %%
 <program>: <deklarácie> <definície_podprogramov>
-<sp>: <výraz>
-<op3>: <op3> <multiplikatívny_op> <op4>
- | <op4>
 <príkaz>: 
  | <blok>
  | <príkaz_priradenia>
  | <príkaz_if>
  | <príkaz_while>
  | <príkaz_call>
+<hlavička_podprogramu>: procedure <id> ( <formálne_parametre> )
+ | function <id> ( <formálne_parametre> ) : <typ>
+<príkazy>: <príkaz> ; <príkazy>
+ | 
+<forma>: var
+ | 
+<logický_op>: and
+ | or
+<op1>: <op1> <relačný_op> <op2>
+ | <op2>
+<deklarácia_typu>: type <id> = <typ> ;
+<deklarácie_typov>: <deklarácia_typu> <deklarácie_typov>
+ | 
+<op4>: <konšt>
+ | <prem>
+ | ( <výraz> )
+ | <unárny_op> <op4>
+<zvyšok_dfp>: , <deklarácia_fp> <zvyšok_dfp>
+ | 
+<jednoduchý_typ>: Integer
+ | Real
+ | Boolean
+ | Char
+<príkaz_call>: <id> ( <skutočné_parametre> )
+<blok>: begin <príkazy> end
+<hor>: konšt_int
+<deklarácia>: <zoznam_identifikátorov> : <typ> ;
+<op3>: <op3> <multiplikatívny_op> <op4>
+ | <op4>
+<dol>: konšt_int
+<definície_podprogramov>: <definícia_podprogramu> <definície_podprogramov>
+ | 
+<výraz>: <výraz> <logický_op> <op1>
+ | <op1>
+<id>: id
+<sp>: <výraz>
+<op2>: <op2> <aditívny_op> <op3>
+ | <op3>
+<skutočné_parametre>: <sp> <zvyšok_sp>
+ | 
+<deklarácie_premenných>: <deklarácia_premenných> <deklarácie_premenných>
+ | 
+<prem>: <id>
+ | <prem> [ <výraz> ]
+ | <prem> . <id>
+<formálne_parametre>: <deklarácia_fp> <zvyšok_dfp>
+ | 
+<zoznam_identifikátorov>: <id> <zvyšok_zoznamu>
+<zvyšok_zoznamu>: , <id> <zvyšok_zoznamu>
+ | 
+<pole>: array [ <dol> .. <hor> ] of <typ_prvku>
+<definícia_podprogramu>: <hlavička_podprogramu> <telo_podprogramu>
+<deklarácia_premenných>: var <zoznam_deklarácií>
+<telo_podprogramu>: <deklarácie> <blok>
+<príkaz_if>: if <výraz> then <príkaz>
+<príkaz_priradenia>: <výraz> := <výraz>
+<unárny_op>: not
+ | -
+<konšt>: konšt_int
+ | konšt_real
+ | konšt_boolean
+ | konšt_char
+<deklarácia_fp>: <forma> <id> : <typ>
+<príkaz_while>: while <výraz> do <príkaz>
+<aditívny_op>: +
+ | -
+<deklarácie>: <deklarácie_typov> <deklarácie_premenných>
 <relačný_op>: <
  | <=
  | >
  | >=
  | =
  | <>
-<konšt>: konšt_int
- | konšt_real
- | konšt_boolean
- | konšt_char
-<op2>: <op2> <aditívny_op> <op3>
- | <op3>
-<deklarácia_premenných>: var <zoznam_deklarácií>
 <multiplikatívny_op>: *
  | /
  | mod
-<zvyšok_zoznamu>: , <id> <zvyšok_zoznamu>
+<typ_prvku>: <typ>
+<záznam>: record <zoznam_deklarácií> end
+<zvyšok_sp>: , <sp> <zvyšok_sp>
  | 
-<deklarácia_fp>: <forma> <id> : <typ>
+<zoznam_deklarácií>: <deklarácia> <zoznam_deklarácií>
+ | 
 <typ>: <jednoduchý_typ>
  | <id>
  | <pole>
  | <záznam>
-<hor>: konšt_int
-<hlavička_podprogramu>: procedure <id> ( <formálne_parametre> )
- | function <id> ( <formálne_parametre> ) : <typ>
-<jednoduchý_typ>: Integer
- | Real
- | Boolean
- | Char
-<výraz>: <výraz> <logický_op> <op1>
- | <op1>
-<príkazy>: <príkaz> ; <príkazy>
- | 
-<príkaz_while>: while <výraz> do <príkaz>
-<op1>: <op1> <relačný_op> <op2>
- | <op2>
-<formálne_parametre>: <deklarácia_fp> <zvyšok_dfp>
- | 
-<blok>: begin <príkazy> end
-<telo_podprogramu>: <deklarácie> <blok>
-<príkaz_priradenia>: <výraz> := <výraz>
-<zvyšok_sp>: , <sp> <zvyšok_sp>
- | 
-<deklarácia>: <zoznam_identifikátorov> : <typ> ;
-<dol>: konšt_int
-<op4>: <konšt>
- | <prem>
- | ( <výraz> )
- | <unárny_op> <op4>
-<forma>: var
- | 
-<príkaz_if>: if <výraz> then <príkaz>
-<prem>: <id>
- | <prem> [ <výraz> ]
- | <prem> . <id>
-<skutočné_parametre>: <sp> <zvyšok_sp>
- | 
-<logický_op>: and
- | or
-<deklarácie>: <deklarácie_typov> <deklarácie_premenných>
-<id>: id
-<definície_podprogramov>: <definícia_podprogramu> <definície_podprogramov>
- | 
-<definícia_podprogramu>: <hlavička_podprogramu> <telo_podprogramu>
-<zoznam_deklarácií>: <deklarácia> <zoznam_deklarácií>
- | 
-<typ_prvku>: <typ>
-<príkaz_call>: <id> ( <skutočné_parametre> )
-<pole>: array [ <dol> .. <hor> ] of <typ_prvku>
-<záznam>: record <zoznam_deklarácií> end
-<zvyšok_dfp>: , <deklarácia_fp> <zvyšok_dfp>
- | 
-<unárny_op>: not
- | -
-<zoznam_identifikátorov>: <id> <zvyšok_zoznamu>
-<deklarácia_typu>: type <id> = <typ> ;
-<deklarácie_premenných>: <deklarácia_premenných> <deklarácie_premenných>
- | 
-<aditívny_op>: +
- | -
-<deklarácie_typov>: <deklarácia_typu> <deklarácie_typov>
- | 
 %%

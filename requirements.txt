@@ -1,2 +1,5 @@
 python-sat
 pycryptosat
+pandas
+matplotlib
+seaborn

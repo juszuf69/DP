@@ -1,0 +1,5 @@
+solver,grammar,word,word_length,positive_or_negative,nonterminal_count,rule_count,status,result,time_ms
+sat:m22,1,a a b b b b c b c b,10,positive,4,6,ok,ACCEPT,6.094
+cyk,1,a a b b b b c b c b,10,positive,4,6,ok,ACCEPT,0.101
+sat:m22,1,a a b c b b b b c c,10,negative,4,6,ok,ACCEPT,5.354
+cyk,1,a a b c b b b b c c,10,negative,4,6,ok,ACCEPT,0.114

@@ -58,7 +58,7 @@ def _run_sat_solver(grammar, word: str, sat_solver_name: str) -> tuple[str, str,
     stats: dict[str, int] = {}
 
     try:
-        cfg_sat = CFG_2_SAT(grammar, word, solve=False)
+        cfg_sat = CFG_2_SAT(grammar, word, solve=False, save_dimacs=False, verbose=False)
         stats = cfg_sat.get_stats()
 
         word_tokens = [] if not word.strip() else word.split()

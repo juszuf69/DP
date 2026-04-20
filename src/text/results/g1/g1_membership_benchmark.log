@@ -1,0 +1,10 @@
+2026-04-20 14:22:02,212 INFO membership-benchmark: Membership benchmark started
+2026-04-20 14:22:02,212 INFO membership-benchmark: Grammar file: text\input\g1.txt
+2026-04-20 14:22:02,212 INFO membership-benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-20 14:22:02,212 INFO membership-benchmark: SAT solver: m22
+2026-04-20 14:22:02,232 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-20 14:22:02,233 INFO benchmark: Java generation attempt 1/3 for positive words (target=1, min_length=10, max_length=10, repetitions=21)
+2026-04-20 14:22:02,635 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-04-20 14:22:02,636 INFO benchmark: Java generation attempt 1/3 for negative words (target=1, min_length=10, max_length=10, repetitions=21)
+2026-04-20 14:22:02,799 INFO membership-benchmark: grammar=1 collected words: positive=1 negative=1
+2026-04-20 14:22:02,826 INFO membership-benchmark: Membership benchmark finished successfully
