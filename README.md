@@ -1,128 +1,77 @@
 # CFG to SAT Toolkit
 
-## Terminology
+Author: Jozef Nyitrai, STU Slovakia
 
-- CHNF = Chomsky Normal Form for grammars.
-- CNF = Conjunctive Normal Form for SAT formulas.
+This repository is part of my Master thesis.
 
-## What This Project Does
+This repository encodes context-free grammar membership as SAT, writes the resulting instances as DIMACS CNF, solves them with multiple backends, and benchmarks the approach against CYK. It also includes a Java word generator, collected benchmark results, and plots generated from those results.
 
-This repository turns context-free grammar membership into SAT, writes the instance as DIMACS CNF, solves it with several SAT backends, and benchmarks the results.
+The bundled Java word generator is included for benchmarking, but it is not my work.
 
-The pipeline is:
+## Repository Goal
 
-1. Read a grammar file.
-2. Convert the grammar to CHNF.
-3. Encode a tokenized word as a SAT formula.
-4. Save the formula as DIMACS CNF.
-5. Optionally solve it immediately.
-6. Run SAT solver benchmarks on Java-generated positive and negative words.
+The project is built to answer a practical question: how well does a SAT-based membership encoding behave compared with a direct CYK implementation on real grammars and generated words?
 
-## Core Algorithm
+The workflow is:
 
-### Membership problem
+1. Parse a grammar file.
+2. Convert the grammar to Chomsky normal form.
+3. Encode a tokenized word as SAT.
+4. Save the CNF as DIMACS and optionally solve it.
+5. Generate benchmark words with the bundled Java generator.
+6. Run solver benchmarks and generate plots from the collected CSV files.
 
-Given a grammar $G = (N, T, P, S)$ and a word $w = w_0\,w_1\,\dots\,w_{n-1}$, the code decides whether $w \in L(G)$.
-
-### Why CHNF is needed
-
-The SAT encoding assumes only these production shapes:
-
-- $A \rightarrow a$
-- $A \rightarrow BC$
-- optionally $S \rightarrow \varepsilon$
-
-So arbitrary CFGs are converted to CHNF first.
-
-### CHNF conversion steps
-
-The parser performs the standard normalization steps:
-
-1. Add a fresh start symbol.
-2. Remove epsilon productions, keeping start epsilon when needed.
-3. Remove unit productions.
-4. Remove useless symbols.
-5. Replace terminals inside longer rules with helper nonterminals.
-6. Binarize long rules.
-
-### SAT encoding
-
-The main boolean variable is:
+The core SAT variable is:
 
 $$
 X_{A,i,j} = \text{``nonterminal } A \text{ derives substring } w_i \dots w_j''
 $$
 
-The encoding adds:
+The SAT encoding mirrors the CYK recurrence, which is why the repository also includes a direct CYK implementation for comparison.
 
-1. A base truth assignment for terminal spans.
-2. A true literal for the start symbol over the full span when the word is in the language.
-3. Tseitin clauses for binary rules and split points.
+## Repository Layout
 
-The resulting SAT formula is equivalent to the CYK recurrence, which is why the code can cross-check SAT output with CYK.
+| Path | Purpose |
+| --- | --- |
+| [src/CFG_2_SAT.py](src/CFG_2_SAT.py) | Main SAT encoder and DIMACS writer |
+| [src/modules/parser.py](src/modules/parser.py) | Grammar parsing, CNF conversion, and grammar export |
+| [src/modules/CYK.py](src/modules/CYK.py) | Direct CYK membership checker |
+| [src/benchmark_sat_solvers.py](src/benchmark_sat_solvers.py) | Benchmarks SAT solver backends on generated DIMACS instances |
+| [src/benchmark_membership_solvers.py](src/benchmark_membership_solvers.py) | Benchmarks SAT membership against CYK |
+| [src/generate_benchmark_diagrams.py](src/generate_benchmark_diagrams.py) | Builds plots from benchmark CSV files |
+| [src/modules/WordGenerator.jar](src/modules/WordGenerator.jar) | Bundled Java word generator used by the benchmark scripts |
+| [src/text/input/](src/text/input/) | Sample grammar inputs |
+| [src/text/output/](src/text/output/) | Exported Java and CNF grammar text |
+| [src/text/dimacs_outputs/](src/text/dimacs_outputs/) | DIMACS CNF output |
+| [src/text/results/](src/text/results/) | Benchmark CSV and log output |
+| [src/text/results/plots/](src/text/results/plots/) | Generated diagrams |
+| [misc/word_generator/Generator_final/](misc/word_generator/Generator_final/) | Maven project used to build the generator JAR |
 
-### Complexity
+## Requirements
 
-For word length $n$ and $|N|$ nonterminals, the base table has $|N| \cdot n(n+1)/2$ entries, and the binary rule expansion grows cubically with span length. That is the expected complexity class for CNF grammar membership.
+The project is Python-based and expects:
 
-## Main Files
+- Python 3.10 or newer
+- Java 11 or newer for the bundled generator JAR
+- `python-sat`
+- `pycryptosat` for the optional extra SAT backend
+- `pandas`, `matplotlib`, and `seaborn` for plot generation
 
-- [src/CFG_2_SAT.py](src/CFG_2_SAT.py): main SAT encoder and DIMACS writer.
-- [src/modules/parser.py](src/modules/parser.py): grammar parsing and CHNF conversion.
-- [src/modules/CYK.py](src/modules/CYK.py): membership check used for validation.
-- [src/benchmark_sat_solvers.py](src/benchmark_sat_solvers.py): benchmark runner and CSV export.
-- [src/domain/grammar_types.py](src/domain/grammar_types.py): simple data classes for terminals, nonterminals, rules, and grammars.
-- [src/modules/WordGenerator.jar](src/modules/WordGenerator.jar): Java generator used by the benchmark flow.
+Install everything from the project root:
 
-## Supporting Modules
+```powershell
+python -m pip install -r requirements.txt
+```
 
-### [src/domain/grammar_types.py](src/domain/grammar_types.py)
+The scripts are meant to be run from the `src` directory so their relative imports resolve correctly:
 
-Defines the in-memory grammar model:
+```powershell
+cd src
+```
 
-- `Terminal`
-- `NonTerminal`
-- `Rule`
-- `Grammar`
+## Grammar Format
 
-### [src/modules/parser.py](src/modules/parser.py)
-
-Responsibilities:
-
-- Parse plain-text grammar files.
-- Support multiple grammars in one file, separated by `---`.
-- Convert each grammar to CHNF.
-- Export two text representations:
-  - Java grammar format in `src/text/output/JavaGrammar/`
-  - CHNF grammar format in `src/text/output/Chomsky/`
-
-### [src/CFG_2_SAT.py](src/CFG_2_SAT.py)
-
-Responsibilities:
-
-- Build the SAT table for a word.
-- Create DIMACS CNF clauses.
-- Save the DIMACS file into `src/text/dimacs_outputs/`.
-- Optionally solve the formula with PySAT.
-- Print a derivation when the instance is satisfiable.
-
-### [src/modules/CYK.py](src/modules/CYK.py)
-
-Implements standard CYK membership checking on the CHNF grammar. The SAT encoder uses it to verify that SAT and CYK agree.
-
-### [src/benchmark_sat_solvers.py](src/benchmark_sat_solvers.py)
-
-Runs the benchmark pipeline:
-
-- loads grammars,
-- uses the Java generator to produce positive and negative benchmark words,
-- builds DIMACS files,
-- runs multiple solvers,
-- writes CSV and log output.
-
-## Grammar File Format
-
-Grammar files are plain text. Example:
+Grammar files are plain text. A minimal example looks like this:
 
 ```text
 terminal:
@@ -142,42 +91,13 @@ start:
 S
 ```
 
-Rules use `LHS - RHS` syntax.
+Rules use `LHS - RHS` syntax. Words are tokenized by spaces, so `a b c` is a three-token word. Epsilon is written as `ε`.
 
-Notes:
+Multiple grammars may live in the same file. Separate grammar blocks with a line containing `---`.
 
-- Multiple grammars can live in one file.
-- Separate grammar blocks with a line containing `---`.
-- Epsilon is written as `ε`.
-- Words are tokenized by spaces, for example `a b c`.
+## Main Workflows
 
-## Requirements
-
-The code is Python-based and expects:
-
-- Python 3.10 or newer
-- `python-sat`
-- `pycryptosat` for the optional extra solver backend
-- Java runtime if you want to use the bundled word generator JAR
-
-Install from the project root:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-## Setup
-
-The scripts are written to run from the `src` directory.
-
-```powershell
-cd src
-```
-
-## Usage
-
-
-### 1. Generate and solve a DIMACS instance
+### Encode and solve one word
 
 ```python
 from CFG_2_SAT import CFG_2_SAT
@@ -190,9 +110,9 @@ print(solver.dimacs_path)
 print(solver.get_stats())
 ```
 
-This parses the grammar, converts it to CHNF, builds the SAT encoding, writes the DIMACS file, and solves it immediately.
+This parses the grammar, converts it to CNF, builds the SAT instance, writes the DIMACS file, and solves it immediately.
 
-### 2. Generate DIMACS without solving
+If you only want the DIMACS file:
 
 ```python
 from CFG_2_SAT import CFG_2_SAT
@@ -205,52 +125,76 @@ print(solver.dimacs_path)
 print(solver.get_stats())
 ```
 
-This is the same encoding path, but it stops after saving the DIMACS file.
+### Benchmark SAT solvers
 
-### 3. Run the benchmark
-
-The benchmark uses the Java generator for both positive and negative words. If `--java-jar` is omitted, it uses the default JAR in `src/modules/WordGenerator.jar`.
+`benchmark_sat_solvers.py` generates positive and negative benchmark words with the Java generator, converts each case to DIMACS, and runs several SAT backends. The available PySAT backends depend on your local build; the script targets `g3`, `g4`, `gc3`, `gc4`, `m22`, `mc`, and `mgh`, plus `pycryptosat` when it is installed. If `--java-jar` is omitted, it uses the bundled `src/modules/WordGenerator.jar`.
 
 ```powershell
 python benchmark_sat_solvers.py text/input/g1.txt --min-length 10 --max-length 20 --positive-count 10 --negative-count 10
 ```
 
-If you want to point at a different JAR:
+You can point at a different JAR if needed:
 
 ```powershell
 python benchmark_sat_solvers.py text/input/g1.txt --min-length 10 --max-length 20 --positive-count 10 --negative-count 10 --java-jar modules/WordGenerator.jar
 ```
 
-### 4. Run the benchmark on a multi-grammar file
+### Benchmark membership against CYK
+
+`benchmark_membership_solvers.py` uses the same generated words, then compares a SAT-based membership check against the direct CYK implementation. It also falls back to the bundled `src/modules/WordGenerator.jar` unless you override `--java-jar`.
 
 ```powershell
-python benchmark_sat_solvers.py text/input/grammars.txt --min-length 10 --max-length 20 --positive-count 10 --negative-count 10
+python benchmark_membership_solvers.py text/input/g1.txt --min-length 10 --max-length 20 --positive-count 10 --negative-count 10 --sat-solver m22
 ```
 
-The parser splits grammar blocks by `---`, exports each one separately, and the benchmark processes them one by one.
+### Generate plots from results
 
-## Output Locations
+`generate_benchmark_diagrams.py` scans the benchmark CSV files under `src/text/results/` and writes diagrams to `src/text/results/plots/`.
 
-### DIMACS
+```powershell
+python generate_benchmark_diagrams.py --results-root text/results --output-dir text/results/plots
+```
 
-Generated files are written under:
+If you want to force a specific membership CSV, pass `--membership-csv`.
+
+## Outputs
+
+### DIMACS output
+
+Generated DIMACS files are written to:
 
 - `src/text/dimacs_outputs/`
 - `src/text/dimacs_outputs/benchmark_runs/<grammar_file_stem>/`
 
-Each DIMACS file includes a comment header with grammar, word, and stats.
+Each DIMACS file includes a short comment header with the grammar name, the word, and the encoding statistics.
 
-### Benchmark results
+### Benchmark CSV and logs
 
-Benchmark CSV files and logs are written under:
+Benchmark runs write results and logs to:
 
 - `src/text/results/<grammar_file_stem>/`
 
-The CSV contains solver name, grammar index, word, polarity, formula size, status, result, and runtime.
+Typical files include the membership summary CSV, the length-range CSVs, and the matching log files produced by each benchmark run.
 
-## Practical Notes
+The SAT benchmark CSV includes solver name, grammar index, word, polarity, DIMACS path, formula size statistics, status, result, and runtime. The membership benchmark CSV includes the SAT and CYK rows for the same generated words.
 
-1. Start with short lengths before larger benchmark ranges.
-2. Use the generated Java grammar exports if you need to inspect what the benchmark is running.
-3. Compare SAT and CYK output when debugging a grammar or word.
-4. For benchmark runs, the Java generator is the only word source used.
+### Plots
+
+The repository already contains generated diagrams in [src/text/results/plots/](src/text/results/plots/):
+
+- [01_sat_correlation_heatmap.png](src/text/results/plots/01_sat_correlation_heatmap.png)
+- [02_sat_time_scatter_grid.png](src/text/results/plots/02_sat_time_scatter_grid.png)
+- [03_sat_solver_by_word_length.png](src/text/results/plots/03_sat_solver_by_word_length.png)
+- [04_sat_solver_median_runtime.png](src/text/results/plots/04_sat_solver_median_runtime.png)
+- [05_cyk_vs_sat_median_runtime.png](src/text/results/plots/05_cyk_vs_sat_median_runtime.png)
+- [06_cyk_vs_sat_by_word_length.png](src/text/results/plots/06_cyk_vs_sat_by_word_length.png)
+
+These charts summarize SAT solver timing, solver comparisons by word length, and CYK versus SAT membership timing.
+
+## Notes
+
+- The bundled Java generator expects one grammar per input block. For multi-grammar files, the parser exports separate Java grammar blocks and the benchmark scripts process them one by one.
+- The repository includes sample inputs such as `g1.txt`, `g2.txt`, `g3.txt`, `big_grammar.txt`, and `grammars.txt`.
+- If `pycryptosat` is missing, the SAT benchmark still runs; the extra solver row is just skipped.
+- Start with shorter word lengths before moving to larger benchmark ranges.
+- The exported grammar files under `src/text/output/` are useful when you want to inspect exactly what the benchmark scripts are feeding into the generator and the CNF encoder.
