@@ -6,10 +6,10 @@
 S: 
  | b S
  | a A
-B: b B
- | a S
 A: b A
  | a B
+B: b B
+ | a S
 %%
 
 ---
@@ -21,11 +21,11 @@ A: b A
 %%
 S: B A B
  | A B A
-B: B A
- | b
 A: A B
  | a A
  | a b
+B: B A
+ | b
 %%
 
 ---
@@ -68,22 +68,22 @@ A: a A b
 %start veta
 %%
 veta: podmet prísudok
+prísudok: sloveso
+ | sloveso predmet
 zámeno: on
  | ona
  | ono
+sloveso: varí
+ | číta
+ | platí
 podstmeno: mama
  | otec
  | školné
  | obed
  | noviny
-predmet: podstmeno
-prísudok: sloveso
- | sloveso predmet
-sloveso: varí
- | číta
- | platí
 podmet: podstmeno
  | zámeno
+predmet: podstmeno
 %%
 
 ---
@@ -103,8 +103,8 @@ deklaracie: deklaracia deklaracie
  | 
 pole: 
  | [ konst_int ]
-deklarator: identifikator pole
 deklaracia: typ deklarator ;
+deklarator: identifikator pole
 typ: char
  | int
  | float
@@ -133,9 +133,9 @@ A: a A
 S: a b A
  | b a B
  | 
-B: b a B
- | 
 A: a b A
+ | 
+B: b a B
  | 
 %%
 
@@ -216,10 +216,10 @@ S: a S
 S: a A
  | b B
  | 
-B: a S
- | b A
 A: a B
  | b S
+B: a S
+ | b A
 %%
 
 ---
@@ -232,12 +232,12 @@ A: a B
 S: 
  | a A
  | b C
-A: a A
- | b B
- | 
 D: a D
  | 
 B: b B
+ | 
+A: a A
+ | b B
  | 
 C: b C
  | a D
@@ -255,9 +255,9 @@ S: a A
  | a S
  | A
  | a b B
-B: b B
 A: 
  | b A
+B: b B
 %%
 
 ---
@@ -271,13 +271,13 @@ A:
 S: a A C
  | b B
  | B B
+A: a A b
 B: 
  | a B b
  | S B
 C: C C
  | b
  | c
-A: a A b
 %%
 
 ---
@@ -297,13 +297,13 @@ A: a A b
 %start program
 %%
 program: štart príkazy koniec
-podmienka: p1
- | p2
 príkazy: príkaz ; príkazy
  | 
+výraz: príkaz1
+ | príkaz2
 príkaz: výraz
  | ak podmienka potom príkaz
  | pokiaľ podmienka rob príkaz
-výraz: príkaz1
- | príkaz2
+podmienka: p1
+ | p2
 %%

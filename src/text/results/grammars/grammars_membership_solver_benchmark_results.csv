@@ -1,0 +1,541 @@
+solver,grammar,word,word_length,positive_or_negative,nonterminal_count,rule_count,status,result,time_ms
+sat:m22,1,a a b a a b a b b b a,11,positive,6,13,ok,ACCEPT,33.457
+cyk,1,a a b a a b a b b b a,11,positive,6,13,ok,ACCEPT,0.223
+sat:m22,1,b b a b a b a b a a a,11,positive,6,13,ok,ACCEPT,33.567
+cyk,1,b b a b a b a b a a a,11,positive,6,13,ok,ACCEPT,0.217
+sat:m22,1,a b a b b a b a a a b a a a,14,positive,6,13,ok,ACCEPT,67.822
+cyk,1,a b a b b a b a a a b a a a,14,positive,6,13,ok,ACCEPT,0.402
+sat:m22,1,a a a b b b b b a b b a a a a b b a,18,positive,6,13,ok,ACCEPT,133.867
+cyk,1,a a a b b b b b a b b a a a a b b a,18,positive,6,13,ok,ACCEPT,1.157
+sat:m22,1,b b b a a a b a a a a b a a,14,positive,6,13,ok,ACCEPT,59.412
+cyk,1,b b b a a a b a a a a b a a,14,positive,6,13,ok,ACCEPT,0.398
+sat:m22,1,a a b b a b b a a b b b a,13,positive,6,13,ok,ACCEPT,49.450
+cyk,1,a a b b a b b a a b b b a,13,positive,6,13,ok,ACCEPT,0.294
+sat:m22,1,b a a a a a a a a b b a,12,positive,6,13,ok,ACCEPT,39.037
+cyk,1,b a a a a a a a a b b a,12,positive,6,13,ok,ACCEPT,0.231
+sat:m22,1,b b a b b a b b b a,10,positive,6,13,ok,ACCEPT,21.861
+cyk,1,b b a b b a b b b a,10,positive,6,13,ok,ACCEPT,0.155
+sat:m22,1,a b b b b b b b a b a,11,positive,6,13,ok,ACCEPT,30.594
+cyk,1,a b b b b b b b a b a,11,positive,6,13,ok,ACCEPT,0.220
+sat:m22,1,a a b a b a b b b a b a b b a b b a b a,20,positive,6,13,ok,ACCEPT,213.282
+cyk,1,a a b a b a b b b a b a b b a b b a b a,20,positive,6,13,ok,ACCEPT,0.984
+sat:m22,1,a b a a b b a a b a,10,negative,6,13,ok,ACCEPT,22.183
+cyk,1,a b a a b b a a b a,10,negative,6,13,ok,ACCEPT,0.151
+sat:m22,1,a a a b a b a b b a a b a a,14,negative,6,13,ok,ACCEPT,60.831
+cyk,1,a a a b a b a b b a a b a a,14,negative,6,13,ok,ACCEPT,0.337
+sat:m22,1,a a a a a a b a a b a,11,negative,6,13,ok,ACCEPT,29.814
+cyk,1,a a a a a a b a a b a,11,negative,6,13,ok,ACCEPT,0.184
+sat:m22,1,b b a b b a b a a b a a b b a a a a a a,20,negative,6,13,ok,ACCEPT,166.098
+cyk,1,b b a b b a b a a b a a b b a a a a a a,20,negative,6,13,ok,ACCEPT,0.987
+sat:m22,1,b b a a a a b b a b a a b a b a b a a a,20,negative,6,13,ok,ACCEPT,169.327
+cyk,1,b b a a a a b b a b a a b a b a b a a a,20,negative,6,13,ok,ACCEPT,1.100
+sat:m22,1,a b a a b a a b b a b a b b a b a,17,negative,6,13,ok,ACCEPT,111.566
+cyk,1,a b a a b a a b b a b a b b a b a,17,negative,6,13,ok,ACCEPT,0.542
+sat:m22,1,a a a a a a b a b a b b a a a a,16,negative,6,13,ok,ACCEPT,92.592
+cyk,1,a a a a a a b a b a b b a a a a,16,negative,6,13,ok,ACCEPT,0.936
+sat:m22,1,b b b b b a b b a a,10,negative,6,13,ok,ACCEPT,23.686
+cyk,1,b b b b b a b b a a,10,negative,6,13,ok,ACCEPT,0.200
+sat:m22,1,b b b a b a b b b b a b a a b a,16,negative,6,13,ok,ACCEPT,86.706
+cyk,1,b b b a b a b b b b a b a a b a,16,negative,6,13,ok,ACCEPT,0.487
+sat:m22,1,b a b a b a a a b b b b a a b a b a,18,negative,6,13,ok,ACCEPT,155.347
+cyk,1,b a b a b a a a b b b b a a b a b a,18,negative,6,13,ok,ACCEPT,0.831
+sat:m22,2,b a a b b b a b b b,10,positive,7,11,ok,ACCEPT,22.960
+cyk,2,b a a b b b a b b b,10,positive,7,11,ok,ACCEPT,0.126
+sat:m22,2,a b b a a a a a a a a b b b b b b b,18,positive,7,11,ok,ACCEPT,128.801
+cyk,2,a b b a a a a a a a a b b b b b b b,18,positive,7,11,ok,ACCEPT,0.346
+sat:m22,2,b a b a a a a a b b b,11,positive,7,11,ok,ACCEPT,31.578
+cyk,2,b a b a a a a a b b b,11,positive,7,11,ok,ACCEPT,0.106
+sat:m22,2,b a b b b a b b a b b b,12,positive,7,11,ok,ACCEPT,41.095
+cyk,2,b a b b b a b b a b b b,12,positive,7,11,ok,ACCEPT,0.204
+sat:m22,2,a b b a a a a a b b b b b b,14,positive,7,11,ok,ACCEPT,551.326
+cyk,2,a b b a a a a a b b b b b b,14,positive,7,11,ok,ACCEPT,0.763
+sat:m22,2,b a a a b b b b a b b b a a b,15,positive,7,11,ok,ACCEPT,74.712
+cyk,2,b a a a b b b b a b b b a a b,15,positive,7,11,ok,ACCEPT,0.239
+sat:m22,2,a b b b a a a b b b b b a b b,15,positive,7,11,ok,ACCEPT,77.274
+cyk,2,a b b b a a a b b b b b a b b,15,positive,7,11,ok,ACCEPT,0.500
+sat:m22,2,b a a a b b a b b b b a b b b a a b,18,positive,7,11,ok,ACCEPT,137.424
+cyk,2,b a a a b b a b b b b a b b b a a b,18,positive,7,11,ok,ACCEPT,0.508
+sat:m22,2,b a a a a b b b b a b a b b a b b b,18,positive,7,11,ok,ACCEPT,130.800
+cyk,2,b a a a a b b b b a b a b b a b b b,18,positive,7,11,ok,ACCEPT,0.439
+sat:m22,2,b a a b a a a a b b a b b,13,positive,7,11,ok,ACCEPT,49.149
+cyk,2,b a a b a a a a b b a b b,13,positive,7,11,ok,ACCEPT,0.163
+sat:m22,2,b a a b b a a b b a a b b b a b b b,18,negative,7,11,ok,ACCEPT,135.841
+cyk,2,b a a b b a a b b a a b b b a b b b,18,negative,7,11,ok,ACCEPT,0.672
+sat:m22,2,b a a a b a b a b b b a b a b b b a b b,20,negative,7,11,ok,ACCEPT,225.337
+cyk,2,b a a a b a b a b b b a b a b b b a b b,20,negative,7,11,ok,ACCEPT,1.499
+sat:m22,2,a b b a a b a a b b a b a a b b,16,negative,7,11,ok,ACCEPT,103.740
+cyk,2,a b b a a b a a b b a b a a b b,16,negative,7,11,ok,ACCEPT,0.265
+sat:m22,2,a a a b b b b a b b a b b b b a a b b,19,negative,7,11,ok,ACCEPT,156.304
+cyk,2,a a a b b b b a b b a b b b b a a b b,19,negative,7,11,ok,ACCEPT,0.509
+sat:m22,2,a b b b a b a b b a a a b b b,15,negative,7,11,ok,ACCEPT,74.693
+cyk,2,a b b b a b a b b a a a b b b,15,negative,7,11,ok,ACCEPT,0.565
+sat:m22,2,b a b b a a a a b a a a b a b b b,17,negative,7,11,ok,ACCEPT,173.274
+cyk,2,b a b b a a a a b a a a b a b b b,17,negative,7,11,ok,ACCEPT,0.735
+sat:m22,2,b a b b b a b b b b a a b b b,15,negative,7,11,ok,ACCEPT,86.757
+cyk,2,b a b b b a b b b b a a b b b,15,negative,7,11,ok,ACCEPT,0.273
+sat:m22,2,a b b b b a b b b b,10,negative,7,11,ok,ACCEPT,24.407
+cyk,2,a b b b b a b b b b,10,negative,7,11,ok,ACCEPT,0.098
+sat:m22,2,b a b b a b b b a b a b a b b b b,17,negative,7,11,ok,ACCEPT,138.668
+cyk,2,b a b b a b b b a b a b a b b b b,17,negative,7,11,ok,ACCEPT,0.485
+sat:m22,2,b a b b b b a a b a b b b a a b b b,18,negative,7,11,ok,ACCEPT,183.372
+cyk,2,b a b b b b a a b a b b b a a b b b,18,negative,7,11,ok,ACCEPT,0.400
+sat:m22,4,a a a a a a b b b b b b a b,14,positive,6,9,ok,ACCEPT,65.302
+cyk,4,a a a a a a b b b b b b a b,14,positive,6,9,ok,ACCEPT,0.166
+sat:m22,4,a a a b b b a a a a b b b b,14,positive,6,9,ok,ACCEPT,60.311
+cyk,4,a a a b b b a a a a b b b b,14,positive,6,9,ok,ACCEPT,0.123
+sat:m22,4,a a a a b b b b a a a b b b,14,positive,6,9,ok,ACCEPT,54.520
+cyk,4,a a a a b b b b a a a b b b,14,positive,6,9,ok,ACCEPT,0.131
+sat:m22,4,a a a a a a a b b b b b b b a b,16,positive,6,9,ok,ACCEPT,82.893
+cyk,4,a a a a a a a b b b b b b b a b,16,positive,6,9,ok,ACCEPT,0.169
+sat:m22,4,a b a a a a a b b b b b,12,positive,6,9,ok,ACCEPT,40.171
+cyk,4,a b a a a a a b b b b b,12,positive,6,9,ok,ACCEPT,0.100
+sat:m22,4,a a a b b b a a a b b b,12,positive,6,9,ok,ACCEPT,34.736
+cyk,4,a a a b b b a a a b b b,12,positive,6,9,ok,ACCEPT,0.095
+sat:m22,4,a a a a a a a b b b b b b b a a b b,18,positive,6,9,ok,ACCEPT,127.538
+cyk,4,a a a a a a a b b b b b b b a a b b,18,positive,6,9,ok,ACCEPT,0.221
+sat:m22,4,a a a a a b b b b b a a a a a b b b b b,20,positive,6,9,ok,ACCEPT,187.572
+cyk,4,a a a a a b b b b b a a a a a b b b b b,20,positive,6,9,ok,ACCEPT,0.410
+sat:m22,4,a a a a a b b b b b a b,12,positive,6,9,ok,ACCEPT,33.992
+cyk,4,a a a a a b b b b b a b,12,positive,6,9,ok,ACCEPT,0.096
+sat:m22,4,a b a a a a a a a b b b b b b b,16,positive,6,9,ok,ACCEPT,78.590
+cyk,4,a b a a a a a a a b b b b b b b,16,positive,6,9,ok,ACCEPT,0.589
+sat:m22,4,a a b b a a a a a b b b b b,14,negative,6,9,ok,ACCEPT,54.975
+cyk,4,a a b b a a a a a b b b b b,14,negative,6,9,ok,ACCEPT,0.131
+sat:m22,4,a a b b a a a a a a b b b b b b,16,negative,6,9,ok,ACCEPT,89.043
+cyk,4,a a b b a a a a a a b b b b b b,16,negative,6,9,ok,ACCEPT,0.173
+sat:m22,4,a a a a a b b b b b a a a b b b,16,negative,6,9,ok,ACCEPT,81.466
+cyk,4,a a a a a b b b b b a a a b b b,16,negative,6,9,ok,ACCEPT,0.157
+sat:m22,4,a b a a a a a a a b b b b b b b,16,negative,6,9,ok,ACCEPT,83.990
+cyk,4,a b a a a a a a a b b b b b b b,16,negative,6,9,ok,ACCEPT,0.158
+sat:m22,4,a a a a b b b b a a a a a a b b b b b b,20,negative,6,9,ok,ACCEPT,155.920
+cyk,4,a a a a b b b b a a a a a a b b b b b b,20,negative,6,9,ok,ACCEPT,0.244
+sat:m22,4,a a a b b b a a a b b b,12,negative,6,9,ok,ACCEPT,36.097
+cyk,4,a a a b b b a a a b b b,12,negative,6,9,ok,ACCEPT,0.106
+sat:m22,4,a a b b a a a b b b,10,negative,6,9,ok,ACCEPT,21.394
+cyk,4,a a b b a a a b b b,10,negative,6,9,ok,ACCEPT,0.072
+sat:m22,4,a b a a a a a a a a b b b b b b b b,18,negative,6,9,ok,ACCEPT,114.390
+cyk,4,a b a a a a a a a a b b b b b b b b,18,negative,6,9,ok,ACCEPT,0.224
+sat:m22,4,a a a a a b b b b b a a b b,14,negative,6,9,ok,ACCEPT,80.390
+cyk,4,a a a a a b b b b b a a b b,14,negative,6,9,ok,ACCEPT,0.166
+sat:m22,4,a a a a a a b b b b b b a a b b,16,negative,6,9,ok,ACCEPT,100.474
+cyk,4,a a a a a a b b b b b b a a b b,16,negative,6,9,ok,ACCEPT,0.182
+sat:m22,6,char identifikator ; float identifikator ; char identifikator ; char identifikator ;,12,positive,15,20,ok,ACCEPT,80.957
+cyk,6,char identifikator ; float identifikator ; char identifikator ; char identifikator ;,12,positive,15,20,ok,ACCEPT,0.368
+sat:m22,6,float identifikator [ konst_int ] ; float identifikator [ konst_int ] ; char identifikator ; float identifikator ;,18,positive,15,20,ok,ACCEPT,279.719
+cyk,6,float identifikator [ konst_int ] ; float identifikator [ konst_int ] ; char identifikator ; float identifikator ;,18,positive,15,20,ok,ACCEPT,0.267
+sat:m22,6,char identifikator ; int identifikator [ konst_int ] ; char identifikator ; int identifikator ;,15,positive,15,20,ok,ACCEPT,149.886
+cyk,6,char identifikator ; int identifikator [ konst_int ] ; char identifikator ; int identifikator ;,15,positive,15,20,ok,ACCEPT,0.212
+sat:m22,6,char identifikator ; float identifikator ; float identifikator [ konst_int ] ; char identifikator ; int identifikator ;,18,positive,15,20,ok,ACCEPT,256.877
+cyk,6,char identifikator ; float identifikator ; float identifikator [ konst_int ] ; char identifikator ; int identifikator ;,18,positive,15,20,ok,ACCEPT,0.289
+sat:m22,6,float identifikator ; float identifikator ; int identifikator ; char identifikator ; float identifikator ; float identifikator ;,18,positive,15,20,ok,ACCEPT,295.775
+cyk,6,float identifikator ; float identifikator ; int identifikator ; char identifikator ; float identifikator ; float identifikator ;,18,positive,15,20,ok,ACCEPT,0.724
+sat:m22,6,char identifikator ; char identifikator ; char identifikator ; int identifikator ;,12,positive,15,20,ok,ACCEPT,77.842
+cyk,6,char identifikator ; char identifikator ; char identifikator ; int identifikator ;,12,positive,15,20,ok,ACCEPT,0.162
+sat:m22,6,char identifikator ; char identifikator [ konst_int ] ; char identifikator ;,12,positive,15,20,ok,ACCEPT,93.203
+cyk,6,char identifikator ; char identifikator [ konst_int ] ; char identifikator ;,12,positive,15,20,ok,ACCEPT,0.131
+sat:m22,6,int identifikator ; char identifikator ; char identifikator ; float identifikator ;,12,positive,15,20,ok,ACCEPT,93.973
+cyk,6,int identifikator ; char identifikator ; char identifikator ; float identifikator ;,12,positive,15,20,ok,ACCEPT,0.154
+sat:m22,6,int identifikator ; int identifikator ; float identifikator ; char identifikator [ konst_int ] ; char identifikator ;,18,positive,15,20,ok,ACCEPT,184.625
+cyk,6,int identifikator ; int identifikator ; float identifikator ; char identifikator [ konst_int ] ; char identifikator ;,18,positive,15,20,ok,ACCEPT,0.253
+sat:m22,6,int identifikator ; float identifikator ; char identifikator [ konst_int ] ; float identifikator ;,15,positive,15,20,ok,ACCEPT,113.134
+cyk,6,int identifikator ; float identifikator ; char identifikator [ konst_int ] ; float identifikator ;,15,positive,15,20,ok,ACCEPT,0.196
+sat:m22,6,float identifikator [ konst_int ] ; int identifikator [ konst_int ] ; float identifikator ; float identifikator ;,18,negative,15,20,ok,ACCEPT,244.218
+cyk,6,float identifikator [ konst_int ] ; int identifikator [ konst_int ] ; float identifikator ; float identifikator ;,18,negative,15,20,ok,ACCEPT,0.270
+sat:m22,6,char identifikator ; char identifikator ; int identifikator ; char identifikator ;,12,negative,15,20,ok,ACCEPT,60.317
+cyk,6,char identifikator ; char identifikator ; int identifikator ; char identifikator ;,12,negative,15,20,ok,ACCEPT,0.129
+sat:m22,6,int identifikator ; char identifikator ; int identifikator ; char identifikator ; float identifikator ;,15,negative,15,20,ok,ACCEPT,109.938
+cyk,6,int identifikator ; char identifikator ; int identifikator ; char identifikator ; float identifikator ;,15,negative,15,20,ok,ACCEPT,0.225
+sat:m22,6,float identifikator ; char identifikator ; int identifikator [ konst_int ] ; int identifikator ;,15,negative,15,20,ok,ACCEPT,121.230
+cyk,6,float identifikator ; char identifikator ; int identifikator [ konst_int ] ; int identifikator ;,15,negative,15,20,ok,ACCEPT,0.200
+sat:m22,6,float identifikator ; float identifikator ; float identifikator ; int identifikator ; char identifikator ; float identifikator ;,18,negative,15,20,ok,ACCEPT,229.445
+cyk,6,float identifikator ; float identifikator ; float identifikator ; int identifikator ; char identifikator ; float identifikator ;,18,negative,15,20,ok,ACCEPT,0.690
+sat:m22,6,int identifikator ; int identifikator ; char identifikator ; float identifikator ;,12,negative,15,20,ok,ACCEPT,113.053
+cyk,6,int identifikator ; int identifikator ; char identifikator ; float identifikator ;,12,negative,15,20,ok,ACCEPT,0.311
+sat:m22,6,int identifikator ; float identifikator [ konst_int ] ; int identifikator ; int identifikator ;,15,negative,15,20,ok,ACCEPT,168.989
+cyk,6,int identifikator ; float identifikator [ konst_int ] ; int identifikator ; int identifikator ;,15,negative,15,20,ok,ACCEPT,0.218
+sat:m22,6,char identifikator ; char identifikator ; char identifikator ; float identifikator ; char identifikator ; float identifikator ;,18,negative,15,20,ok,ACCEPT,318.146
+cyk,6,char identifikator ; char identifikator ; char identifikator ; float identifikator ; char identifikator ; float identifikator ;,18,negative,15,20,ok,ACCEPT,0.360
+sat:m22,6,char identifikator ; char identifikator ; int identifikator [ konst_int ] ;,12,negative,15,20,ok,ACCEPT,66.968
+cyk,6,char identifikator ; char identifikator ; int identifikator [ konst_int ] ;,12,negative,15,20,ok,ACCEPT,0.125
+sat:m22,6,char identifikator ; int identifikator ; int identifikator ; int identifikator ; int identifikator ; int identifikator ;,18,negative,15,20,ok,ACCEPT,200.784
+cyk,6,char identifikator ; int identifikator ; int identifikator ; int identifikator ; int identifikator ; int identifikator ;,18,negative,15,20,ok,ACCEPT,0.572
+sat:m22,7,a a b b a b b a a a a a b,13,positive,4,6,ok,ACCEPT,28.624
+cyk,7,a a b b a b b a a a a a b,13,positive,4,6,ok,ACCEPT,0.329
+sat:m22,7,a a a a b a b b a b a b a a b,15,positive,4,6,ok,ACCEPT,43.633
+cyk,7,a a a a b a b b a b a b a a b,15,positive,4,6,ok,ACCEPT,0.607
+sat:m22,7,a a a b a b a b b b b,11,positive,4,6,ok,ACCEPT,19.180
+cyk,7,a a a b a b a b b b b,11,positive,4,6,ok,ACCEPT,0.169
+sat:m22,7,a b a b b a a a a b a b b a a a a b,18,positive,4,6,ok,ACCEPT,67.098
+cyk,7,a b a b b a a a a b a b b a a a a b,18,positive,4,6,ok,ACCEPT,0.360
+sat:m22,7,a a a b a b b b b b a b a b b,15,positive,4,6,ok,ACCEPT,40.594
+cyk,7,a a a b a b b b b b a b a b b,15,positive,4,6,ok,ACCEPT,0.335
+sat:m22,7,a a b a b b a b a a a a a b b a b,17,positive,4,6,ok,ACCEPT,45.791
+cyk,7,a a b a b b a b a a a a a b b a b,17,positive,4,6,ok,ACCEPT,0.278
+sat:m22,7,a b a a b b a b b b b,11,positive,4,6,ok,ACCEPT,11.896
+cyk,7,a b a a b b a b b b b,11,positive,4,6,ok,ACCEPT,0.148
+sat:m22,7,a a b a a b a b a b,10,positive,4,6,ok,ACCEPT,13.924
+cyk,7,a a b a a b a b a b,10,positive,4,6,ok,ACCEPT,0.096
+sat:m22,7,a a b a a b a b a b a b a b b b b a b,19,positive,4,6,ok,ACCEPT,61.168
+cyk,7,a a b a a b a b a b a b a b b b b a b,19,positive,4,6,ok,ACCEPT,1.197
+sat:m22,7,a a a a b a b a a b a b a b b,15,positive,4,6,ok,ACCEPT,30.014
+cyk,7,a a a a b a b a a b a b a b b,15,positive,4,6,ok,ACCEPT,0.258
+sat:m22,7,a b b b b a a a b b b,11,negative,4,6,ok,ACCEPT,14.362
+cyk,7,a b b b b a a a b b b,11,negative,4,6,ok,ACCEPT,0.122
+sat:m22,7,a a b b a a a a b a b b a b a b b b,18,negative,4,6,ok,ACCEPT,51.730
+cyk,7,a a b b a a a a b a b b a b a b b b,18,negative,4,6,ok,ACCEPT,0.404
+sat:m22,7,a a b a b b a b a b b,11,negative,4,6,ok,ACCEPT,13.687
+cyk,7,a a b a b b a b a b b,11,negative,4,6,ok,ACCEPT,0.137
+sat:m22,7,a a a b b a a a a b,10,negative,4,6,ok,ACCEPT,10.271
+cyk,7,a a a b b a a a a b,10,negative,4,6,ok,ACCEPT,0.080
+sat:m22,7,a a a a a a a b a a a b a a b,15,negative,4,6,ok,ACCEPT,34.247
+cyk,7,a a a a a a a b a a a b a a b,15,negative,4,6,ok,ACCEPT,0.362
+sat:m22,7,a a a b a a a b b b b b a a a b b b b,19,negative,4,6,ok,ACCEPT,70.093
+cyk,7,a a a b a a a b b b b b a a a b b b b,19,negative,4,6,ok,ACCEPT,0.456
+sat:m22,7,a a b a a a a b b b b a b a b b b b,18,negative,4,6,ok,ACCEPT,53.595
+cyk,7,a a b a a a a b b b b a b a b b b b,18,negative,4,6,ok,ACCEPT,0.574
+sat:m22,7,a a b b b a a a b a a b b a b a b,17,negative,4,6,ok,ACCEPT,50.336
+cyk,7,a a b b b a a a b a a b b a b a b,17,negative,4,6,ok,ACCEPT,0.300
+sat:m22,7,a a b b a a a a a b b b b a b,15,negative,4,6,ok,ACCEPT,31.739
+cyk,7,a a b b a a a a a b b b b a b,15,negative,4,6,ok,ACCEPT,0.230
+sat:m22,7,a a b a b a a a b b,10,negative,4,6,ok,ACCEPT,9.872
+cyk,7,a a b a b a a a b b,10,negative,4,6,ok,ACCEPT,0.092
+sat:m22,8,b a b a b a b a b a b a b a b a,16,positive,9,14,ok,ACCEPT,148.208
+cyk,8,b a b a b a b a b a b a b a b a,16,positive,9,14,ok,ACCEPT,0.686
+sat:m22,8,a b a b a b a b a b a b a b a b a b,18,positive,9,14,ok,ACCEPT,197.992
+cyk,8,a b a b a b a b a b a b a b a b a b,18,positive,9,14,ok,ACCEPT,1.606
+sat:m22,8,b a b a b a b a b a b a b a b a b a,18,positive,9,14,ok,ACCEPT,210.407
+cyk,8,b a b a b a b a b a b a b a b a b a,18,positive,9,14,ok,ACCEPT,0.967
+sat:m22,8,b a b a b a b a b a b a b a,14,positive,9,14,ok,ACCEPT,121.841
+cyk,8,b a b a b a b a b a b a b a,14,positive,9,14,ok,ACCEPT,0.427
+sat:m22,8,a b a b a b a b a b a b,12,positive,9,14,ok,ACCEPT,58.553
+cyk,8,a b a b a b a b a b a b,12,positive,9,14,ok,ACCEPT,0.280
+sat:m22,8,b a b a b a b a b a b a b a b a b a b a,20,positive,9,14,ok,ACCEPT,279.654
+cyk,8,b a b a b a b a b a b a b a b a b a b a,20,positive,9,14,ok,ACCEPT,1.708
+sat:m22,8,a b a b a b a b a b a b a b,14,positive,9,14,ok,ACCEPT,97.842
+cyk,8,a b a b a b a b a b a b a b,14,positive,9,14,ok,ACCEPT,1.175
+sat:m22,8,b a b a b a b a b a b a,12,positive,9,14,ok,ACCEPT,61.012
+cyk,8,b a b a b a b a b a b a,12,positive,9,14,ok,ACCEPT,0.280
+sat:m22,8,a b a b a b a b a b,10,positive,9,14,ok,ACCEPT,46.419
+cyk,8,a b a b a b a b a b,10,positive,9,14,ok,ACCEPT,0.179
+sat:m22,8,a b a b a b a b a b a b a b a b a b a b,20,positive,9,14,ok,ACCEPT,287.500
+cyk,8,a b a b a b a b a b a b a b a b a b a b,20,positive,9,14,ok,ACCEPT,1.303
+sat:m22,8,b a b a b a b a b a b a,12,negative,9,14,ok,ACCEPT,90.857
+cyk,8,b a b a b a b a b a b a,12,negative,9,14,ok,ACCEPT,0.294
+sat:m22,8,b a b a b a b a b a,10,negative,9,14,ok,ACCEPT,46.323
+cyk,8,b a b a b a b a b a,10,negative,9,14,ok,ACCEPT,0.188
+sat:m22,8,a b a b a b a b a b,10,negative,9,14,ok,ACCEPT,43.334
+cyk,8,a b a b a b a b a b,10,negative,9,14,ok,ACCEPT,0.434
+sat:m22,8,a b a b a b a b a b a b,12,negative,9,14,ok,ACCEPT,128.286
+cyk,8,a b a b a b a b a b a b,12,negative,9,14,ok,ACCEPT,0.639
+sat:m22,8,a b a b a b a b a b a b a b,14,negative,9,14,ok,ACCEPT,107.757
+cyk,8,a b a b a b a b a b a b a b,14,negative,9,14,ok,ACCEPT,0.874
+sat:m22,8,a b a b a b a b a b a b a b a b,16,negative,9,14,ok,ACCEPT,137.882
+cyk,8,a b a b a b a b a b a b a b a b,16,negative,9,14,ok,ACCEPT,0.628
+sat:m22,8,b a b a b a b a b a b a b a b a,16,negative,9,14,ok,ACCEPT,143.307
+cyk,8,b a b a b a b a b a b a b a b a,16,negative,9,14,ok,ACCEPT,0.979
+sat:m22,8,b a b a b a b a b a b a b a,14,negative,9,14,ok,ACCEPT,93.461
+cyk,8,b a b a b a b a b a b a b a,14,negative,9,14,ok,ACCEPT,0.426
+sat:m22,8,a b a b a b a b a b a b a b a b a b a b,20,negative,9,14,ok,ACCEPT,307.770
+cyk,8,a b a b a b a b a b a b a b a b a b a b,20,negative,9,14,ok,ACCEPT,2.114
+sat:m22,8,b a b a b a b a b a b a b a b a b a b a,20,negative,9,14,ok,ACCEPT,289.211
+cyk,8,b a b a b a b a b a b a b a b a b a b a,20,negative,9,14,ok,ACCEPT,1.209
+sat:m22,9,b c b c b c b c b c b c b c b c d,17,positive,6,9,ok,ACCEPT,66.089
+cyk,9,b c b c b c b c b c b c b c b c d,17,positive,6,9,ok,ACCEPT,0.162
+sat:m22,9,b c b c b c b c b c d,11,positive,6,9,ok,ACCEPT,17.331
+cyk,9,b c b c b c b c b c d,11,positive,6,9,ok,ACCEPT,0.076
+sat:m22,9,b c b c b c b c b c b c b c b c b c d,19,positive,6,9,ok,ACCEPT,86.095
+cyk,9,b c b c b c b c b c b c b c b c b c d,19,positive,6,9,ok,ACCEPT,0.624
+sat:m22,9,b c b c b c b c b c b c d,13,positive,6,9,ok,ACCEPT,34.443
+cyk,9,b c b c b c b c b c b c d,13,positive,6,9,ok,ACCEPT,0.103
+sat:m22,9,b c b c b c b c b c b c b c d,15,positive,6,9,ok,ACCEPT,42.608
+cyk,9,b c b c b c b c b c b c b c d,15,positive,6,9,ok,ACCEPT,0.299
+sat:m22,9,b c b c b c b c b c b c b c b c d,17,negative,6,9,ok,ACCEPT,116.353
+cyk,9,b c b c b c b c b c b c b c b c d,17,negative,6,9,ok,ACCEPT,0.615
+sat:m22,9,b c b c b c b c b c b c b c b c b c d,19,negative,6,9,ok,ACCEPT,146.745
+cyk,9,b c b c b c b c b c b c b c b c b c d,19,negative,6,9,ok,ACCEPT,0.234
+sat:m22,9,b c b c b c b c b c d,11,negative,6,9,ok,ACCEPT,39.611
+cyk,9,b c b c b c b c b c d,11,negative,6,9,ok,ACCEPT,0.109
+sat:m22,9,b c b c b c b c b c b c d,13,negative,6,9,ok,ACCEPT,36.165
+cyk,9,b c b c b c b c b c b c d,13,negative,6,9,ok,ACCEPT,0.107
+sat:m22,9,b c b c b c b c b c b c b c d,15,negative,6,9,ok,ACCEPT,46.750
+cyk,9,b c b c b c b c b c b c b c d,15,negative,6,9,ok,ACCEPT,0.131
+sat:m22,10,1 1 3 2 3 3 3 2 2 2 3,11,positive,7,20,ok,ACCEPT,143.284
+cyk,10,1 1 3 2 3 3 3 2 2 2 3,11,positive,7,20,ok,ACCEPT,0.844
+sat:m22,10,0 0 0 1 0 0 1 3 2 3 3 3 3,13,positive,7,20,ok,ACCEPT,104.679
+cyk,10,0 0 0 1 0 0 1 3 2 3 3 3 3,13,positive,7,20,ok,ACCEPT,0.336
+sat:m22,10,0 1 0 1 0 0 0 0 1 0 1 3,12,positive,7,20,ok,ACCEPT,59.191
+cyk,10,0 1 0 1 0 0 0 0 1 0 1 3,12,positive,7,20,ok,ACCEPT,0.094
+sat:m22,10,0 0 1 0 0 1 0 3 3 3 2 3 3 3 2 2 2 2,18,positive,7,20,ok,ACCEPT,179.519
+cyk,10,0 0 1 0 0 1 0 3 3 3 2 3 3 3 2 2 2 2,18,positive,7,20,ok,ACCEPT,1.120
+sat:m22,10,1 0 0 1 2 2 3 3 2 3 3 3 3 3,14,positive,7,20,ok,ACCEPT,82.168
+cyk,10,1 0 0 1 2 2 3 3 2 3 3 3 3 3,14,positive,7,20,ok,ACCEPT,0.720
+sat:m22,10,1 1 1 1 1 1 1 3 3 3 2 2 3 2 2,15,positive,7,20,ok,ACCEPT,93.344
+cyk,10,1 1 1 1 1 1 1 3 3 3 2 2 3 2 2,15,positive,7,20,ok,ACCEPT,1.008
+sat:m22,10,0 0 1 1 0 0 1 1 0 1 0 1 1 1 1 0 2 3,18,positive,7,20,ok,ACCEPT,172.265
+cyk,10,0 0 1 1 0 0 1 1 0 1 0 1 1 1 1 0 2 3,18,positive,7,20,ok,ACCEPT,0.255
+sat:m22,10,0 1 0 2 2 3 2 3 3 2 3 3 2 2 3 2 2 2 2 3,20,positive,7,20,ok,ACCEPT,236.164
+cyk,10,0 1 0 2 2 3 2 3 3 2 3 3 2 2 3 2 2 2 2 3,20,positive,7,20,ok,ACCEPT,3.203
+sat:m22,10,0 1 1 0 0 0 0 1 1 0 0 0 0 2 2 2 3,17,positive,7,20,ok,ACCEPT,150.507
+cyk,10,0 1 1 0 0 0 0 1 1 0 0 0 0 2 2 2 3,17,positive,7,20,ok,ACCEPT,0.351
+sat:m22,10,0 3 2 2 2 2 3 3 3 2 2,11,positive,7,20,ok,ACCEPT,47.009
+cyk,10,0 3 2 2 2 2 3 3 3 2 2,11,positive,7,20,ok,ACCEPT,0.531
+sat:m22,10,2 3 2 3 2 2 3 3 3 2 2 2 3 2 2 2 2 2 2 3,20,negative,7,20,ok,ACCEPT,243.406
+cyk,10,2 3 2 3 2 2 3 3 3 2 2 2 3 2 2 2 2 2 2 3,20,negative,7,20,ok,ACCEPT,2.796
+sat:m22,10,0 1 0 1 0 1 1 0 0 1 0 2 2 3,14,negative,7,20,ok,ACCEPT,81.976
+cyk,10,0 1 0 1 0 1 1 0 0 1 0 2 2 3,14,negative,7,20,ok,ACCEPT,0.186
+sat:m22,10,1 0 0 2 3 2 3 2 2 3 2,11,negative,7,20,ok,ACCEPT,43.239
+cyk,10,1 0 0 2 3 2 3 2 2 3 2,11,negative,7,20,ok,ACCEPT,0.519
+sat:m22,10,0 3 2 3 2 3 3 3 3 2 3 3 2 2 2,15,negative,7,20,ok,ACCEPT,110.252
+cyk,10,0 3 2 3 2 3 3 3 3 2 3 3 2 2 2,15,negative,7,20,ok,ACCEPT,1.137
+sat:m22,10,1 1 0 1 0 0 1 0 1 1 0 1 1 0 3 3 3,17,negative,7,20,ok,ACCEPT,141.754
+cyk,10,1 1 0 1 0 0 1 0 1 1 0 1 1 0 3 3 3,17,negative,7,20,ok,ACCEPT,0.292
+sat:m22,10,1 0 1 0 1 1 1 1 1 3 3 2 2,13,negative,7,20,ok,ACCEPT,70.710
+cyk,10,1 0 1 0 1 1 1 1 1 3 3 2 2,13,negative,7,20,ok,ACCEPT,0.216
+sat:m22,10,0 0 1 0 0 0 1 0 1 3 3 3 3 3 3 2 2 2 3 3,20,negative,7,20,ok,ACCEPT,245.571
+cyk,10,0 0 1 0 0 0 1 0 1 3 3 3 3 3 3 2 2 2 3 3,20,negative,7,20,ok,ACCEPT,3.105
+sat:m22,10,0 1 0 1 1 1 0 0 1 0 0 3 2 3 2 3 3,17,negative,7,20,ok,ACCEPT,170.787
+cyk,10,0 1 0 1 1 1 0 0 1 0 0 3 2 3 2 3 3,17,negative,7,20,ok,ACCEPT,0.536
+sat:m22,10,1 1 0 1 0 0 2 3 2 2 3 2 2 2 3 2 3,17,negative,7,20,ok,ACCEPT,145.596
+cyk,10,1 1 0 1 0 0 2 3 2 2 3 2 2 2 3 2 3,17,negative,7,20,ok,ACCEPT,1.066
+sat:m22,10,0 1 1 0 3 3 3 3 3 3,10,negative,7,20,ok,ACCEPT,31.659
+cyk,10,0 1 1 0 3 3 3 3 3 3,10,negative,7,20,ok,ACCEPT,0.248
+sat:m22,12,a b a a b a a b b b a b b b b b b b,18,positive,4,10,ok,ACCEPT,71.205
+cyk,12,a b a a b a a b b b a b b b b b b b,18,positive,4,10,ok,ACCEPT,1.111
+sat:m22,12,b a b a b b a b a a a a,12,positive,4,10,ok,ACCEPT,24.937
+cyk,12,b a b a b b a b a a a a,12,positive,4,10,ok,ACCEPT,0.367
+sat:m22,12,b b b b a a a a a b a a,12,positive,4,10,ok,ACCEPT,23.616
+cyk,12,b b b b a a a a a b a a,12,positive,4,10,ok,ACCEPT,0.446
+sat:m22,12,a a a b b a a a a b b a a,13,positive,4,10,ok,ACCEPT,31.815
+cyk,12,a a a b b a a a a b b a a,13,positive,4,10,ok,ACCEPT,0.489
+sat:m22,12,a a a b b a a b a a,10,positive,4,10,ok,ACCEPT,14.998
+cyk,12,a a a b b a a b a a,10,positive,4,10,ok,ACCEPT,0.621
+sat:m22,12,b a a b b a a a a a a a a b b a,16,positive,4,10,ok,ACCEPT,84.799
+cyk,12,b a a b b a a a a a a a a b b a,16,positive,4,10,ok,ACCEPT,0.833
+sat:m22,12,b a b a a b b a b b a b,12,positive,4,10,ok,ACCEPT,23.002
+cyk,12,b a b a a b b a b b a b,12,positive,4,10,ok,ACCEPT,0.419
+sat:m22,12,a b a b a a b b b a b a b a,14,positive,4,10,ok,ACCEPT,41.623
+cyk,12,a b a b a a b b b a b a b a,14,positive,4,10,ok,ACCEPT,1.637
+sat:m22,12,b b a b b b a b a b a a,12,positive,4,10,ok,ACCEPT,27.645
+cyk,12,b b a b b b a b a b a a,12,positive,4,10,ok,ACCEPT,1.387
+sat:m22,12,b a a b b a a a b a b b b a b a a,17,positive,4,10,ok,ACCEPT,65.704
+cyk,12,b a a b b a a a b a b b b a b a a,17,positive,4,10,ok,ACCEPT,1.117
+sat:m22,12,b b b b a a a a b a b b a a b b b b a,19,negative,4,10,ok,ACCEPT,78.437
+cyk,12,b b b b a a a a b a b b a a b b b b a,19,negative,4,10,ok,ACCEPT,2.218
+sat:m22,12,b a a b b b b a b b a a b,13,negative,4,10,ok,ACCEPT,29.660
+cyk,12,b a a b b b b a b b a a b,13,negative,4,10,ok,ACCEPT,0.841
+sat:m22,12,b b a b b a a a b b b b a a a b b,17,negative,4,10,ok,ACCEPT,56.774
+cyk,12,b b a b b a a a b b b b a a a b b,17,negative,4,10,ok,ACCEPT,1.679
+sat:m22,12,b a b b a a b b b a b b a b a b a a a b,20,negative,4,10,ok,ACCEPT,94.238
+cyk,12,b a b b a a b b b a b b a b a b a a a b,20,negative,4,10,ok,ACCEPT,1.427
+sat:m22,12,a a b b b a a b b a a b a b,14,negative,4,10,ok,ACCEPT,31.889
+cyk,12,a a b b b a a b b a a b a b,14,negative,4,10,ok,ACCEPT,0.910
+sat:m22,12,a b a b b a b b b a a a b a b b b b a,19,negative,4,10,ok,ACCEPT,86.272
+cyk,12,a b a b b a b b b a a a b a b b b b a,19,negative,4,10,ok,ACCEPT,1.267
+sat:m22,12,a a a b a a a b b a b b b b a a a b,18,negative,4,10,ok,ACCEPT,69.086
+cyk,12,a a a b a a a b b a b b b b a a a b,18,negative,4,10,ok,ACCEPT,2.148
+sat:m22,12,a a a a b a b b a a a a a b a b a,17,negative,4,10,ok,ACCEPT,61.452
+cyk,12,a a a a b a b b a a a a a b a b a,17,negative,4,10,ok,ACCEPT,0.911
+sat:m22,12,a b b a b a a a b a b b b b a a a b b,19,negative,4,10,ok,ACCEPT,83.839
+cyk,12,a b b a b a a a b a b b b b a a a b b,19,negative,4,10,ok,ACCEPT,2.062
+sat:m22,12,a b b b b a b a a a,10,negative,4,10,ok,ACCEPT,11.982
+cyk,12,a b b b b a b a a a,10,negative,4,10,ok,ACCEPT,0.229
+sat:m22,13,a a a a b a b b b a b b b a b b b a b,19,positive,6,12,ok,ACCEPT,173.622
+cyk,13,a a a a b a b b b a b b b a b b b a b,19,positive,6,12,ok,ACCEPT,0.732
+sat:m22,13,b b a b a a a b a a a,11,positive,6,12,ok,ACCEPT,32.431
+cyk,13,b b a b a a a b a a a,11,positive,6,12,ok,ACCEPT,0.216
+sat:m22,13,a a a b b a b a b b b b a a b a a b,18,positive,6,12,ok,ACCEPT,143.052
+cyk,13,a a a b b a b a b b b b a a b a a b,18,positive,6,12,ok,ACCEPT,0.715
+sat:m22,13,b b a a b a a a b b b a,12,positive,6,12,ok,ACCEPT,43.691
+cyk,13,b b a a b a a a b b b a,12,positive,6,12,ok,ACCEPT,0.266
+sat:m22,13,b a b a b b a a a a a b b b b b b b a,19,positive,6,12,ok,ACCEPT,167.665
+cyk,13,b a b a b b a a a a a b b b b b b b a,19,positive,6,12,ok,ACCEPT,0.790
+sat:m22,13,b a b b a a a b b b a a a b,14,positive,6,12,ok,ACCEPT,71.014
+cyk,13,b a b b a a a b b b a a a b,14,positive,6,12,ok,ACCEPT,0.358
+sat:m22,13,b b b a b a a b a a a b b a,14,positive,6,12,ok,ACCEPT,84.961
+cyk,13,b b b a b a a b a a a b b a,14,positive,6,12,ok,ACCEPT,0.445
+sat:m22,13,b b a a b a a a a b a,11,positive,6,12,ok,ACCEPT,39.242
+cyk,13,b b a a b a a a a b a,11,positive,6,12,ok,ACCEPT,0.236
+sat:m22,13,a a a a a b a b a a b a,12,positive,6,12,ok,ACCEPT,60.914
+cyk,13,a a a a a b a b a a b a,12,positive,6,12,ok,ACCEPT,0.492
+sat:m22,13,a b b a b b a b a b a b b a b a b,17,positive,6,12,ok,ACCEPT,117.980
+cyk,13,a b b a b b a b a b a b b a b a b,17,positive,6,12,ok,ACCEPT,0.623
+sat:m22,13,a a a b b a b b a b b b b b b b b a,18,negative,6,12,ok,ACCEPT,141.120
+cyk,13,a a a b b a b b a b b b b b b b b a,18,negative,6,12,ok,ACCEPT,0.856
+sat:m22,13,a a a b a b b a b a a b a b a,15,negative,6,12,ok,ACCEPT,84.663
+cyk,13,a a a b a b b a b a a b a b a,15,negative,6,12,ok,ACCEPT,0.410
+sat:m22,13,a b b b a b b a a a a a a,13,negative,6,12,ok,ACCEPT,57.264
+cyk,13,a b b b a b b a a a a a a,13,negative,6,12,ok,ACCEPT,0.274
+sat:m22,13,a b a a b b a b a b,10,negative,6,12,ok,ACCEPT,32.144
+cyk,13,a b a a b b a b a b,10,negative,6,12,ok,ACCEPT,0.167
+sat:m22,13,b b a b b a b a a a b a b b a a,16,negative,6,12,ok,ACCEPT,94.245
+cyk,13,b b a b b a b a a a b a b b a a,16,negative,6,12,ok,ACCEPT,0.733
+sat:m22,13,a a a a a b a b b b a b b b a a b b,18,negative,6,12,ok,ACCEPT,137.833
+cyk,13,a a a a a b a b b b a b b b a a b b,18,negative,6,12,ok,ACCEPT,1.255
+sat:m22,13,b a b a b a b a a a a b a b a a a b b,19,negative,6,12,ok,ACCEPT,170.175
+cyk,13,b a b a b a b a a a a b a b a a a b b,19,negative,6,12,ok,ACCEPT,1.749
+sat:m22,13,a a b b a a a a a b a b a a,14,negative,6,12,ok,ACCEPT,88.868
+cyk,13,a a b b a a a a a b a b a a,14,negative,6,12,ok,ACCEPT,0.341
+sat:m22,13,b b b b a b b a a b a a b a a b a a,18,negative,6,12,ok,ACCEPT,154.348
+cyk,13,b b b b a b b a a b a a b a a b a a,18,negative,6,12,ok,ACCEPT,0.708
+sat:m22,13,b b a a b b b b a a a a b a,14,negative,6,12,ok,ACCEPT,63.067
+cyk,13,b b a a b b b b a a a a b a,14,negative,6,12,ok,ACCEPT,0.339
+sat:m22,14,a a b b b b b b b b b,11,positive,7,18,ok,ACCEPT,32.470
+cyk,14,a a b b b b b b b b b,11,positive,7,18,ok,ACCEPT,1.406
+sat:m22,14,b b b b b b b b b a a a a a,14,positive,7,18,ok,ACCEPT,64.653
+cyk,14,b b b b b b b b b a a a a a,14,positive,7,18,ok,ACCEPT,2.353
+sat:m22,14,a a a a a a a a a b,10,positive,7,18,ok,ACCEPT,25.983
+cyk,14,a a a a a a a a a b,10,positive,7,18,ok,ACCEPT,0.576
+sat:m22,14,a a a a a a a a a a a b b b b b b,17,positive,7,18,ok,ACCEPT,201.300
+cyk,14,a a a a a a a a a a a b b b b b b,17,positive,7,18,ok,ACCEPT,5.801
+sat:m22,14,a a a b b b b b b b b b b b b b,16,positive,7,18,ok,ACCEPT,118.959
+cyk,14,a a a b b b b b b b b b b b b b,16,positive,7,18,ok,ACCEPT,2.067
+sat:m22,14,a a a a a a a a a a b b b b b b,16,positive,7,18,ok,ACCEPT,96.691
+cyk,14,a a a a a a a a a a b b b b b b,16,positive,7,18,ok,ACCEPT,1.819
+sat:m22,14,a a a a a a a a a a a a a a b b b b,18,positive,7,18,ok,ACCEPT,130.229
+cyk,14,a a a a a a a a a a a a a a b b b b,18,positive,7,18,ok,ACCEPT,2.634
+sat:m22,14,b b b b b b b b b b b b b b b b a a a,19,positive,7,18,ok,ACCEPT,164.698
+cyk,14,b b b b b b b b b b b b b b b b a a a,19,positive,7,18,ok,ACCEPT,6.336
+sat:m22,14,b b b a a a a a a a a a,12,positive,7,18,ok,ACCEPT,42.394
+cyk,14,b b b a a a a a a a a a,12,positive,7,18,ok,ACCEPT,0.826
+sat:m22,14,a a a a a a b b b b b b b b b b b b b b,20,positive,7,18,ok,ACCEPT,189.536
+cyk,14,a a a a a a b b b b b b b b b b b b b b,20,positive,7,18,ok,ACCEPT,4.798
+sat:m22,14,a a a a a a a a a a a a a a a a b b b b,20,negative,7,18,ok,ACCEPT,203.692
+cyk,14,a a a a a a a a a a a a a a a a b b b b,20,negative,7,18,ok,ACCEPT,4.384
+sat:m22,14,b b b b b b b b b b b b b b b a a a a a,20,negative,7,18,ok,ACCEPT,207.484
+cyk,14,b b b b b b b b b b b b b b b a a a a a,20,negative,7,18,ok,ACCEPT,3.545
+sat:m22,14,a a a a a a a a a b b,11,negative,7,18,ok,ACCEPT,32.303
+cyk,14,a a a a a a a a a b b,11,negative,7,18,ok,ACCEPT,0.696
+sat:m22,14,b b b b b b b b b b b a,12,negative,7,18,ok,ACCEPT,40.272
+cyk,14,b b b b b b b b b b b a,12,negative,7,18,ok,ACCEPT,0.986
+sat:m22,14,a a a a a a a a a a,10,negative,7,18,ok,ACCEPT,26.238
+cyk,14,a a a a a a a a a a,10,negative,7,18,ok,ACCEPT,0.838
+sat:m22,14,b b b b b b b a a a a a a a a a a a a,19,negative,7,18,ok,ACCEPT,159.087
+cyk,14,b b b b b b b a a a a a a a a a a a a,19,negative,7,18,ok,ACCEPT,2.841
+sat:m22,14,b b b b b b b b b a,10,negative,7,18,ok,ACCEPT,33.776
+cyk,14,b b b b b b b b b a,10,negative,7,18,ok,ACCEPT,1.570
+sat:m22,14,a a a a a a a b b b b b b b b b b b,18,negative,7,18,ok,ACCEPT,145.436
+cyk,14,a a a a a a a b b b b b b b b b b b,18,negative,7,18,ok,ACCEPT,3.813
+sat:m22,14,b b b a a a a a a a a a a a a,15,negative,7,18,ok,ACCEPT,77.369
+cyk,14,b b b a a a a a a a a a a a a,15,negative,7,18,ok,ACCEPT,1.603
+sat:m22,14,a a a a a a a a b b b b b b b b b,17,negative,7,18,ok,ACCEPT,116.322
+cyk,14,a a a a a a a a b b b b b b b b b,17,negative,7,18,ok,ACCEPT,2.057
+sat:m22,15,a a a a a a a a a a a a a,13,positive,5,14,ok,ACCEPT,47.049
+cyk,15,a a a a a a a a a a a a a,13,positive,5,14,ok,ACCEPT,0.950
+sat:m22,15,a a a a a a a a a a a a a a a a a a a,19,positive,5,14,ok,ACCEPT,135.551
+cyk,15,a a a a a a a a a a a a a a a a a a a,19,positive,5,14,ok,ACCEPT,1.310
+sat:m22,15,a a a a a a a a a a a a a a a a,16,positive,5,14,ok,ACCEPT,96.035
+cyk,15,a a a a a a a a a a a a a a a a,16,positive,5,14,ok,ACCEPT,0.879
+sat:m22,15,a a a a a a a a a a a,11,positive,5,14,ok,ACCEPT,30.745
+cyk,15,a a a a a a a a a a a,11,positive,5,14,ok,ACCEPT,0.328
+sat:m22,15,a a a a a a a a a a,10,positive,5,14,ok,ACCEPT,21.178
+cyk,15,a a a a a a a a a a,10,positive,5,14,ok,ACCEPT,0.484
+sat:m22,15,a a a a a a a a a a a a a a a a a a a a,20,positive,5,14,ok,ACCEPT,156.110
+cyk,15,a a a a a a a a a a a a a a a a a a a a,20,positive,5,14,ok,ACCEPT,1.891
+sat:m22,15,a a a a a a a a a a a a,12,positive,5,14,ok,ACCEPT,34.639
+cyk,15,a a a a a a a a a a a a,12,positive,5,14,ok,ACCEPT,0.358
+sat:m22,15,a a a a a a a a a a a a a a a,15,positive,5,14,ok,ACCEPT,68.533
+cyk,15,a a a a a a a a a a a a a a a,15,positive,5,14,ok,ACCEPT,1.158
+sat:m22,15,a a a a a a a a a a a a a a,14,positive,5,14,ok,ACCEPT,69.262
+cyk,15,a a a a a a a a a a a a a a,14,positive,5,14,ok,ACCEPT,0.615
+sat:m22,15,a a a a a a a a a a a a a a a a a,17,positive,5,14,ok,ACCEPT,136.377
+cyk,15,a a a a a a a a a a a a a a a a a,17,positive,5,14,ok,ACCEPT,1.146
+sat:m22,15,a a a a a a a a a a a a a,13,negative,5,14,ok,ACCEPT,49.822
+cyk,15,a a a a a a a a a a a a a,13,negative,5,14,ok,ACCEPT,0.695
+sat:m22,15,a a a a a a a a a a a,11,negative,5,14,ok,ACCEPT,28.462
+cyk,15,a a a a a a a a a a a,11,negative,5,14,ok,ACCEPT,0.383
+sat:m22,15,a a a a a a a a a a a a a a a a,16,negative,5,14,ok,ACCEPT,80.936
+cyk,15,a a a a a a a a a a a a a a a a,16,negative,5,14,ok,ACCEPT,1.104
+sat:m22,15,a a a a a a a a a a,10,negative,5,14,ok,ACCEPT,19.451
+cyk,15,a a a a a a a a a a,10,negative,5,14,ok,ACCEPT,0.227
+sat:m22,15,a a a a a a a a a a a a,12,negative,5,14,ok,ACCEPT,35.004
+cyk,15,a a a a a a a a a a a a,12,negative,5,14,ok,ACCEPT,0.687
+sat:m22,15,a a a a a a a a a a a a a a a a a,17,negative,5,14,ok,ACCEPT,105.172
+cyk,15,a a a a a a a a a a a a a a a a a,17,negative,5,14,ok,ACCEPT,0.900
+sat:m22,15,a a a a a a a a a a a a a a a a a a,18,negative,5,14,ok,ACCEPT,117.475
+cyk,15,a a a a a a a a a a a a a a a a a a,18,negative,5,14,ok,ACCEPT,2.931
+sat:m22,15,a a a a a a a a a a a a a a,14,negative,5,14,ok,ACCEPT,61.544
+cyk,15,a a a a a a a a a a a a a a,14,negative,5,14,ok,ACCEPT,0.919
+sat:m22,15,a a a a a a a a a a a a a a a,15,negative,5,14,ok,ACCEPT,66.357
+cyk,15,a a a a a a a a a a a a a a a,15,negative,5,14,ok,ACCEPT,0.651
+sat:m22,15,a a a a a a a a a a a a a a a a a a a,19,negative,5,14,ok,ACCEPT,133.359
+cyk,15,a a a a a a a a a a a a a a a a a a a,19,negative,5,14,ok,ACCEPT,1.461
+sat:m22,16,b b b b b b b b b b b b b b,14,positive,9,26,ok,ACCEPT,166.461
+cyk,16,b b b b b b b b b b b b b b,14,positive,9,26,ok,ACCEPT,4.909
+sat:m22,16,b b b b b b b b b b b b b b b b b,17,positive,9,26,ok,ACCEPT,291.166
+cyk,16,b b b b b b b b b b b b b b b b b,17,positive,9,26,ok,ACCEPT,8.820
+sat:m22,16,b b b b b b b b b b b b b b b b b b,18,positive,9,26,ok,ACCEPT,378.868
+cyk,16,b b b b b b b b b b b b b b b b b b,18,positive,9,26,ok,ACCEPT,9.314
+sat:m22,16,b b b b b b b a b b b b b b b b b b b,19,positive,9,26,ok,ACCEPT,379.857
+cyk,16,b b b b b b b a b b b b b b b b b b b,19,positive,9,26,ok,ACCEPT,9.259
+sat:m22,16,b b b b b b b b b b b b b b b b b b b b,20,positive,9,26,ok,ACCEPT,476.322
+cyk,16,b b b b b b b b b b b b b b b b b b b b,20,positive,9,26,ok,ACCEPT,15.363
+sat:m22,16,b b b b b b b b b b b b b a a b b b b b,20,positive,9,26,ok,ACCEPT,447.093
+cyk,16,b b b b b b b b b b b b b a a b b b b b,20,positive,9,26,ok,ACCEPT,8.834
+sat:m22,16,b b b b b b b b b b b b b,13,positive,9,26,ok,ACCEPT,143.830
+cyk,16,b b b b b b b b b b b b b,13,positive,9,26,ok,ACCEPT,3.097
+sat:m22,16,b b b b b b b b b b b b,12,positive,9,26,ok,ACCEPT,94.070
+cyk,16,b b b b b b b b b b b b,12,positive,9,26,ok,ACCEPT,2.835
+sat:m22,16,b b b b b b b b b b b b b a b b b b b,19,positive,9,26,ok,ACCEPT,553.069
+cyk,16,b b b b b b b b b b b b b a b b b b b,19,positive,9,26,ok,ACCEPT,8.571
+sat:m22,16,b a b b b b b b b b b b b b,14,positive,9,26,ok,ACCEPT,148.403
+cyk,16,b a b b b b b b b b b b b b,14,positive,9,26,ok,ACCEPT,4.569
+sat:m22,16,b b b b b b b b b b b b b,13,negative,9,26,ok,ACCEPT,127.138
+cyk,16,b b b b b b b b b b b b b,13,negative,9,26,ok,ACCEPT,4.611
+sat:m22,16,b b b b b b b b b b,10,negative,9,26,ok,ACCEPT,52.915
+cyk,16,b b b b b b b b b b,10,negative,9,26,ok,ACCEPT,1.543
+sat:m22,16,b b b b b b b b b b b b,12,negative,9,26,ok,ACCEPT,91.615
+cyk,16,b b b b b b b b b b b b,12,negative,9,26,ok,ACCEPT,2.462
+sat:m22,16,b b b b b b a b b b b b b b,14,negative,9,26,ok,ACCEPT,181.721
+cyk,16,b b b b b b a b b b b b b b,14,negative,9,26,ok,ACCEPT,4.257
+sat:m22,16,b b b b b b b b b b b b b b b b b,17,negative,9,26,ok,ACCEPT,297.265
+cyk,16,b b b b b b b b b b b b b b b b b,17,negative,9,26,ok,ACCEPT,8.264
+sat:m22,16,b b b b b b b b b b b,11,negative,9,26,ok,ACCEPT,70.574
+cyk,16,b b b b b b b b b b b,11,negative,9,26,ok,ACCEPT,2.658
+sat:m22,16,b b b b b b b b b b b b b b b b b b b b,20,negative,9,26,ok,ACCEPT,557.413
+cyk,16,b b b b b b b b b b b b b b b b b b b b,20,negative,9,26,ok,ACCEPT,17.250
+sat:m22,16,b b b b b b b b b b b b b b b,15,negative,9,26,ok,ACCEPT,217.685
+cyk,16,b b b b b b b b b b b b b b b,15,negative,9,26,ok,ACCEPT,7.175
+sat:m22,16,b b b a b b b b b b b b b b b b,16,negative,9,26,ok,ACCEPT,359.982
+cyk,16,b b b a b b b b b b b b b b b b,16,negative,9,26,ok,ACCEPT,5.363
+sat:m22,16,b b b b b b b b b b b b b b,14,negative,9,26,ok,ACCEPT,163.428
+cyk,16,b b b b b b b b b b b b b b,14,negative,9,26,ok,ACCEPT,5.054
+sat:m22,17,štart príkaz1 ; ak p2 potom pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz2 ; koniec,18,positive,17,23,ok,ACCEPT,227.487
+cyk,17,štart príkaz1 ; ak p2 potom pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz2 ; koniec,18,positive,17,23,ok,ACCEPT,0.266
+sat:m22,17,štart pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; koniec,20,positive,17,23,ok,ACCEPT,317.508
+cyk,17,štart pokiaľ p2 rob príkaz1 ; príkaz2 ; príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; koniec,20,positive,17,23,ok,ACCEPT,0.317
+sat:m22,17,štart ak p2 potom ak p1 potom ak p2 potom príkaz2 ; príkaz1 ; príkaz2 ; koniec,17,positive,17,23,ok,ACCEPT,247.402
+cyk,17,štart ak p2 potom ak p1 potom ak p2 potom príkaz2 ; príkaz1 ; príkaz2 ; koniec,17,positive,17,23,ok,ACCEPT,0.489
+sat:m22,17,štart pokiaľ p1 rob príkaz2 ; príkaz1 ; ak p2 potom príkaz2 ; ak p1 potom príkaz1 ; koniec,19,positive,17,23,ok,ACCEPT,269.060
+cyk,17,štart pokiaľ p1 rob príkaz2 ; príkaz1 ; ak p2 potom príkaz2 ; ak p1 potom príkaz1 ; koniec,19,positive,17,23,ok,ACCEPT,0.250
+sat:m22,17,štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; koniec,18,positive,17,23,ok,ACCEPT,220.359
+cyk,17,štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; ak p1 potom príkaz1 ; príkaz1 ; koniec,18,positive,17,23,ok,ACCEPT,0.245
+sat:m22,17,štart príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec,16,positive,17,23,ok,ACCEPT,157.893
+cyk,17,štart príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec,16,positive,17,23,ok,ACCEPT,0.211
+sat:m22,17,štart pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz1 ; príkaz1 ; koniec,15,positive,17,23,ok,ACCEPT,129.529
+cyk,17,štart pokiaľ p1 rob pokiaľ p2 rob ak p2 potom príkaz1 ; príkaz1 ; koniec,15,positive,17,23,ok,ACCEPT,0.154
+sat:m22,17,štart ak p2 potom príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; koniec,13,positive,17,23,ok,ACCEPT,82.767
+cyk,17,štart ak p2 potom príkaz2 ; príkaz1 ; príkaz2 ; príkaz2 ; koniec,13,positive,17,23,ok,ACCEPT,0.132
+sat:m22,17,štart príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz1 ; koniec,17,positive,17,23,ok,ACCEPT,241.174
+cyk,17,štart príkaz2 ; príkaz2 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz1 ; koniec,17,positive,17,23,ok,ACCEPT,0.354
+sat:m22,17,štart pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; koniec,10,positive,17,23,ok,ACCEPT,38.832
+cyk,17,štart pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; koniec,10,positive,17,23,ok,ACCEPT,0.090
+sat:m22,17,štart príkaz1 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; koniec,15,negative,17,23,ok,ACCEPT,127.219
+cyk,17,štart príkaz1 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; koniec,15,negative,17,23,ok,ACCEPT,0.152
+sat:m22,17,štart príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; koniec,15,negative,17,23,ok,ACCEPT,132.666
+cyk,17,štart príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; koniec,15,negative,17,23,ok,ACCEPT,0.300
+sat:m22,17,štart príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; koniec,14,negative,17,23,ok,ACCEPT,98.969
+cyk,17,štart príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; koniec,14,negative,17,23,ok,ACCEPT,0.153
+sat:m22,17,štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; koniec,11,negative,17,23,ok,ACCEPT,51.743
+cyk,17,štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; koniec,11,negative,17,23,ok,ACCEPT,0.243
+sat:m22,17,štart ak p1 potom ak p2 potom ak p2 potom príkaz2 ; koniec,13,negative,17,23,ok,ACCEPT,97.311
+cyk,17,štart ak p1 potom ak p2 potom ak p2 potom príkaz2 ; koniec,13,negative,17,23,ok,ACCEPT,0.265
+sat:m22,17,štart príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; koniec,11,negative,17,23,ok,ACCEPT,52.137
+cyk,17,štart príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; koniec,11,negative,17,23,ok,ACCEPT,0.098
+sat:m22,17,štart pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz2 ; koniec,17,negative,17,23,ok,ACCEPT,180.189
+cyk,17,štart pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz2 ; koniec,17,negative,17,23,ok,ACCEPT,0.250
+sat:m22,17,štart ak p1 potom pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec,19,negative,17,23,ok,ACCEPT,292.648
+cyk,17,štart ak p1 potom pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec,19,negative,17,23,ok,ACCEPT,0.394
+sat:m22,17,štart príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; koniec,20,negative,17,23,ok,ACCEPT,287.107
+cyk,17,štart príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; koniec,20,negative,17,23,ok,ACCEPT,0.611
+sat:m22,17,štart pokiaľ p1 rob pokiaľ p2 rob pokiaľ p2 rob ak p2 potom príkaz2 ; koniec,16,negative,17,23,ok,ACCEPT,154.735
+cyk,17,štart pokiaľ p1 rob pokiaľ p2 rob pokiaľ p2 rob ak p2 potom príkaz2 ; koniec,16,negative,17,23,ok,ACCEPT,0.273

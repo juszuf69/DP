@@ -1,231 +1,113 @@
 Grammar:
-%token (
-%token )
-%token *
-%token +
-%token ,
-%token -
-%token .
-%token ..
-%token /
-%token :
-%token :=
 %token ;
-%token <
-%token <=
-%token <>
-%token =
-%token >
-%token >=
-%token Boolean
-%token Char
-%token Integer
-%token Real
-%token [
-%token ]
-%token and
-%token array
-%token begin
-%token do
-%token end
-%token function
-%token id
-%token if
-%token konšt_boolean
-%token konšt_char
-%token konšt_int
-%token konšt_real
-%token mod
-%token not
-%token of
-%token or
-%token procedure
-%token record
-%token then
-%token type
-%token var
-%token while
+%token ak
+%token koniec
+%token p1
+%token p2
+%token pokiaľ
+%token potom
+%token príkaz1
+%token príkaz2
+%token rob
+%token štart
 
-%start <program>
+%start program
 %%
-<program> : <deklarácie> <definície_podprogramov>
-<sp> : <výraz>
-<op3> : <op3> <multiplikatívny_op> <op4>
- | <op4>
-<príkaz> : 
- | <blok>
- | <príkaz_priradenia>
- | <príkaz_if>
- | <príkaz_while>
- | <príkaz_call>
-<relačný_op> : <
- | <=
- | >
- | >=
- | =
- | <>
-<konšt> : konšt_int
- | konšt_real
- | konšt_boolean
- | konšt_char
-<op2> : <op2> <aditívny_op> <op3>
- | <op3>
-<deklarácia_premenných> : var <zoznam_deklarácií>
-<multiplikatívny_op> : *
- | /
- | mod
-<zvyšok_zoznamu> : , <id> <zvyšok_zoznamu>
+program : štart príkazy koniec
+príkazy : príkaz ; príkazy
  | 
-<deklarácia_fp> : <forma> <id> : <typ>
-<typ> : <jednoduchý_typ>
- | <id>
- | <pole>
- | <záznam>
-<hor> : konšt_int
-<hlavička_podprogramu> : procedure <id> ( <formálne_parametre> )
- | function <id> ( <formálne_parametre> ) : <typ>
-<jednoduchý_typ> : Integer
- | Real
- | Boolean
- | Char
-<výraz> : <výraz> <logický_op> <op1>
- | <op1>
-<príkazy> : <príkaz> ; <príkazy>
- | 
-<príkaz_while> : while <výraz> do <príkaz>
-<op1> : <op1> <relačný_op> <op2>
- | <op2>
-<formálne_parametre> : <deklarácia_fp> <zvyšok_dfp>
- | 
-<blok> : begin <príkazy> end
-<telo_podprogramu> : <deklarácie> <blok>
-<príkaz_priradenia> : <výraz> := <výraz>
-<zvyšok_sp> : , <sp> <zvyšok_sp>
- | 
-<deklarácia> : <zoznam_identifikátorov> : <typ> ;
-<dol> : konšt_int
-<op4> : <konšt>
- | <prem>
- | ( <výraz> )
- | <unárny_op> <op4>
-<forma> : var
- | 
-<príkaz_if> : if <výraz> then <príkaz>
-<prem> : <id>
- | <prem> [ <výraz> ]
- | <prem> . <id>
-<skutočné_parametre> : <sp> <zvyšok_sp>
- | 
-<logický_op> : and
- | or
-<deklarácie> : <deklarácie_typov> <deklarácie_premenných>
-<id> : id
-<definície_podprogramov> : <definícia_podprogramu> <definície_podprogramov>
- | 
-<definícia_podprogramu> : <hlavička_podprogramu> <telo_podprogramu>
-<zoznam_deklarácií> : <deklarácia> <zoznam_deklarácií>
- | 
-<typ_prvku> : <typ>
-<príkaz_call> : <id> ( <skutočné_parametre> )
-<pole> : array [ <dol> .. <hor> ] of <typ_prvku>
-<záznam> : record <zoznam_deklarácií> end
-<zvyšok_dfp> : , <deklarácia_fp> <zvyšok_dfp>
- | 
-<unárny_op> : not
- | -
-<zoznam_identifikátorov> : <id> <zvyšok_zoznamu>
-<deklarácia_typu> : type <id> = <typ> ;
-<deklarácie_premenných> : <deklarácia_premenných> <deklarácie_premenných>
- | 
-<aditívny_op> : +
- | -
-<deklarácie_typov> : <deklarácia_typu> <deklarácie_typov>
- | 
+výraz : príkaz1
+ | príkaz2
+príkaz : výraz
+ | ak podmienka potom príkaz
+ | pokiaľ podmienka rob príkaz
+podmienka : p1
+ | p2
 %%
 
 Number of generated words: 40
-Word lengths are generated from an interval [40, 50]
+Word lengths are generated from an interval [10, 20]
 
 Generated words:
-type id = Integer ; procedure id ( ) type id = Integer ; var begin konšt_char >= konšt_real = konšt_char <= id <> konšt_char < ( id ) < id = konšt_int or konšt_char := konšt_char mod konšt_boolean ; end
-type id = id ; procedure id ( ) type id = Boolean ; begin id * - not konšt_boolean mod konšt_boolean := not konšt_boolean = konšt_boolean / id or konšt_boolean and id and id . id >= konšt_boolean > konšt_real ; end
-type id = Boolean ; procedure id ( ) type id = Boolean ; begin konšt_char mod konšt_char < konšt_boolean < konšt_int := konšt_int * konšt_real + konšt_real >= konšt_char < konšt_real >= konšt_real = konšt_int + konšt_boolean ; end
-type id = Real ; procedure id ( ) type id = Boolean ; begin - konšt_real := konšt_int - id < konšt_int and konšt_real * konšt_char = not konšt_real < konšt_boolean > not konšt_real <= konšt_char >= konšt_real = konšt_int ; end
-type id = Boolean ; procedure id ( ) type id = Integer ; begin konšt_char = konšt_char and konšt_int <= - id + konšt_boolean + konšt_real = id <> not id / konšt_char mod konšt_real := not konšt_int ; end
-type id = id ; procedure id ( ) type id = Char ; begin konšt_int <> - konšt_char * konšt_int or konšt_int mod not id + ( konšt_boolean * id mod konšt_int ) + konšt_char * id [ id ] := konšt_boolean > id <> konšt_int ; end
-type id = Real ; procedure id ( ) type id = Integer ; begin konšt_char >= - id <= - konšt_real / konšt_real / konšt_char + konšt_real / konšt_boolean / konšt_char := ( not konšt_real ) + - konšt_real ; end
-type id = Real ; procedure id ( ) type id = id ; begin not konšt_real := id < not ( konšt_real mod konšt_boolean + konšt_boolean or - konšt_char and - konšt_real > konšt_boolean or id < - konšt_char <= id ) * konšt_boolean ; end
-type id = Integer ; procedure id ( ) type id = Char ; begin konšt_int and not - konšt_real <> konšt_boolean mod konšt_real mod konšt_real <= konšt_char = - - ( konšt_boolean < konšt_char < konšt_boolean ) and konšt_char := konšt_char ; end
-type id = id ; function id ( ) : record end type id = id ; begin - konšt_real - konšt_real and konšt_boolean mod konšt_int > not konšt_real or not konšt_boolean > konšt_boolean + not konšt_boolean < konšt_boolean := konšt_int or id = konšt_char ; end
-type id = id ; var procedure id ( ) type id = Char ; begin while konšt_boolean do konšt_int mod konšt_real < - konšt_char < - konšt_boolean mod not konšt_real >= konšt_char := not konšt_int mod konšt_real ; end
-type id = Integer ; procedure id ( ) type id = Boolean ; var begin id mod konšt_char := konšt_char - - konšt_real >= konšt_char / konšt_char >= konšt_char >= konšt_boolean / - konšt_char < - id ; end
-type id = Char ; procedure id ( ) type id = Char ; begin konšt_char <= konšt_int mod konšt_real * konšt_char := konšt_int < konšt_char mod not id <= konšt_boolean / konšt_int <= konšt_boolean - - konšt_real >= konšt_real ; end
-type id = Real ; procedure id ( ) type id = Real ; begin not konšt_int < ( konšt_int - konšt_boolean * konšt_int ) < not - not not not konšt_real <= konšt_int := konšt_real + konšt_boolean ; end
-type id = Integer ; procedure id ( ) type id = id ; var begin not - id > konšt_int and - konšt_real and ( konšt_real or id and konšt_real ) = id <> id < konšt_int > konšt_real or konšt_char < konšt_char - konšt_int := id ; end
-type id = Boolean ; procedure id ( ) type id = Integer ; begin konšt_int > not id * not konšt_char + konšt_int <> konšt_int - konšt_real * konšt_boolean <> konšt_char <> konšt_int mod id >= konšt_real := konšt_char ; end
-type id = Integer ; procedure id ( ) type id = record end ; begin konšt_int / id + - konšt_real * konšt_real mod konšt_char and konšt_char <> id and id <> konšt_int and konšt_int > konšt_real - konšt_char / id <> konšt_boolean := konšt_int ; end
-type id = Integer ; var procedure id ( ) type id = Boolean ; begin while - konšt_boolean * - konšt_real = konšt_int + konšt_boolean do not id * konšt_boolean <> konšt_boolean + konšt_boolean >= konšt_boolean := konšt_boolean / id and - konšt_real - konšt_real ; end
-type id = Real ; procedure id ( ) type id = id ; begin id >= konšt_int and not konšt_char := konšt_real * konšt_real and - konšt_char + konšt_boolean or konšt_boolean > konšt_real <> konšt_char and konšt_boolean mod not konšt_boolean ; end
-type id = Real ; procedure id ( ) type id = Real ; begin konšt_int - konšt_real > - konšt_char <= id / konšt_real - id + konšt_boolean * konšt_char >= - konšt_char * - konšt_int := konšt_boolean mod konšt_int ; end
-type id = id ; procedure id ( ) type id = Real ; begin - konšt_char >= konšt_int mod konšt_char mod id := konšt_int = konšt_boolean <= not konšt_real mod konšt_char - not - - konšt_boolean - konšt_real = not konšt_int ; end
-type id = id ; procedure id ( ) type id = Real ; begin konšt_real / konšt_int := id or konšt_real * id mod konšt_char >= konšt_char >= id mod not konšt_real / id < konšt_char * not konšt_boolean <= konšt_char ; end
-type id = Boolean ; procedure id ( ) type id = Char ; begin konšt_real := konšt_int = konšt_int * id ; if konšt_real then id / id := id and id / konšt_int / konšt_real * konšt_char ; end
-type id = id ; procedure id ( ) type id = Real ; begin konšt_int * konšt_char <= id >= not ( konšt_real or - konšt_char = - konšt_char mod konšt_boolean ) := not id - konšt_int <= konšt_int ; end
-type id = Char ; procedure id ( ) type id = Real ; begin not id >= konšt_char mod konšt_int / konšt_real <= konšt_char := konšt_char or konšt_int >= - konšt_boolean < not id and konšt_real * konšt_int or not not konšt_char + id ; end
-type id = Integer ; procedure id ( ) type id = Boolean ; begin - konšt_boolean - - konšt_char / konšt_int + konšt_real + not konšt_int = konšt_char + konšt_char / konšt_real + not konšt_real + konšt_real := konšt_int > konšt_int / id mod konšt_boolean = konšt_real ; end
-type id = Real ; procedure id ( ) type id = Char ; begin konšt_real * konšt_int > - konšt_real / konšt_real * id / konšt_int <= not not not - konšt_int >= konšt_int := konšt_char > konšt_boolean ; end
-type id = Integer ; procedure id ( ) type id = id ; begin konšt_real = konšt_int and konšt_real <= id mod konšt_int mod konšt_int <= konšt_char <= - id / konšt_boolean := konšt_int <> konšt_real <= konšt_int + konšt_int <= - id mod id + konšt_char ; end
-type id = id ; procedure id ( ) type id = Integer ; begin konšt_real / ( id * konšt_boolean and konšt_real < konšt_char + konšt_int mod konšt_int ) * id and id := konšt_char or konšt_int ; end
-type id = Integer ; procedure id ( ) type id = Char ; begin while - konšt_real mod - id = id >= konšt_real < konšt_char do konšt_int or konšt_int + - konšt_char > id := konšt_int or konšt_char ; end
-type id = Boolean ; var procedure id ( ) type id = Boolean ; var begin konšt_real <= konšt_real + not not - konšt_int := ( konšt_char >= konšt_real / konšt_int mod konšt_real < id <= konšt_int * konšt_real + id ) ; end
-type id = Integer ; procedure id ( ) type id = Real ; begin konšt_real = konšt_int - ( id <> konšt_char or - konšt_real or id or ( konšt_real - konšt_boolean ) ) := id - id ; end
-type id = Integer ; procedure id ( ) type id = Real ; begin konšt_real = - not konšt_char := not not id >= - konšt_real - konšt_real <= konšt_int or konšt_real < konšt_boolean <> konšt_char < konšt_int <> konšt_real - not id > id > konšt_int ; end
-type id = Integer ; procedure id ( ) type id = Real ; begin konšt_int > not konšt_int or konšt_char := not id - ( konšt_real mod id and ( konšt_real <> konšt_int or - konšt_char ) ) + id ; end
-type id = Char ; procedure id ( ) type id = Real ; begin konšt_char and konšt_boolean mod id < not konšt_int * konšt_real := not ( konšt_real ) > konšt_boolean and not konšt_real / konšt_boolean mod konšt_real ; end
-type id = Char ; procedure id ( ) type id = Boolean ; var begin konšt_boolean or id = ( konšt_boolean >= id [ id ] . id ) <= not ( not konšt_real mod konšt_char ) <= konšt_int := konšt_char > id ; end
-type id = Boolean ; procedure id ( ) type id = Real ; begin while id do ; id + - id / id = konšt_char mod ( konšt_char <= konšt_boolean and id ) and konšt_real - konšt_char := konšt_real / konšt_char and id ; end
-type id = Integer ; procedure id ( ) type id = Integer ; begin konšt_char = konšt_char - id and konšt_boolean >= - - - konšt_int := konšt_boolean >= konšt_real * konšt_real > ( konšt_int / konšt_int < konšt_char mod konšt_real - konšt_int ) ; end
-type id = id ; procedure id ( ) type id = Integer ; begin konšt_int >= ( id / konšt_real and konšt_boolean ) <> - konšt_real <> konšt_int := id > konšt_char / konšt_real > id [ not konšt_boolean ] ; end
-type id = Boolean ; procedure id ( ) type id = Char ; begin konšt_char mod - konšt_char / not konšt_real := ( konšt_int * not konšt_real >= konšt_boolean = konšt_boolean ) and ( konšt_boolean and id ) mod konšt_int or konšt_char ; end
+štart príkaz1 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; koniec
+štart príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; koniec
+štart príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; koniec
+štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; koniec
+štart ak p1 potom ak p2 potom ak p2 potom príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; koniec
+štart pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz2 ; koniec
+štart ak p1 potom pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec
+štart príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; koniec
+štart pokiaľ p1 rob pokiaľ p2 rob pokiaľ p2 rob ak p2 potom príkaz2 ; koniec
+štart ak p2 potom ak p1 potom príkaz1 ; koniec
+štart pokiaľ p2 rob príkaz2 ; ak p2 potom pokiaľ p2 rob ak p2 potom príkaz1 ; koniec
+štart ak p2 potom pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; koniec
+štart príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec
+štart ak p2 potom ak p1 potom príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; koniec
+štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; príkaz1 ; koniec
+štart príkaz1 ; príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; koniec
+štart pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; koniec
+štart pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz2 ; koniec
+štart ak p1 potom príkaz1 ; ak p1 potom príkaz2 ; koniec
+štart príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec
+štart príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom príkaz2 ; koniec
+štart príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; koniec
+štart príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; koniec
+štart príkaz1 ; pokiaľ p2 rob ak p1 potom príkaz2 ; príkaz2 ; koniec
+štart príkaz1 ; príkaz1 ; príkaz2 ; príkaz2 ; ak p2 potom ak p1 potom príkaz1 ; koniec
+štart príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; koniec
+štart príkaz1 ; ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; koniec
+štart ak p1 potom príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; koniec
+štart príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz2 ; koniec
+štart príkaz1 ; ak p2 potom príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob ak p1 potom príkaz2 ; koniec
+štart pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; koniec
+štart príkaz2 ; príkaz2 ; pokiaľ p1 rob ak p1 potom pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; koniec
+štart ak p2 potom ak p2 potom príkaz1 ; koniec
+štart ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; ak p1 potom príkaz1 ; koniec
+štart príkaz2 ; príkaz1 ; príkaz1 ; ak p1 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec
+štart príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; koniec
+štart príkaz2 ; ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; koniec
+štart ak p2 potom pokiaľ p1 rob ak p2 potom príkaz1 ; koniec
+štart ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; koniec
 
 Statistics:
-type id = id ; procedure id ( ) type id = Integer ; begin konšt_int >= ( id / konšt_real and konšt_boolean ) <> - konšt_real <> konšt_int := id > konšt_char / konšt_real > id [ not konšt_boolean ] ; end: 1
-type id = Boolean ; procedure id ( ) type id = Boolean ; begin konšt_char mod konšt_char < konšt_boolean < konšt_int := konšt_int * konšt_real + konšt_real >= konšt_char < konšt_real >= konšt_real = konšt_int + konšt_boolean ; end: 1
-type id = Integer ; procedure id ( ) type id = Boolean ; var begin id mod konšt_char := konšt_char - - konšt_real >= konšt_char / konšt_char >= konšt_char >= konšt_boolean / - konšt_char < - id ; end: 1
-type id = Boolean ; var procedure id ( ) type id = Boolean ; var begin konšt_real <= konšt_real + not not - konšt_int := ( konšt_char >= konšt_real / konšt_int mod konšt_real < id <= konšt_int * konšt_real + id ) ; end: 1
-type id = Integer ; procedure id ( ) type id = Real ; begin konšt_real = konšt_int - ( id <> konšt_char or - konšt_real or id or ( konšt_real - konšt_boolean ) ) := id - id ; end: 1
-type id = id ; var procedure id ( ) type id = Char ; begin while konšt_boolean do konšt_int mod konšt_real < - konšt_char < - konšt_boolean mod not konšt_real >= konšt_char := not konšt_int mod konšt_real ; end: 1
-type id = Char ; procedure id ( ) type id = Char ; begin konšt_char <= konšt_int mod konšt_real * konšt_char := konšt_int < konšt_char mod not id <= konšt_boolean / konšt_int <= konšt_boolean - - konšt_real >= konšt_real ; end: 1
-type id = Integer ; procedure id ( ) type id = id ; begin konšt_real = konšt_int and konšt_real <= id mod konšt_int mod konšt_int <= konšt_char <= - id / konšt_boolean := konšt_int <> konšt_real <= konšt_int + konšt_int <= - id mod id + konšt_char ; end: 1
-type id = Integer ; procedure id ( ) type id = Integer ; var begin konšt_char >= konšt_real = konšt_char <= id <> konšt_char < ( id ) < id = konšt_int or konšt_char := konšt_char mod konšt_boolean ; end: 1
-type id = Real ; procedure id ( ) type id = Boolean ; begin - konšt_real := konšt_int - id < konšt_int and konšt_real * konšt_char = not konšt_real < konšt_boolean > not konšt_real <= konšt_char >= konšt_real = konšt_int ; end: 1
-type id = Integer ; procedure id ( ) type id = Real ; begin konšt_real = - not konšt_char := not not id >= - konšt_real - konšt_real <= konšt_int or konšt_real < konšt_boolean <> konšt_char < konšt_int <> konšt_real - not id > id > konšt_int ; end: 1
-type id = id ; procedure id ( ) type id = Char ; begin konšt_int <> - konšt_char * konšt_int or konšt_int mod not id + ( konšt_boolean * id mod konšt_int ) + konšt_char * id [ id ] := konšt_boolean > id <> konšt_int ; end: 1
-type id = Integer ; procedure id ( ) type id = Boolean ; begin - konšt_boolean - - konšt_char / konšt_int + konšt_real + not konšt_int = konšt_char + konšt_char / konšt_real + not konšt_real + konšt_real := konšt_int > konšt_int / id mod konšt_boolean = konšt_real ; end: 1
-type id = Boolean ; procedure id ( ) type id = Char ; begin konšt_real := konšt_int = konšt_int * id ; if konšt_real then id / id := id and id / konšt_int / konšt_real * konšt_char ; end: 1
-type id = id ; procedure id ( ) type id = Real ; begin - konšt_char >= konšt_int mod konšt_char mod id := konšt_int = konšt_boolean <= not konšt_real mod konšt_char - not - - konšt_boolean - konšt_real = not konšt_int ; end: 1
-type id = Char ; procedure id ( ) type id = Boolean ; var begin konšt_boolean or id = ( konšt_boolean >= id [ id ] . id ) <= not ( not konšt_real mod konšt_char ) <= konšt_int := konšt_char > id ; end: 1
-type id = Integer ; procedure id ( ) type id = Char ; begin konšt_int and not - konšt_real <> konšt_boolean mod konšt_real mod konšt_real <= konšt_char = - - ( konšt_boolean < konšt_char < konšt_boolean ) and konšt_char := konšt_char ; end: 1
-type id = Integer ; var procedure id ( ) type id = Boolean ; begin while - konšt_boolean * - konšt_real = konšt_int + konšt_boolean do not id * konšt_boolean <> konšt_boolean + konšt_boolean >= konšt_boolean := konšt_boolean / id and - konšt_real - konšt_real ; end: 1
-type id = Integer ; procedure id ( ) type id = record end ; begin konšt_int / id + - konšt_real * konšt_real mod konšt_char and konšt_char <> id and id <> konšt_int and konšt_int > konšt_real - konšt_char / id <> konšt_boolean := konšt_int ; end: 1
-type id = Char ; procedure id ( ) type id = Real ; begin konšt_char and konšt_boolean mod id < not konšt_int * konšt_real := not ( konšt_real ) > konšt_boolean and not konšt_real / konšt_boolean mod konšt_real ; end: 1
-type id = Integer ; procedure id ( ) type id = Integer ; begin konšt_char = konšt_char - id and konšt_boolean >= - - - konšt_int := konšt_boolean >= konšt_real * konšt_real > ( konšt_int / konšt_int < konšt_char mod konšt_real - konšt_int ) ; end: 1
-type id = Real ; procedure id ( ) type id = Integer ; begin konšt_char >= - id <= - konšt_real / konšt_real / konšt_char + konšt_real / konšt_boolean / konšt_char := ( not konšt_real ) + - konšt_real ; end: 1
-type id = Char ; procedure id ( ) type id = Real ; begin not id >= konšt_char mod konšt_int / konšt_real <= konšt_char := konšt_char or konšt_int >= - konšt_boolean < not id and konšt_real * konšt_int or not not konšt_char + id ; end: 1
-type id = Real ; procedure id ( ) type id = id ; begin id >= konšt_int and not konšt_char := konšt_real * konšt_real and - konšt_char + konšt_boolean or konšt_boolean > konšt_real <> konšt_char and konšt_boolean mod not konšt_boolean ; end: 1
-type id = id ; procedure id ( ) type id = Boolean ; begin id * - not konšt_boolean mod konšt_boolean := not konšt_boolean = konšt_boolean / id or konšt_boolean and id and id . id >= konšt_boolean > konšt_real ; end: 1
-type id = id ; procedure id ( ) type id = Integer ; begin konšt_real / ( id * konšt_boolean and konšt_real < konšt_char + konšt_int mod konšt_int ) * id and id := konšt_char or konšt_int ; end: 1
-type id = Integer ; procedure id ( ) type id = Char ; begin while - konšt_real mod - id = id >= konšt_real < konšt_char do konšt_int or konšt_int + - konšt_char > id := konšt_int or konšt_char ; end: 1
-type id = Boolean ; procedure id ( ) type id = Char ; begin konšt_char mod - konšt_char / not konšt_real := ( konšt_int * not konšt_real >= konšt_boolean = konšt_boolean ) and ( konšt_boolean and id ) mod konšt_int or konšt_char ; end: 1
-type id = Integer ; procedure id ( ) type id = id ; var begin not - id > konšt_int and - konšt_real and ( konšt_real or id and konšt_real ) = id <> id < konšt_int > konšt_real or konšt_char < konšt_char - konšt_int := id ; end: 1
-type id = Integer ; procedure id ( ) type id = Real ; begin konšt_int > not konšt_int or konšt_char := not id - ( konšt_real mod id and ( konšt_real <> konšt_int or - konšt_char ) ) + id ; end: 1
-type id = id ; function id ( ) : record end type id = id ; begin - konšt_real - konšt_real and konšt_boolean mod konšt_int > not konšt_real or not konšt_boolean > konšt_boolean + not konšt_boolean < konšt_boolean := konšt_int or id = konšt_char ; end: 1
-type id = id ; procedure id ( ) type id = Real ; begin konšt_int * konšt_char <= id >= not ( konšt_real or - konšt_char = - konšt_char mod konšt_boolean ) := not id - konšt_int <= konšt_int ; end: 1
-type id = Real ; procedure id ( ) type id = Real ; begin not konšt_int < ( konšt_int - konšt_boolean * konšt_int ) < not - not not not konšt_real <= konšt_int := konšt_real + konšt_boolean ; end: 1
-type id = Boolean ; procedure id ( ) type id = Integer ; begin konšt_char = konšt_char and konšt_int <= - id + konšt_boolean + konšt_real = id <> not id / konšt_char mod konšt_real := not konšt_int ; end: 1
-type id = Boolean ; procedure id ( ) type id = Real ; begin while id do ; id + - id / id = konšt_char mod ( konšt_char <= konšt_boolean and id ) and konšt_real - konšt_char := konšt_real / konšt_char and id ; end: 1
-type id = Boolean ; procedure id ( ) type id = Integer ; begin konšt_int > not id * not konšt_char + konšt_int <> konšt_int - konšt_real * konšt_boolean <> konšt_char <> konšt_int mod id >= konšt_real := konšt_char ; end: 1
-type id = id ; procedure id ( ) type id = Real ; begin konšt_real / konšt_int := id or konšt_real * id mod konšt_char >= konšt_char >= id mod not konšt_real / id < konšt_char * not konšt_boolean <= konšt_char ; end: 1
-type id = Real ; procedure id ( ) type id = Char ; begin konšt_real * konšt_int > - konšt_real / konšt_real * id / konšt_int <= not not not - konšt_int >= konšt_int := konšt_char > konšt_boolean ; end: 1
-type id = Real ; procedure id ( ) type id = Real ; begin konšt_int - konšt_real > - konšt_char <= id / konšt_real - id + konšt_boolean * konšt_char >= - konšt_char * - konšt_int := konšt_boolean mod konšt_int ; end: 1
-type id = Real ; procedure id ( ) type id = id ; begin not konšt_real := id < not ( konšt_real mod konšt_boolean + konšt_boolean or - konšt_char and - konšt_real > konšt_boolean or id < - konšt_char <= id ) * konšt_boolean ; end: 1
+štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz1 ; ak p1 potom pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz2 ; pokiaľ p2 rob príkaz1 ; ak p2 potom príkaz2 ; koniec: 1
+štart pokiaľ p2 rob príkaz2 ; ak p2 potom pokiaľ p2 rob ak p2 potom príkaz1 ; koniec: 1
+štart pokiaľ p1 rob pokiaľ p2 rob príkaz1 ; príkaz2 ; koniec: 1
+štart ak p2 potom ak p2 potom príkaz1 ; koniec: 1
+štart ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; koniec: 1
+štart ak p2 potom pokiaľ p1 rob pokiaľ p2 rob príkaz2 ; ak p1 potom príkaz1 ; koniec: 1
+štart pokiaľ p2 rob príkaz2 ; pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; príkaz2 ; príkaz2 ; koniec: 1
+štart ak p1 potom príkaz1 ; ak p1 potom príkaz2 ; koniec: 1
+štart príkaz2 ; ak p1 potom príkaz1 ; príkaz2 ; príkaz1 ; koniec: 1
+štart ak p2 potom ak p1 potom príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz1 ; príkaz1 ; ak p1 potom príkaz1 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz1 ; ak p1 potom príkaz2 ; príkaz1 ; príkaz2 ; príkaz1 ; koniec: 1
+štart ak p1 potom príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p2 rob príkaz2 ; koniec: 1
+štart pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom pokiaľ p2 rob príkaz2 ; koniec: 1
+štart ak p1 potom pokiaľ p1 rob ak p2 potom príkaz2 ; príkaz1 ; príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz2 ; príkaz2 ; pokiaľ p1 rob príkaz2 ; príkaz2 ; koniec: 1
+štart pokiaľ p2 rob pokiaľ p1 rob príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p1 rob ak p2 potom príkaz1 ; príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz2 ; pokiaľ p2 rob pokiaľ p1 rob pokiaľ p1 rob príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz2 ; ak p2 potom príkaz2 ; koniec: 1
+štart príkaz2 ; príkaz2 ; ak p1 potom príkaz2 ; príkaz1 ; pokiaľ p2 rob príkaz2 ; príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz1 ; príkaz2 ; príkaz2 ; ak p2 potom ak p1 potom príkaz1 ; koniec: 1
+štart príkaz2 ; príkaz2 ; pokiaľ p1 rob ak p1 potom pokiaľ p2 rob pokiaľ p2 rob príkaz1 ; koniec: 1
+štart príkaz1 ; ak p2 potom príkaz2 ; príkaz1 ; príkaz1 ; príkaz1 ; koniec: 1
+štart príkaz1 ; ak p2 potom pokiaľ p1 rob ak p2 potom príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz2 ; príkaz1 ; pokiaľ p2 rob pokiaľ p1 rob príkaz2 ; príkaz1 ; koniec: 1
+štart príkaz1 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; ak p1 potom príkaz2 ; koniec: 1
+štart príkaz1 ; pokiaľ p2 rob ak p1 potom príkaz2 ; príkaz2 ; koniec: 1
+štart príkaz1 ; príkaz2 ; príkaz1 ; príkaz2 ; pokiaľ p2 rob príkaz1 ; koniec: 1
+štart príkaz2 ; ak p2 potom príkaz1 ; príkaz1 ; príkaz1 ; koniec: 1
+štart ak p2 potom pokiaľ p1 rob pokiaľ p1 rob príkaz1 ; koniec: 1
+štart ak p2 potom ak p1 potom príkaz1 ; koniec: 1
+štart príkaz1 ; ak p2 potom príkaz2 ; pokiaľ p1 rob pokiaľ p2 rob ak p1 potom príkaz2 ; koniec: 1
+štart príkaz2 ; pokiaľ p2 rob príkaz1 ; príkaz2 ; koniec: 1
+štart pokiaľ p1 rob pokiaľ p2 rob pokiaľ p2 rob ak p2 potom príkaz2 ; koniec: 1
+štart ak p2 potom pokiaľ p1 rob ak p2 potom príkaz1 ; koniec: 1
+štart ak p1 potom ak p2 potom ak p2 potom príkaz2 ; koniec: 1

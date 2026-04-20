@@ -40,10 +40,10 @@ A - T_a A
 A - T_a T_b
 B - B A
 B - b
-S0 - A S0_BIN_0
-S0 - B S0_BIN_1
-S0_BIN_0 - B A
-S0_BIN_1 - A B
+S0 - A S0_BIN_1
+S0 - B S0_BIN_0
+S0_BIN_0 - A B
+S0_BIN_1 - B A
 T_a - a
 T_b - b
 
@@ -198,12 +198,12 @@ B - T_b B_BIN_0
 B - T_b T_a
 B_BIN_0 - T_a B
 S0 - ε
-S0 - T_a S0_BIN_1
+S0 - T_a S0_BIN_0
 S0 - T_a T_b
-S0 - T_b S0_BIN_0
+S0 - T_b S0_BIN_1
 S0 - T_b T_a
-S0_BIN_0 - T_a B
-S0_BIN_1 - T_b A
+S0_BIN_0 - T_b A
+S0_BIN_1 - T_a B
 T_a - a
 T_b - b
 
