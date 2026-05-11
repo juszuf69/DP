@@ -8,3 +8,13 @@
 2026-04-20 14:23:45,722 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
 2026-04-20 14:23:46,155 INFO membership-benchmark: grammar=1 collected words: positive=10 negative=10
 2026-04-20 14:24:28,506 INFO membership-benchmark: Membership benchmark finished successfully
+2026-05-11 11:40:29,963 INFO membership-benchmark: Membership benchmark started
+2026-05-11 11:40:29,963 INFO membership-benchmark: Grammar file: src\text\input\big_grammar.txt
+2026-05-11 11:40:29,963 INFO membership-benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:40:29,964 INFO membership-benchmark: SAT solver: m22
+2026-05-11 11:40:30,298 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:40:30,298 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:40:30,754 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:40:30,754 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:40:31,190 INFO membership-benchmark: grammar=1 collected words: positive=10 negative=10
+2026-05-11 11:41:22,587 INFO membership-benchmark: Membership benchmark finished successfully

@@ -198,12 +198,12 @@ B - T_b B_BIN_0
 B - T_b T_a
 B_BIN_0 - T_a B
 S0 - ε
-S0 - T_a S0_BIN_0
+S0 - T_a S0_BIN_1
 S0 - T_a T_b
-S0 - T_b S0_BIN_1
+S0 - T_b S0_BIN_0
 S0 - T_b T_a
-S0_BIN_0 - T_b A
-S0_BIN_1 - T_a B
+S0_BIN_0 - T_a B
+S0_BIN_1 - T_b A
 T_a - a
 T_b - b
 
@@ -277,13 +277,13 @@ rules:
 S0 - T_b S0_BIN_6
 S0 - T_e S0_BIN_0
 S0 - T_w S0_BIN_1
-S0 - T_w S0_BIN_4
+S0 - T_w S0_BIN_3
 S0_BIN_0 - T_n T_d
-S0_BIN_1 - T_h S0_BIN_2
-S0_BIN_2 - T_i S0_BIN_3
-S0_BIN_3 - T_l T_e
+S0_BIN_1 - T_i S0_BIN_2
+S0_BIN_2 - T_t T_h
+S0_BIN_3 - T_h S0_BIN_4
 S0_BIN_4 - T_i S0_BIN_5
-S0_BIN_5 - T_t T_h
+S0_BIN_5 - T_l T_e
 S0_BIN_6 - T_e S0_BIN_7
 S0_BIN_7 - T_g S0_BIN_8
 S0_BIN_8 - T_i T_n
@@ -472,14 +472,14 @@ T_rob - rob
 T_štart - štart
 podmienka - p1
 podmienka - p2
-príkaz - T_ak príkaz_BIN_0
-príkaz - T_pokiaľ príkaz_BIN_2
+príkaz - T_ak príkaz_BIN_2
+príkaz - T_pokiaľ príkaz_BIN_0
 príkaz - príkaz1
 príkaz - príkaz2
 príkaz_BIN_0 - podmienka príkaz_BIN_1
-príkaz_BIN_1 - T_potom príkaz
+príkaz_BIN_1 - T_rob príkaz
 príkaz_BIN_2 - podmienka príkaz_BIN_3
-príkaz_BIN_3 - T_rob príkaz
+príkaz_BIN_3 - T_potom príkaz
 príkazy - príkaz T_;
 príkazy - príkaz príkazy_BIN_0
 príkazy_BIN_0 - T_; príkazy

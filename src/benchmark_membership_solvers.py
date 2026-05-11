@@ -28,6 +28,8 @@ def _build_row(
     status: str,
     result: str,
     elapsed_ms: float,
+    conversion_ms: float,
+    solve_ms: float,
     stats: dict[str, int],
 ) -> dict[str, str]:
     return {
@@ -41,6 +43,8 @@ def _build_row(
         "status": status,
         "result": result,
         "time_ms": f"{elapsed_ms:.3f}",
+        "time_conversion_ms": f"{conversion_ms:.3f}",
+        "time_solve_ms": f"{solve_ms:.3f}",
     }
 
 
@@ -51,23 +55,31 @@ def _grammar_stats(grammar) -> dict[str, int]:
     }
 
 
-def _run_sat_solver(grammar, word: str, sat_solver_name: str) -> tuple[str, str, float, dict[str, int]]:
+def _run_sat_solver(grammar, word: str, sat_solver_name: str) -> tuple[str, str, float, float, float, dict[str, int]]:
     start = time.perf_counter()
     status = "ok"
     result = "REJECT"
     stats: dict[str, int] = {}
+    conversion_ms = 0.0
+    solve_ms = 0.0
 
     try:
+        # Measure CNF conversion time
+        conversion_start = time.perf_counter()
         cfg_sat = CFG_2_SAT(grammar, word, solve=False, save_dimacs=False, verbose=False)
+        conversion_ms = (time.perf_counter() - conversion_start) * 1000.0
         stats = cfg_sat.get_stats()
 
         word_tokens = [] if not word.strip() else word.split()
         if not word_tokens:
             result = "ACCEPT" if getattr(grammar, "accepts_epsilon", False) else "REJECT"
         else:
+            # Measure SAT solver time
+            solve_start = time.perf_counter()
             cnf = CNF(from_clauses=cfg_sat.clauses)
             with PySatSolver(name=sat_solver_name, bootstrap_with=cnf.clauses) as solver:
                 sat_result = solver.solve()
+            solve_ms = (time.perf_counter() - solve_start) * 1000.0
             result = "ACCEPT" if sat_result else "REJECT"
     except Exception as exc:
         status = "error"
@@ -75,7 +87,7 @@ def _run_sat_solver(grammar, word: str, sat_solver_name: str) -> tuple[str, str,
         logger.exception("SAT benchmark failed for word=%r", word)
 
     elapsed_ms = (time.perf_counter() - start) * 1000.0
-    return status, result, elapsed_ms, stats
+    return status, result, elapsed_ms, conversion_ms, solve_ms, stats
 
 
 def _run_cyk(grammar, word: str) -> tuple[str, str, float, dict[str, int]]:
@@ -153,7 +165,7 @@ def benchmark_from_grammar_file(
         )
 
         for label, word in cases:
-            sat_status, sat_result, sat_ms, sat_stats = _run_sat_solver(grammar, word, sat_solver_name=sat_solver_name)
+            sat_status, sat_result, sat_ms, sat_conversion_ms, sat_solve_ms, sat_stats = _run_sat_solver(grammar, word, sat_solver_name=sat_solver_name)
             all_rows.append(
                 _build_row(
                     solver=f"sat:{sat_solver_name}",
@@ -163,6 +175,8 @@ def benchmark_from_grammar_file(
                     status=sat_status,
                     result=sat_result,
                     elapsed_ms=sat_ms,
+                    conversion_ms=sat_conversion_ms,
+                    solve_ms=sat_solve_ms,
                     stats=sat_stats,
                 )
             )
@@ -177,6 +191,8 @@ def benchmark_from_grammar_file(
                     status=cyk_status,
                     result=cyk_result,
                     elapsed_ms=cyk_ms,
+                    conversion_ms=0.0,
+                    solve_ms=cyk_ms,
                     stats=cyk_stats,
                 )
             )
@@ -202,6 +218,8 @@ def write_csv(rows: list[dict[str, str]], output_csv: Path) -> None:
                 "status",
                 "result",
                 "time_ms",
+                "time_conversion_ms",
+                "time_solve_ms",
             ],
         )
         writer.writeheader()

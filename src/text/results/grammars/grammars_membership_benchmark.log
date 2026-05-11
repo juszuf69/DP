@@ -434,3 +434,218 @@
 2026-04-20 10:53:24,111 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
 2026-04-20 10:53:24,342 INFO membership-benchmark: grammar=17 collected words: positive=10 negative=10
 2026-04-20 10:53:27,887 INFO membership-benchmark: Membership benchmark finished successfully
+2026-05-11 11:38:46,468 INFO membership-benchmark: Membership benchmark started
+2026-05-11 11:38:46,468 INFO membership-benchmark: Grammar file: src\text\input\grammars.txt
+2026-05-11 11:38:46,468 INFO membership-benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:46,468 INFO membership-benchmark: SAT solver: m22
+2026-05-11 11:38:46,527 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:46,527 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:47,024 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:47,025 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:47,305 INFO membership-benchmark: grammar=1 collected words: positive=10 negative=10
+2026-05-11 11:38:49,049 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:49,050 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:49,352 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:49,352 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:49,630 INFO membership-benchmark: grammar=2 collected words: positive=10 negative=10
+2026-05-11 11:38:50,856 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:50,857 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:51,106 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:38:51,299 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:38:51,490 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:51,490 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:51,665 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:38:51,850 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:38:52,148 INFO membership-benchmark: grammar=3 collected words: positive=0 negative=0
+2026-05-11 11:38:52,151 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:52,156 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:52,581 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:52,581 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:52,928 INFO membership-benchmark: grammar=4 collected words: positive=10 negative=10
+2026-05-11 11:38:55,632 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:55,632 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:55,848 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:38:56,096 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:38:56,377 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:56,377 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:56,579 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:38:56,845 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:38:57,081 INFO membership-benchmark: grammar=5 collected words: positive=0 negative=0
+2026-05-11 11:38:57,083 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:57,083 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:57,305 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:38:57,535 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:38:57,535 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:38:57,765 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:38:58,015 INFO membership-benchmark: grammar=6 collected words: positive=10 negative=10
+2026-05-11 11:39:00,297 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:00,298 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:00,491 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:00,491 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:00,702 INFO membership-benchmark: grammar=7 collected words: positive=10 negative=10
+2026-05-11 11:39:01,333 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:01,344 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:01,565 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:01,565 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:01,820 INFO membership-benchmark: grammar=8 collected words: positive=10 negative=10
+2026-05-11 11:39:03,914 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:03,914 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:04,113 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:04,373 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:04,661 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:04,662 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:04,929 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:05,139 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:05,367 INFO membership-benchmark: grammar=9 collected words: positive=5 negative=5
+2026-05-11 11:39:05,812 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:05,812 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:06,049 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:06,049 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:06,388 INFO membership-benchmark: grammar=10 collected words: positive=10 negative=10
+2026-05-11 11:39:08,833 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:08,833 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:09,021 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:09,220 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:09,417 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:09,418 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:09,679 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:09,897 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:10,098 INFO membership-benchmark: grammar=11 collected words: positive=0 negative=0
+2026-05-11 11:39:10,100 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:10,100 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:10,343 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:10,343 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:10,585 INFO membership-benchmark: grammar=12 collected words: positive=10 negative=10
+2026-05-11 11:39:11,262 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:11,262 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:11,490 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:11,491 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:11,776 INFO membership-benchmark: grammar=13 collected words: positive=10 negative=10
+2026-05-11 11:39:13,214 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:13,214 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:13,436 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:13,436 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:13,704 INFO membership-benchmark: grammar=14 collected words: positive=10 negative=10
+2026-05-11 11:39:13,962 INFO membership-benchmark: Membership benchmark started
+2026-05-11 11:39:13,963 INFO membership-benchmark: Grammar file: src\text\input\grammars.txt
+2026-05-11 11:39:13,963 INFO membership-benchmark: Java generator jar: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:13,963 INFO membership-benchmark: SAT solver: m22
+2026-05-11 11:39:13,984 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:13,984 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:14,241 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:14,241 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:14,532 INFO membership-benchmark: grammar=1 collected words: positive=10 negative=10
+2026-05-11 11:39:15,698 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:15,698 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:15,945 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:15,946 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:16,229 INFO membership-benchmark: grammar=15 collected words: positive=10 negative=10
+2026-05-11 11:39:16,380 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:16,381 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:16,704 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:16,704 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:17,024 INFO membership-benchmark: grammar=2 collected words: positive=10 negative=10
+2026-05-11 11:39:17,914 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:17,915 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:18,250 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:18,251 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:18,588 INFO membership-benchmark: grammar=16 collected words: positive=10 negative=10
+2026-05-11 11:39:18,836 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:18,837 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:19,050 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:19,273 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:19,507 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:19,507 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:19,725 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:19,954 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:20,277 INFO membership-benchmark: grammar=3 collected words: positive=0 negative=0
+2026-05-11 11:39:20,281 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:20,281 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:20,564 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:20,564 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:20,845 INFO membership-benchmark: grammar=4 collected words: positive=10 negative=10
+2026-05-11 11:39:23,231 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:23,232 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:23,523 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:23,865 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:24,388 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:24,392 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:24,742 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:24,760 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:25,045 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:25,323 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:25,324 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:25,606 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:25,789 INFO membership-benchmark: grammar=17 collected words: positive=10 negative=10
+2026-05-11 11:39:26,012 INFO membership-benchmark: grammar=5 collected words: positive=0 negative=0
+2026-05-11 11:39:26,015 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:26,015 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:26,465 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:26,465 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:26,814 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:27,229 INFO membership-benchmark: grammar=6 collected words: positive=10 negative=10
+2026-05-11 11:39:30,457 INFO membership-benchmark: Membership benchmark finished successfully
+2026-05-11 11:39:30,656 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:30,657 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:30,895 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:30,895 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:31,146 INFO membership-benchmark: grammar=7 collected words: positive=10 negative=10
+2026-05-11 11:39:32,032 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:32,032 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:32,266 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:32,266 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:32,483 INFO membership-benchmark: grammar=8 collected words: positive=10 negative=10
+2026-05-11 11:39:34,891 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:34,891 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:35,114 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:35,344 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:35,579 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:35,579 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:35,809 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:36,045 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:36,298 INFO membership-benchmark: grammar=9 collected words: positive=5 negative=5
+2026-05-11 11:39:36,708 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:36,708 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:36,957 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:36,957 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:37,235 INFO membership-benchmark: grammar=10 collected words: positive=10 negative=10
+2026-05-11 11:39:39,241 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:39,242 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:39,452 INFO benchmark: Java generation attempt 2/3 for positive words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:39,648 INFO benchmark: Java generation attempt 3/3 for positive words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:39,899 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:39,899 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:40,129 INFO benchmark: Java generation attempt 2/3 for negative words (target=10, min_length=10, max_length=20, repetitions=60)
+2026-05-11 11:39:40,411 INFO benchmark: Java generation attempt 3/3 for negative words (target=10, min_length=10, max_length=20, repetitions=80)
+2026-05-11 11:39:40,648 INFO membership-benchmark: grammar=11 collected words: positive=0 negative=0
+2026-05-11 11:39:40,650 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:40,650 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:40,888 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:40,889 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:41,169 INFO membership-benchmark: grammar=12 collected words: positive=10 negative=10
+2026-05-11 11:39:42,108 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:42,108 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:42,349 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:42,349 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:42,651 INFO membership-benchmark: grammar=13 collected words: positive=10 negative=10
+2026-05-11 11:39:44,232 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:44,232 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:44,494 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:44,494 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:44,760 INFO membership-benchmark: grammar=14 collected words: positive=10 negative=10
+2026-05-11 11:39:46,611 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:46,611 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:46,870 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:46,870 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:47,123 INFO membership-benchmark: grammar=15 collected words: positive=10 negative=10
+2026-05-11 11:39:48,549 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:48,549 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:48,833 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:48,833 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:49,248 INFO membership-benchmark: grammar=16 collected words: positive=10 negative=10
+2026-05-11 11:39:53,092 INFO benchmark: Using Java word generator jar for positive words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:53,092 INFO benchmark: Java generation attempt 1/3 for positive words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:53,359 INFO benchmark: Using Java word generator jar for negative words: D:\STU\ING\DP\src\modules\WordGenerator.jar
+2026-05-11 11:39:53,359 INFO benchmark: Java generation attempt 1/3 for negative words (target=10, min_length=10, max_length=20, repetitions=40)
+2026-05-11 11:39:53,655 INFO membership-benchmark: grammar=17 collected words: positive=10 negative=10
+2026-05-11 11:39:56,258 INFO membership-benchmark: Membership benchmark finished successfully

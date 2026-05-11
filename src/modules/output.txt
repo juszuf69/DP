@@ -49,183 +49,183 @@ Grammar:
 %start <program>
 %%
 <program> : <deklarácie> <definície_podprogramov>
-<príkaz> : 
- | <blok>
- | <príkaz_priradenia>
- | <príkaz_if>
- | <príkaz_while>
- | <príkaz_call>
-<hlavička_podprogramu> : procedure <id> ( <formálne_parametre> )
- | function <id> ( <formálne_parametre> ) : <typ>
-<príkazy> : <príkaz> ; <príkazy>
- | 
-<forma> : var
- | 
-<logický_op> : and
- | or
-<op1> : <op1> <relačný_op> <op2>
- | <op2>
-<deklarácia_typu> : type <id> = <typ> ;
-<deklarácie_typov> : <deklarácia_typu> <deklarácie_typov>
- | 
-<op4> : <konšt>
- | <prem>
- | ( <výraz> )
- | <unárny_op> <op4>
-<zvyšok_dfp> : , <deklarácia_fp> <zvyšok_dfp>
- | 
-<jednoduchý_typ> : Integer
- | Real
- | Boolean
- | Char
-<príkaz_call> : <id> ( <skutočné_parametre> )
-<blok> : begin <príkazy> end
-<hor> : konšt_int
-<deklarácia> : <zoznam_identifikátorov> : <typ> ;
 <op3> : <op3> <multiplikatívny_op> <op4>
  | <op4>
-<dol> : konšt_int
-<definície_podprogramov> : <definícia_podprogramu> <definície_podprogramov>
- | 
-<výraz> : <výraz> <logický_op> <op1>
- | <op1>
-<id> : id
-<sp> : <výraz>
 <op2> : <op2> <aditívny_op> <op3>
  | <op3>
-<skutočné_parametre> : <sp> <zvyšok_sp>
- | 
-<deklarácie_premenných> : <deklarácia_premenných> <deklarácie_premenných>
- | 
 <prem> : <id>
  | <prem> [ <výraz> ]
  | <prem> . <id>
-<formálne_parametre> : <deklarácia_fp> <zvyšok_dfp>
+<forma> : var
  | 
-<zoznam_identifikátorov> : <id> <zvyšok_zoznamu>
-<zvyšok_zoznamu> : , <id> <zvyšok_zoznamu>
- | 
-<pole> : array [ <dol> .. <hor> ] of <typ_prvku>
-<definícia_podprogramu> : <hlavička_podprogramu> <telo_podprogramu>
-<deklarácia_premenných> : var <zoznam_deklarácií>
-<telo_podprogramu> : <deklarácie> <blok>
-<príkaz_if> : if <výraz> then <príkaz>
-<príkaz_priradenia> : <výraz> := <výraz>
-<unárny_op> : not
- | -
-<konšt> : konšt_int
- | konšt_real
- | konšt_boolean
- | konšt_char
-<deklarácia_fp> : <forma> <id> : <typ>
-<príkaz_while> : while <výraz> do <príkaz>
-<aditívny_op> : +
- | -
-<deklarácie> : <deklarácie_typov> <deklarácie_premenných>
+<dol> : konšt_int
+<hor> : konšt_int
 <relačný_op> : <
  | <=
  | >
  | >=
  | =
  | <>
-<multiplikatívny_op> : *
- | /
- | mod
-<typ_prvku> : <typ>
-<záznam> : record <zoznam_deklarácií> end
-<zvyšok_sp> : , <sp> <zvyšok_sp>
- | 
-<zoznam_deklarácií> : <deklarácia> <zoznam_deklarácií>
- | 
+<príkaz_if> : if <výraz> then <príkaz>
+<deklarácia_premenných> : var <zoznam_deklarácií>
 <typ> : <jednoduchý_typ>
  | <id>
  | <pole>
  | <záznam>
+<deklarácia_fp> : <forma> <id> : <typ>
+<príkaz> : 
+ | <blok>
+ | <príkaz_priradenia>
+ | <príkaz_if>
+ | <príkaz_while>
+ | <príkaz_call>
+<definície_podprogramov> : <definícia_podprogramu> <definície_podprogramov>
+ | 
+<jednoduchý_typ> : Integer
+ | Real
+ | Boolean
+ | Char
+<zvyšok_zoznamu> : , <id> <zvyšok_zoznamu>
+ | 
+<deklarácia> : <zoznam_identifikátorov> : <typ> ;
+<príkazy> : <príkaz> ; <príkazy>
+ | 
+<príkaz_call> : <id> ( <skutočné_parametre> )
+<zvyšok_dfp> : , <deklarácia_fp> <zvyšok_dfp>
+ | 
+<zoznam_deklarácií> : <deklarácia> <zoznam_deklarácií>
+ | 
+<op1> : <op1> <relačný_op> <op2>
+ | <op2>
+<telo_podprogramu> : <deklarácie> <blok>
+<multiplikatívny_op> : *
+ | /
+ | mod
+<skutočné_parametre> : <sp> <zvyšok_sp>
+ | 
+<logický_op> : and
+ | or
+<formálne_parametre> : <deklarácia_fp> <zvyšok_dfp>
+ | 
+<sp> : <výraz>
+<deklarácie> : <deklarácie_typov> <deklarácie_premenných>
+<výraz> : <výraz> <logický_op> <op1>
+ | <op1>
+<unárny_op> : not
+ | -
+<zoznam_identifikátorov> : <id> <zvyšok_zoznamu>
+<konšt> : konšt_int
+ | konšt_real
+ | konšt_boolean
+ | konšt_char
+<príkaz_while> : while <výraz> do <príkaz>
+<aditívny_op> : +
+ | -
+<id> : id
+<hlavička_podprogramu> : procedure <id> ( <formálne_parametre> )
+ | function <id> ( <formálne_parametre> ) : <typ>
+<deklarácie_typov> : <deklarácia_typu> <deklarácie_typov>
+ | 
+<záznam> : record <zoznam_deklarácií> end
+<pole> : array [ <dol> .. <hor> ] of <typ_prvku>
+<zvyšok_sp> : , <sp> <zvyšok_sp>
+ | 
+<príkaz_priradenia> : <výraz> := <výraz>
+<op4> : <konšt>
+ | <prem>
+ | ( <výraz> )
+ | <unárny_op> <op4>
+<blok> : begin <príkazy> end
+<typ_prvku> : <typ>
+<deklarácie_premenných> : <deklarácia_premenných> <deklarácie_premenných>
+ | 
+<deklarácia_typu> : type <id> = <typ> ;
+<definícia_podprogramu> : <hlavička_podprogramu> <telo_podprogramu>
 %%
 
 Number of generated words: 40
 Word lengths are generated from an interval [10, 20]
 
 Generated words:
-type id = Real ; var var var var var id : Real ;
-type id = Boolean ; var var id , id : Real ; id : Boolean ;
-type id = Boolean ; var var var id : id ; var var var
-type id = Real ; var id , id : id ; id : Integer ;
-type id = Boolean ; var var id : Boolean ; var var var
-type id = Boolean ; var var var var id : id ;
-type id = Char ; var var id : Integer ; var var var id , id : Boolean ;
-type id = Integer ; var var var id : id ;
-type id = Integer ; var id : record end ; var
-type id = Real ; type id = Char ; var var var
-type id = id ; var var id : Integer ; var var
-type id = Integer ; var id : id ; var
-type id = record end ; var id : record id : id ; end ;
-type id = Integer ; type id = Char ; type id = Boolean ; var
-type id = record end ; var id , id : record end ;
-type id = record id : Integer ; id : Integer ; end ; var
-type id = Char ; var var var id : id ; var
-type id = Real ; var var var var var
-type id = Boolean ; type id = Integer ; var var
-type id = record id , id : Char ; end ; var
-type id = Real ; var id , id : id ;
-type id = record end ; var id : array [ konšt_int .. konšt_int ] of Boolean ; var var
-type id = Integer ; var id : Real ; var var id : Real ; var var var var
-type id = Real ; var id : Char ; id : Integer ; var var id : Boolean ;
-type id = Real ; var var id : id ; var id : Real ;
-type id = Integer ; type id = Boolean ; type id = record end ;
-type id = record id : Real ; id : Boolean ; end ;
-type id = id ; var id : Integer ; id : Boolean ;
-type id = Char ; var var var id , id : Char ;
-type id = Boolean ; var var id , id : id ; var
-type id = Integer ; var var id , id : Real ;
-type id = Boolean ; var var var var id : Char ; var
-type id = Char ; var id : Boolean ; id , id : Boolean ; id : Real ;
-type id = record end ; var var id , id , id : Real ;
-type id = Char ; var id : Char ; id : Real ; var
-type id = id ; type id = id ; type id = Integer ; var var
-type id = array [ konšt_int .. konšt_int ] of Char ; var var var var
-type id = Integer ; var id : Boolean ;
-type id = Char ; var id : Integer ; id : record end ; var var var
-type id = Real ; var id : id ; var var var
+type id = Char ; var id : id ; id : Real ;
+type id = id ; var id , id : Real ; var var var id : Real ;
+type id = Integer ; type id = Real ;
+type id = id ; type id = Integer ; var id , id : Integer ; var
+type id = Char ; var id : Char ;
+type id = Boolean ; type id = Real ; var id : Integer ; id : id ;
+type id = Integer ; var id : Boolean ; id : Boolean ; var id : Char ;
+type id = Real ; var var id : Char ; var var var var
+type id = Integer ; var id : Char ;
+type id = Integer ; type id = Integer ; var
+type id = Char ; var var var id : Integer ; var var var var var var
+type id = Integer ; type id = record end ;
+type id = Real ; var id : Real ; var id : Boolean ; id : Real ; var
+type id = Char ; var id : Real ; var var id : Integer ;
+type id = Integer ; var var id : id ;
+type id = Boolean ; var id : Integer ; var var var
+type id = record end ; type id = Boolean ;
+type id = id ; var id , id : Boolean ; var var
+type id = Char ; var var var id : Boolean ;
+type id = id ; var var id : Boolean ; var
+type id = Boolean ; var var id : Boolean ; var
+type id = Char ; var var var var id : Char ; var var
+type id = record id , id : Integer ; end ; var
+type id = Boolean ; var var var id : id ;
+type id = Real ; var id : Boolean ; var
+type id = Integer ; type id = Integer ; var var id : Char ;
+type id = Real ; type id = id ;
+type id = Real ; var var id : record end ; var id : Real ; var
+type id = Boolean ; var id : Real ; var var
+type id = Boolean ; var var var var id : id ; var
+type id = id ; var id : id ;
+type id = id ; var id : Integer ; id , id : Real ;
+type id = id ; var id : Real ; id : Real ; id , id : Boolean ;
+type id = id ; var var var id : Char ; var var var
+type id = record id , id : id ; id : Boolean ; end ; var
+type id = id ; var var var id : Char ; var
+type id = Boolean ; var id , id : record end ; id : Integer ;
+type id = Integer ; type id = Real ; var
+type id = record end ; type id = id ; var id : id ; var
+type id = Char ; type id = Char ; var var
 
 Statistics:
-type id = record end ; var var id , id , id : Real ;: 1
-type id = Boolean ; var var id : Boolean ; var var var: 1
-type id = record id , id : Char ; end ; var: 1
-type id = Integer ; var var id , id : Real ;: 1
-type id = Integer ; var id : Boolean ;: 1
-type id = Real ; type id = Char ; var var var: 1
-type id = record id : Integer ; id : Integer ; end ; var: 1
-type id = Integer ; var id : id ; var: 1
-type id = record id : Real ; id : Boolean ; end ;: 1
-type id = Char ; var id : Boolean ; id , id : Boolean ; id : Real ;: 1
-type id = Integer ; type id = Char ; type id = Boolean ; var: 1
-type id = Real ; var id : Char ; id : Integer ; var var id : Boolean ;: 1
-type id = Integer ; type id = Boolean ; type id = record end ;: 1
-type id = array [ konšt_int .. konšt_int ] of Char ; var var var var: 1
-type id = Integer ; var id : Real ; var var id : Real ; var var var var: 1
-type id = id ; type id = id ; type id = Integer ; var var: 1
-type id = Char ; var var var id , id : Char ;: 1
-type id = id ; var var id : Integer ; var var: 1
-type id = Real ; var var var var var: 1
-type id = Char ; var var id : Integer ; var var var id , id : Boolean ;: 1
-type id = Real ; var var id : id ; var id : Real ;: 1
-type id = record end ; var id : array [ konšt_int .. konšt_int ] of Boolean ; var var: 1
-type id = Boolean ; var var var var id : Char ; var: 1
-type id = Boolean ; var var id , id : Real ; id : Boolean ;: 1
-type id = id ; var id : Integer ; id : Boolean ;: 1
-type id = Real ; var var var var var id : Real ;: 1
-type id = Boolean ; var var var id : id ; var var var: 1
-type id = Boolean ; var var var var id : id ;: 1
-type id = Char ; var id : Integer ; id : record end ; var var var: 1
-type id = Real ; var id , id : id ; id : Integer ;: 1
-type id = record end ; var id : record id : id ; end ;: 1
-type id = Integer ; var id : record end ; var: 1
-type id = Real ; var id , id : id ;: 1
-type id = record end ; var id , id : record end ;: 1
-type id = Boolean ; type id = Integer ; var var: 1
-type id = Char ; var id : Char ; id : Real ; var: 1
-type id = Boolean ; var var id , id : id ; var: 1
-type id = Char ; var var var id : id ; var: 1
-type id = Real ; var id : id ; var var var: 1
-type id = Integer ; var var var id : id ;: 1
+type id = Char ; var id : Char ;: 1
+type id = Boolean ; var var id : Boolean ; var: 1
+type id = Integer ; var id : Char ;: 1
+type id = Char ; var var var id : Boolean ;: 1
+type id = Char ; var var var var id : Char ; var var: 1
+type id = record end ; type id = id ; var id : id ; var: 1
+type id = Integer ; type id = record end ;: 1
+type id = record id , id : id ; id : Boolean ; end ; var: 1
+type id = Char ; var var var id : Integer ; var var var var var var: 1
+type id = Real ; var var id : record end ; var id : Real ; var: 1
+type id = id ; var id : Real ; id : Real ; id , id : Boolean ;: 1
+type id = id ; var var var id : Char ; var var var: 1
+type id = record id , id : Integer ; end ; var: 1
+type id = Real ; var id : Real ; var id : Boolean ; id : Real ; var: 1
+type id = Integer ; var id : Boolean ; id : Boolean ; var id : Char ;: 1
+type id = Boolean ; var var var var id : id ; var: 1
+type id = Boolean ; var var var id : id ;: 1
+type id = Integer ; type id = Integer ; var: 1
+type id = Boolean ; var id : Real ; var var: 1
+type id = Integer ; var var id : id ;: 1
+type id = id ; var var id : Boolean ; var: 1
+type id = Real ; type id = id ;: 1
+type id = Integer ; type id = Real ;: 1
+type id = id ; var id , id : Boolean ; var var: 1
+type id = Integer ; type id = Integer ; var var id : Char ;: 1
+type id = Boolean ; type id = Real ; var id : Integer ; id : id ;: 1
+type id = Real ; var var id : Char ; var var var var: 1
+type id = Boolean ; var id : Integer ; var var var: 1
+type id = Integer ; type id = Real ; var: 1
+type id = Real ; var id : Boolean ; var: 1
+type id = id ; var var var id : Char ; var: 1
+type id = Boolean ; var id , id : record end ; id : Integer ;: 1
+type id = Char ; var id : id ; id : Real ;: 1
+type id = record end ; type id = Boolean ;: 1
+type id = id ; var id : Integer ; id , id : Real ;: 1
+type id = Char ; var id : Real ; var var id : Integer ;: 1
+type id = id ; type id = Integer ; var id , id : Integer ; var: 1
+type id = id ; var id : id ;: 1
+type id = id ; var id , id : Real ; var var var id : Real ;: 1
+type id = Char ; type id = Char ; var var: 1

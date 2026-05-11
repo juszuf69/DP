@@ -7,15 +7,16 @@ from pathlib import Path
 def _load_plot_dependencies():
     try:
         import matplotlib.pyplot as plt  # type: ignore
+        import numpy as np  # type: ignore
         import pandas as pd  # type: ignore
         import seaborn as sns  # type: ignore
     except ImportError as exc:
         raise SystemExit(
             "Missing plotting dependencies. Install with: "
-            "python -m pip install pandas matplotlib seaborn"
+            "python -m pip install pandas matplotlib seaborn numpy"
         ) from exc
 
-    return pd, plt, sns
+    return pd, plt, sns, np
 
 
 def _discover_csvs(results_root: Path) -> list[Path]:
@@ -107,6 +108,16 @@ def _load_membership_dataset(pd, csv_files: list[Path], explicit_path: Path | No
     df["time_ms"] = pd.to_numeric(df["time_ms"], errors="coerce")
     df["word_length"] = pd.to_numeric(df["word_length"], errors="coerce")
     df["nonterminal_count"] = pd.to_numeric(df["nonterminal_count"], errors="coerce")
+    # Convert new timing columns if they exist
+    if "time_conversion_ms" in df.columns:
+        df["time_conversion_ms"] = pd.to_numeric(df["time_conversion_ms"], errors="coerce")
+    else:
+        df["time_conversion_ms"] = 0.0
+    if "time_solve_ms" in df.columns:
+        df["time_solve_ms"] = pd.to_numeric(df["time_solve_ms"], errors="coerce")
+    else:
+        df["time_solve_ms"] = df["time_ms"]
+    
     df = df[df["status"].astype(str).str.lower() == "ok"]
     df = df.dropna(subset=["time_ms", "word_length", "nonterminal_count"])
     return df
@@ -123,7 +134,10 @@ def _plot_sat_correlations(sat_df, output_dir: Path, plt, sns):
     plt.savefig(output_dir / "01_sat_correlation_heatmap.png", dpi=180)
     plt.close()
 
-    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    # Separate big_grammar from other grammars
+    big_grammar_files = sat_df[sat_df["source_file"].str.contains("big_grammar", case=False, na=False)]
+    other_grammars = sat_df[~sat_df["source_file"].str.contains("big_grammar", case=False, na=False)]
+
     scatter_specs = [
         ("nonterminal_count", "Time vs Nonterminals"),
         ("word_length", "Time vs Word Length"),
@@ -131,28 +145,51 @@ def _plot_sat_correlations(sat_df, output_dir: Path, plt, sns):
         ("clause_count", "Time vs Clauses"),
     ]
 
-    for axis, (x_col, title) in zip(axes.flatten(), scatter_specs):
-        sns.scatterplot(
-            data=sat_df,
-            x=x_col,
-            y="time_ms",
-            hue="solver",
-            alpha=0.7,
-            s=35,
-            ax=axis,
-            legend=False,
-        )
-        axis.set_title(title)
-        axis.set_ylabel("Solve Time (ms)")
+    # Plot 1: Big Grammar
+    if not big_grammar_files.empty:
+        fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+        for axis, (x_col, title) in zip(axes.flatten(), scatter_specs):
+            sns.scatterplot(
+                data=big_grammar_files,
+                x=x_col,
+                y="time_ms",
+                hue="solver",
+                alpha=0.7,
+                s=50,
+                ax=axis,
+                palette="Set2",
+            )
+            axis.set_title(title)
+            axis.set_ylabel("Solve Time (ms)")
+            axis.legend(title="Solver", fontsize=8)
 
-    handles, labels = axes[0, 0].get_legend_handles_labels()
-    if handles:
-        fig.legend(handles, labels, loc="upper center", ncol=min(6, len(labels)), title="Solver")
+        fig.suptitle("SAT Solve Time Relationships (big_grammar)", y=1.00)
+        fig.tight_layout()
+        fig.savefig(output_dir / "02a_sat_scatter_big_grammar.png", dpi=180, bbox_inches="tight")
+        plt.close(fig)
 
-    fig.suptitle("SAT Solve Time Relationships", y=1.02)
-    fig.tight_layout()
-    fig.savefig(output_dir / "02_sat_time_scatter_grid.png", dpi=180, bbox_inches="tight")
-    plt.close(fig)
+    # Plot 2: Other Grammars
+    if not other_grammars.empty:
+        fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+        for axis, (x_col, title) in zip(axes.flatten(), scatter_specs):
+            sns.scatterplot(
+                data=other_grammars,
+                x=x_col,
+                y="time_ms",
+                hue="solver",
+                alpha=0.7,
+                s=50,
+                ax=axis,
+                palette="husl",
+            )
+            axis.set_title(title)
+            axis.set_ylabel("Solve Time (ms)")
+            axis.legend(title="Solver", fontsize=8)
+
+        fig.suptitle("SAT Solve Time Relationships (other grammars)", y=1.00)
+        fig.tight_layout()
+        fig.savefig(output_dir / "02b_sat_scatter_other_grammars.png", dpi=180, bbox_inches="tight")
+        plt.close(fig)
 
 
 def _plot_sat_solver_comparison(sat_df, output_dir: Path, plt, sns):
@@ -173,6 +210,7 @@ def _plot_sat_solver_comparison(sat_df, output_dir: Path, plt, sns):
     plt.title("SAT Solver Median Runtime by Word Length")
     plt.xlabel("Word Length")
     plt.ylabel("Median Solve Time (ms)")
+    plt.legend(title="Solver")
     plt.tight_layout()
     plt.savefig(output_dir / "03_sat_solver_by_word_length.png", dpi=180)
     plt.close()
@@ -217,12 +255,67 @@ def _plot_sat_vs_cyk(membership_df, output_dir: Path, plt, sns):
     )
 
     plt.figure(figsize=(10, 6))
-    sns.lineplot(data=by_length, x="word_length", y="time_ms", hue="family", marker="o")
+    sns.lineplot(data=by_length, x="word_length", y="time_ms", hue="family", marker="o", linewidth=2)
     plt.title("CYK vs SAT Median Runtime by Word Length")
     plt.xlabel("Word Length")
     plt.ylabel("Median Solve Time (ms)")
+    plt.legend(title="Algorithm")
     plt.tight_layout()
     plt.savefig(output_dir / "06_cyk_vs_sat_by_word_length.png", dpi=180)
+    plt.close()
+
+
+def _plot_time_breakdown(membership_df, output_dir: Path, plt, sns, np):
+    """Plot time breakdown: conversion vs solver time by word length"""
+    compare_df = membership_df[membership_df["solver"].str.startswith("sat:") | (membership_df["solver"] == "cyk")].copy()
+    if compare_df.empty:
+        return
+
+    compare_df["family"] = compare_df["solver"].apply(lambda s: "sat" if str(s).startswith("sat:") else "cyk")
+
+    # For SAT: aggregate conversion and solver times
+    # For CYK: all time is "solver" time (conversion_ms is 0)
+    by_length_family = (
+        compare_df.groupby(["family", "word_length"], as_index=False)[["time_conversion_ms", "time_solve_ms"]]
+        .median()
+        .sort_values("word_length")
+    )
+
+    # Create stacked bar chart
+    fig, ax = plt.subplots(figsize=(12, 6))
+
+    families = by_length_family["family"].unique()
+    word_lengths = sorted(by_length_family["word_length"].unique())
+
+    x = np.arange(len(word_lengths))
+    width = 0.35
+
+    for i, family in enumerate(sorted(families)):
+        family_data = by_length_family[by_length_family["family"] == family]
+        conversion_times = []
+        solve_times = []
+
+        for wl in word_lengths:
+            row = family_data[family_data["word_length"] == wl]
+            if not row.empty:
+                conversion_times.append(row["time_conversion_ms"].values[0])
+                solve_times.append(row["time_solve_ms"].values[0])
+            else:
+                conversion_times.append(0)
+                solve_times.append(0)
+
+        offset = width * (i - 0.5)
+        ax.bar(x + offset, conversion_times, width, label=f"{family} (conversion)", alpha=0.8)
+        ax.bar(x + offset, solve_times, width, bottom=conversion_times, label=f"{family} (solve)", alpha=0.8)
+
+    ax.set_xlabel("Word Length")
+    ax.set_ylabel("Time (ms)")
+    ax.set_title("SAT Conversion vs Solver Time Breakdown by Word Length")
+    ax.set_xticks(x)
+    ax.set_xticklabels(word_lengths)
+    ax.legend(fontsize=9)
+    plt.tight_layout()
+    plt.savefig(output_dir / "07_time_breakdown_conversion_vs_solver.png", dpi=180)
     plt.close()
 
 
@@ -245,7 +338,7 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    pd, plt, sns = _load_plot_dependencies()
+    pd, plt, sns, np = _load_plot_dependencies()
     sns.set_theme(style="whitegrid")
 
     results_root = Path(args.results_root)
@@ -272,6 +365,7 @@ def main() -> int:
 
     if membership_df is not None:
         _plot_sat_vs_cyk(membership_df, output_dir, plt, sns)
+        _plot_time_breakdown(membership_df, output_dir, plt, sns, np)
 
     generated = sorted(p.name for p in output_dir.glob("*.png"))
     print("Generated diagrams:")
