@@ -123,7 +123,7 @@ def _load_membership_dataset(pd, csv_files: list[Path], explicit_path: Path | No
     return df
 
 
-def _plot_sat_correlations(sat_df, output_dir: Path, plt, sns):
+def _plot_sat_correlations(sat_df, output_dir: Path, plt, sns, pd):
     corr_cols = list(sat_df.select_dtypes(include="number").columns)
     corr_df = sat_df[corr_cols].corr(numeric_only=True)
 
@@ -139,57 +139,84 @@ def _plot_sat_correlations(sat_df, output_dir: Path, plt, sns):
     other_grammars = sat_df[~sat_df["source_file"].str.contains("big_grammar", case=False, na=False)]
 
     scatter_specs = [
-        ("nonterminal_count", "Time vs Nonterminals"),
-        ("word_length", "Time vs Word Length"),
-        ("bool_variable_count", "Time vs Variables"),
-        ("clause_count", "Time vs Clauses"),
+        ("nonterminal_count", "Nonterminals"),
+        ("word_length", "Word Length"),
+        ("bool_variable_count", "Variables"),
+        ("clause_count", "Clauses"),
     ]
 
-    # Plot 1: Big Grammar
+    plot_counter = 2
+
+    # Create individual scatter plots for big_grammar
     if not big_grammar_files.empty:
-        fig, axes = plt.subplots(2, 2, figsize=(14, 10))
-        for axis, (x_col, title) in zip(axes.flatten(), scatter_specs):
+        for idx, (x_col, x_label) in enumerate(scatter_specs, start=1):
+            plt.figure(figsize=(10, 6))
             sns.scatterplot(
                 data=big_grammar_files,
                 x=x_col,
                 y="time_ms",
                 hue="solver",
                 alpha=0.7,
-                s=50,
-                ax=axis,
+                s=60,
                 palette="Set2",
             )
-            axis.set_title(title)
-            axis.set_ylabel("Solve Time (ms)")
-            axis.legend(title="Solver", fontsize=8)
+            plt.title(f"Time vs {x_label} (big_grammar)")
+            plt.ylabel("Solve Time (ms)")
+            plt.xlabel(x_label)
+            plt.legend(title="Solver")
+            plt.tight_layout()
+            plt.savefig(output_dir / f"02{chr(96+idx)}_sat_scatter_{x_col.lower()}_big_grammar.png", dpi=180)
+            plt.close()
+        plot_counter = 2 + len(scatter_specs)
 
-        fig.suptitle("SAT Solve Time Relationships (big_grammar)", y=1.00)
-        fig.tight_layout()
-        fig.savefig(output_dir / "02a_sat_scatter_big_grammar.png", dpi=180, bbox_inches="tight")
-        plt.close(fig)
-
-    # Plot 2: Other Grammars
+    # Create individual scatter plots for other grammars
     if not other_grammars.empty:
-        fig, axes = plt.subplots(2, 2, figsize=(14, 10))
-        for axis, (x_col, title) in zip(axes.flatten(), scatter_specs):
+        for idx, (x_col, x_label) in enumerate(scatter_specs, start=1):
+            plt.figure(figsize=(10, 6))
             sns.scatterplot(
                 data=other_grammars,
                 x=x_col,
                 y="time_ms",
                 hue="solver",
                 alpha=0.7,
-                s=50,
-                ax=axis,
+                s=60,
                 palette="husl",
             )
-            axis.set_title(title)
-            axis.set_ylabel("Solve Time (ms)")
-            axis.legend(title="Solver", fontsize=8)
+            plt.title(f"Time vs {x_label} (other grammars)")
+            plt.ylabel("Solve Time (ms)")
+            plt.xlabel(x_label)
+            plt.legend(title="Solver")
+            plt.tight_layout()
+            plt.savefig(output_dir / f"02{chr(96+len(scatter_specs)+idx)}_sat_scatter_{x_col.lower()}_other_grammars.png", dpi=180)
+            plt.close()
 
-        fig.suptitle("SAT Solve Time Relationships (other grammars)", y=1.00)
-        fig.tight_layout()
-        fig.savefig(output_dir / "02b_sat_scatter_other_grammars.png", dpi=180, bbox_inches="tight")
-        plt.close(fig)
+    # Create aggregate plot for word_length (combining 2b and 2f)
+    if not big_grammar_files.empty and not other_grammars.empty:
+        big_grammar_files_copy = big_grammar_files.copy()
+        other_grammars_copy = other_grammars.copy()
+        big_grammar_files_copy["grammar_type"] = "big_grammar"
+        other_grammars_copy["grammar_type"] = "other_grammars"
+        
+        combined = pd.concat([big_grammar_files_copy, other_grammars_copy], ignore_index=True)
+        
+        plt.figure(figsize=(12, 7))
+        sns.scatterplot(
+            data=combined,
+            x="word_length",
+            y="time_ms",
+            hue="grammar_type",
+            style="solver",
+            s=80,
+            alpha=0.6,
+            palette={"big_grammar": "#FF6B6B", "other_grammars": "#4ECDC4"},
+        )
+        plt.title("Time vs Word Length (Aggregate: big_grammar + other grammars)")
+        plt.ylabel("Solve Time (ms)")
+        plt.xlabel("Word Length")
+        plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left", fontsize=9)
+        plt.tight_layout()
+        plt.savefig(output_dir / "02i_sat_scatter_word_length_aggregate.png", dpi=180, bbox_inches="tight")
+        plt.close()
 
 
 def _plot_sat_solver_comparison(sat_df, output_dir: Path, plt, sns):
@@ -360,7 +387,7 @@ def main() -> int:
     if sat_df is None:
         raise SystemExit("Could not find SAT benchmark CSV files with variable/clause columns.")
 
-    _plot_sat_correlations(sat_df, output_dir, plt, sns)
+    _plot_sat_correlations(sat_df, output_dir, plt, sns, pd)
     _plot_sat_solver_comparison(sat_df, output_dir, plt, sns)
 
     if membership_df is not None:
